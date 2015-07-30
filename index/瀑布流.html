@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>瀑布流</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="col-md-2 col-sm-3 nav">
+        <p>Finec is the minimal and clean html theme template specially made for individual photographers designers as well as photography design agencies. It features all the important pages needed for this category of professionals and companies.</p>
+        <ul>
+          <li><i class="glyphicon glyphicon-home"></i></li>
+          <li><i class="glyphicon glyphicon-menu-up"></i></li>
+          <li><i class="glyphicon glyphicon-send"></i></li>
+        </ul>
+      </div>
+      <div class="col-md-10 main">
+        <div class="row">
+          <figure class="col-md-4 col-sm-4" style="background-image:url(images/sb-7.jpeg)"><a href="#"></a></figure>
+          <figure class="col-md-4 col-sm-4" style="background-image:url(images/wooowhat_thumb.jpg)"><a href="#"></a></figure>
+          <figure class="col-md-4 col-sm-4" style="background-image:url(images/sb-4.jpeg)"><a href="#"></a></figure>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/sb-1.jpeg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/Create-A-Face-Shattering-Effect.jpg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/sb-7.jpeg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/sb-3.jpeg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/blue_untitled_thumb.jpg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/Tiercal_thumb2.jpg"></div></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/sb-6.jpeg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/beastmanthumb.jpg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/wooowhat_thumb.jpg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/WithPeople_thumb.jpg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/sb-7.jpeg"></div></div>
+          <div class="col-md-2 col-sm-3 col-xs-6"><div class="cover"><img src="images/sb-4.jpeg"></div></div>
+        </div>
+      </div>
+    </div> 
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $(window).resize(function(){
+        var imgWidth = $('.cover').width();
+        console.log(imgWidth);
+        $('.cover').height(imgWidth);
+      });
+    });
+    </script>
+  </body>
+</html>
