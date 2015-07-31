@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style type="text/css">
+	html, body{ margin: 0; padding: 0; font-size: 0; background: #000; height: 100%;}
+	.grid{ height: 100%;}
+	.grid-item{ float: left; width: 20vw; overflow: hidden;}
+	
+	@media screen and (max-width: 980px){
+		.grid-item{ width: 33.3vw;}
+	}
+	@media screen and (max-width: 480px){
+		.grid-item{ width: 50vw;}
+	}
+	img{ width: 100%; transition: .8s;}
+	.grid-item:hover img{ transform: scale(1.2);}
+	.grid:hover img{ opacity: .3;}
+	.grid:hover img:hover{ opacity: 1;}
+
+	/*loading提示*/
+	#infscr-loading { 
+	  text-align: center;
+	  z-index: 100;
+	  position: fixed;
+	  left: 45%;
+	  bottom: 40px;
+	  width: 200px;
+	  padding: 10px;
+	  background: #000; 
+	  opacity: 0.8;
+	  color: #FFF;
+	  -webkit-border-radius: 10px;
+	     -moz-border-radius: 10px;
+	          border-radius: 10px;
+	}
+	</style>
+</head>
+<body>
+	<div class="grid">
+		<div class="grid-item"><a href="#"><img src="images/sb-1.jpeg"></a></div>
+		<div class="grid-item"><a href="#"><img src="images/sb-4.jpeg"></a></div>
+		<div class="grid-item"><a href="#"><img src="images/sb-5.jpeg"></a></div>
+		<div class="grid-item"><a href="#"><img src="images/sb-6.jpeg"></a></div>
+		<div class="grid-item"><a href="#"><img src="images/sb-front.jpeg"></a></div>
+		<div class="grid-item"><a href="#"><img src="images/Tiercal_thumb2.jpg"></a></div>
+		<div class="grid-item"><a href="#"><img src="images/sb-9.jpeg"></a></div>
+		<div class="grid-item"><a href="#"><img src="images/WithPeople_thumb.jpg"></a></div>
+		<div class="grid-item"><a href="#"><img src="images/sb-8.jpeg"></a></div>
+	</div>
+	<!-- 导航链接 隐藏 -->
+	<div id="next"><a href="2.html"></a></div>
+
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="js/masonry.pkgd.min.js" type="text/javascript"></script>	<!-- masonry瀑布流 -->
+	<script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>	<!-- 图片预加载 -->
+	<script src="js/jquery.infinitescroll.min.js" type="text/javascript"></script>	<!-- 无限加载 -->
+    
+    <!-- ？？？会重叠在一起 -->
+	<script type="text/javascript">
+	$(function(){
+		var $grid = $('.grid').imagesLoaded( function() {
+		  // init Masonry after all images have loaded
+		  $grid.masonry();
+		});
+
+		$grid.infinitescroll({
+	        navSelector: "#next",
+	        nextSelector: "#next a",
+	        itemSelector: ".grid-item",
+	        animate: true,
+	        extraScrollPx: 100,      
+		}, function(){
+			$('.grid').imagesLoaded(function(){
+				$('.grid').masonry();
+			});
+		});
+	});
+	</script>
+</body>
+</html>
