@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Document</title>
+	<title>masonry</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -20,8 +20,8 @@
 		  	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		  	<ul>
 			    <li><i class="glyphicon glyphicon-home"></i></li>
-			    <li><i class="glyphicon glyphicon-menu-up"></i></li>
-			    <li><i class="glyphicon glyphicon-send"></i></li>
+			    <li><i class="glyphicon glyphicon-menu-hamburger"></i></li>
+			    <li><i class="glyphicon glyphicon-heart"></i></li>
 		  	</ul>
 		</div>
 		<div class="grid col-md-10 main">
@@ -78,7 +78,7 @@
 			// 可以加入别的功能
 
 			var $newElems = $(newElements);
-			$grid.masonry('appended', $newElems, true);	// 新加载的内容插入grid并重新排列
+			$grid.masonry('appended', $newElems);	// 新加载的内容插入grid并重新排列
 		});
 	});
 	</script>
