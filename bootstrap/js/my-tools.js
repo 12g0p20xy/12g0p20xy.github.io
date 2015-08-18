@@ -1,19 +1,24 @@
-// 搜索框
+$('a').click(function(event){
+	event.preventDefault();
+});
+
 $(function(){
-	$('.search-icon').click(function() {
-		$('.searchbar>input').stop(true, false).animate({width: 180, opacity: 1}, 300).focus();
-	});
-	$('.searchbar>input').blur(function(){
-		$(this).stop(true, false).animate({width: 0, opacity: 0}, 300);
+	$('.main-nav>li').hover(function(){
+		$('.sub-nav').stop(true, false).show(100);
+	}, function(){
+		$('.sub-nav').stop(true, false).hide(100);
 	});
 });
 
-// 头图微移动
+// 移动端登录按钮
 $(function(){
-	$(document).scroll(function(){
-		var distance = $(document).scrollTop();
-		$('.jumbotron').css('backgroundPosition', 0+'px '+distance/10+'px'); // 注意px后面有个空格
-		$('.jumbotron').find('h1, h2, .btn').css({position: 'relative', top: -distance/10, opacity: (1-distance/500)});
-		console.log(distance);
+	var signup = $('.sign-menu');
+	$('.m-login').on('mouseenter', function(){
+		signup.addClass('mobile-login');
+		$('nav').append(signup.clone());
+	});
+	$('nav').mouseleave(function(){
+		$('nav').find('.sign-menu').remove();
+		signup.removeClass('mobile-login');
 	});
 });

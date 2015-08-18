@@ -1,290 +1,218 @@
-
-/* General
-***********************/
 html, body{
-	margin: 0;
-	padding: 0;
 	height: 100%;
-}
-body{
-	text-align: center;
-	line-height: 1.6em;
-	color: #666;
 	font-size: 16px;
+	color: #666;
+	font-family: "微软雅黑",STHeitiSC-Light,sans-serif;
 }
-p{
-	color: #888;
+ol, ul{
+	list-style: none;
+	padding: 0;
 }
-.jumbotron{
-	background: url(../images/pic_home_05.jpg);
-	background-size: cover;
-	height: 600px;
-	overflow: hidden;
+a, a:hover{
+	color: #666;
+}
+input{
+	outline: 0;
+}
+.btn{
+	padding: 0.2em 2.4em;
+	color: #006942;
+	border: 1px solid #006942;
+	border-radius: 3px;
+	text-align: center;
+}
+
+header{
+	border-top: 3px solid #006942;
+}
+nav{
+	/*background: url(../images/logo.gif) no-repeat left center;
+	background-size: 6%;*/
+}
+nav ul{
+	padding-left: 75px;
+	padding-top: 40px;
 	margin-bottom: 0;
 }
-.header{
-	padding-bottom: 30px;
-	border-bottom: 2px solid white;
+nav li{
+	display: inline-block;
+	font-size: 14px;
+	padding: 20px 20px;
 }
 .logo{
-	width: 119px;
-	height: 39px;
-	background: url(../images/logo_home.png);
+	width: 66px;
+	height: 66px;
+	margin-top: 15px;
 }
-h1, h2, h3, h4{
-	font-weight: bold;
-	margin: 1em 0;
+.main-nav li{
+	position: relative;
 }
-h1{
-	color: white!important;
-	/*响应式字体大小 这里要用less来改*/
-	font-size: 36px!important;
-	margin: 0.5em 0;
-	margin-top: 100px;
-	text-shadow:0 0 6px rgba(0,0,0,0.1);
+.main-nav li:hover{
+	background: #3d3935;
 }
-h2{
-	color: white;
-	font-size: 24px;
-	text-shadow:0 0 6px rgba(0,0,0,0.1);
-}
-.jumbotron span{
-	color: #A2DC4F;
-}
-.portfolio{
-	color: white;
-	padding: 10px 20px;
-	border: 2px solid white;
-	border-radius: 0;
-	font-size: 18px;
-	font-weight: bold;
-	text-shadow:0 0 6px rgba(0,0,0,0.1);
-}
-.portfolio:hover{
-	color: #A2DC4F;
-	border: 2px solid #A2DC4F;
+.main-nav li:hover a{
+	color: #fff;
 }
 
-/*导航部分*/
-nav{
-	padding-top: 15px;
-}
-.nav li a{
-	color: white;
-	font-weight: bold;
-}
-.nav li>a:hover, .nav li>a:focus{
-	background: transparent;
-	color: #A2DC4F;
-}
-.nav .open>a, .nav .open>a:focus{
-	background: transparent;
-}
-.dropdown-menu{
-	width: 15em;
-	border: 0;
-	background: #555;
-	padding: 10px;
-	margin-top: 10px!important;
-}
-.dropdown-menu:before{
-	content: '';
-	width: 0;
-    height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-bottom: 10px solid #555;
-    position: absolute;
+.sub-nav{
+	display: none;
+	position: absolute;
 	left: 0;
-	top: -10px;
+	top: 60px;
+	width: 300px;
+	padding: 15px;
+	background: #3d3935;
 }
-.dropdown-menu li>a{
-	font-size: 16px;
-	color: #eee;
-	font-weight: normal;
-}
-.dropdown-menu .divider{
-	background: #777;
-}
-.nav{
-	width: 100%;
-}
-li.searchbar{
-	padding-top: 15px;
-	padding-bottom: 15px;
-	padding-right: 15px;
-	float: right;
-}
-.searchbar input{
-	opacity: 0;
-	float: right;
-	margin-right: 15px;
-	float: left;
-	border: 0;
-	width: 0;
-	height: 1.8em;
-	background: #eee;
-	outline: 0;
-	margin-top: -0.3em;
-}
-.search-icon{
+.sub-nav li{
 	display: block;
-	width: 21px;
-	height: 20px;
-	background: url(../images/ico_search_home.png) no-repeat;
-	float: left;
 }
-.mobile-menu{
+
+.mobile-nav{
 	display: none;
 }
-@media (min-width: 768px) and (max-width: 992px){
-	.nav li a{
-		font-size: 0.9em;
-		padding-left: 5%;
-	}
+.mobile-nav li{
+	height: 40px;
+	margin-left: 15px;
+	position: relative;
 }
-@media only screen and (max-width: 768px){
-	.nav{
+.m-login{
+	background: url(../images/phone-icon.png) no-repeat center 0;
+	background-position: 0 2px;
+}
+.m-local{
+	background: url(../images/phone-icon.png) no-repeat center 0;
+	background-position: 0 -40px;
+}
+.m-menu{
+	background: url(../images/phone-icon.png) no-repeat center 0;
+	background-position: 0 -80px;
+}
+@media (max-width: 768px){
+	.main-nav, .login{
 		display: none;
 	}
-	.mobile-menu{
-		font-size: 18px;
-		font-weight: bold;
-		color: white!important;
-		text-align: left;
-		padding-left: 2em;
+	.mobile-nav{
 		display: block;
-		background: url(../images/btn_mogile_menu_home.png) no-repeat 0 35%;
 	}
 }
 
-/*内容页1*/
-.intro .row:first-child{
-	border-bottom: 1px solid silver;
-}
-.row{
-	padding-bottom: 30px;
-	padding-top: 30px;
-}
-
-/*内容页2*/
-.cases{
-	background: #eee;
-}
-.cases .row:nth-child(2){
-	padding-top: 0;
-	border-bottom: 1px solid silver;
-}
-.case-item{
-	margin: 0 auto;
-	width: 340px;
-	height: 193px;
-	background: url(../images/bgr_laptop.png);
+.login li{
+	display: inline-block;
+	font-size: 12px;
+	padding: 5px 0;
 	position: relative;
-	z-index: 2;
 }
-.case-item img{
-	position: absolute;
-	top: 15px;
-	left: 46px;
+.login a{
+	border-right: 1px solid #666;
+	padding: 0 20px;
 }
-.mask{
-	display: block;
-	width: 250px;
-	height: 144px;
-	background: white;
+.login .local{
+	background: url(../images/icon.png) no-repeat 10px -24px;
+	padding-left: 15px;
+}
+.en a{
+	border-right: 0;
+}
+.login{
+	margin-top: 10px;
+}
+.login li:first-child:hover .sign-menu{
 	opacity: 1;
-	background: url(../images/bgr_laptop_mask.png) -6px;
+}
+.sign-menu{
 	position: absolute;
-	z-index: 1;
-	top: 15px;
-	left: 46px;
+	left: 15px;
+	top: 30px;
+	width: 240px;
+	padding: 15px;
+	background: #fff;
+	box-shadow: 1px 1px 6px rgba(0,0,0,.3);
 	opacity: 0;
-	transition: 0.3s;
+	transition: .3s;
 }
-.case-item:hover .mask{
-	opacity: 1;
+.sign-menu>div{
+	margin-bottom: 10px;
 }
-.quoteBtn{
-	margin-top: 1em;
-	border-radius: 0;
-	border: 0;
-	background: #A1C968;
-	padding: 0.4em 1em;
-}
-.quoteBtn:hover{
-	background: #449F63;
-}
-
-/*页脚*/
-footer{
-	background: #363636;
+.sign-menu label{
+	display: block;
 	text-align: left;
-	color: #eee;
 }
-footer ul{
-	padding: 0;
-}
-footer li{
-	list-style: none;
+.sign-menu input{
 	margin-left: 0;
 }
-footer a{
-	color: #888;
+.sign-menu input:nth-child(2){
+	width: 30%;
 }
-footer a:hover{
-	text-decoration: none;
-	color: #A1C968;
-}
-.hd{
-	background: url(../images/logo_home.png) no-repeat 0 50%;
-	height: 90px;
-}
-footer input{
+.sign-menu a{
 	border: 0;
-	height: 2.4em;
+	color: #006942;
+	padding: 0;
+}
+
+.mobile-login{
+	width: 100%;
+	opacity: 1;
+	position: static;
+	box-shadow: 0;
 	font-size: 14px;
+	padding-top: 100px;
+}
+.mobile-login input[type='text']{
+	width: 100% !important;
+}
+
+.main a, .main h3{
+	color: #006942;
+}
+.main{
+	padding: 30px 0;
+}
+.rewards{
+	padding-top: 30px;
+	padding-left: 180px;
+	background: url(../images/panel-logo.gif) no-repeat left center;
+}
+.rewards p{
+	font-size: 14px;
+	line-height: 1.8em;
+	margin: 15px 30px 45px 0;
+}
+
+.signup{
+	border-left: 1px #ccc dotted;
+	font-size: 14px;
+	padding-left: 45px;
+}
+label{
+	display: inline-block;
+	text-align: right;
+	width: 5em;
+}
+.signup>div{
+	width: 100%;
+	margin-top: 24px;
+}
+input{
+	border-radius: 3px;
+	margin-left: 15px;
+	height: 2em;
 	outline: 0;
+	border: 1px solid #ccc;
 }
-footer input[type="text"]{
-	width: 80%;
-	background: #5B5B5B;
-	margin-right: 2px;
-	padding-left: 5px;
-	color: #ACACAC;
+#account{
+	width: 60%;
 }
-footer input[type="button"]{
-	background: #8F8F8F;
-	font-weight: bold;
+input[type="checkbox"]{
+	vertical-align: middle;
+	margin-right: 3px;
 }
-footer input[type="button"]:hover{
-	opacity: 0.8;
+
+.intro{
+	height: 300px;
+	background: #f8edda;
 }
-footer .ft{
-	border-bottom: 1px solid silver;
-}
-.ft li{
-	padding-left: 1em;
-	background: url(../images/ico_widget_footer_li.png) no-repeat 0 50%;
-}
-footer .rights{
-	font-size: 12px;
-	color: #888;
-	font-weight: bold;
-}
-.rights span{
-	float: left;
-}
-.rights ul{
-	float: right;
-}
-.rights li{
-	display: inline;
-}
-.rights li:after{
-	content: '/';
-	margin: 0 0.6em;
-}
-.rights li:last-child:after{
-	content: none;
-}
+
+/*非响应式*/
+/*.container{
+	min-width: 960px !important;
+}*/
