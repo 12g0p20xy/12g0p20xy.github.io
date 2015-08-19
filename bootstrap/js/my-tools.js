@@ -27,3 +27,13 @@ $(function(){
 		signup.removeClass('mobile-login');
 	});
 });
+
+// 移动端菜单按钮
+$(function(){
+	$('.m-menu').on('mouseenter',function(){
+		$('.m-submenu').stop(true, false).slideDown(100);
+	});
+	$('.m-submenu').mouseleave(function(){
+		$(this).stop(true, false).slideUp(100);
+	});
+});

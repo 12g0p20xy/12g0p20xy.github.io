@@ -146,6 +146,18 @@ nav a:hover{
 	background: url(../images/phone-icon.png) no-repeat center 0;
 	background-position: 0 -80px;
 }
+.m-submenu{
+	display: none;
+	width: 100%;
+	background: #3d3935;
+	margin-top: 90px;
+}
+.m-submenu a{
+	color: #fff;
+	display: block;
+	padding: 15px;
+	border-bottom: 1px solid #5A5555;
+}
 @media (max-width: 768px){
 	.main-nav, .login{
 		display: none;
@@ -155,6 +167,11 @@ nav a:hover{
 	}
 }
 
+.login{
+	margin-top: 10px;
+	position: relative;
+	z-index: 99;
+}
 .login li{
 	display: inline-block;
 	*zoom: 1;
@@ -173,9 +190,6 @@ nav a:hover{
 }
 .en a{
 	border-right: 0;
-}
-.login{
-	margin-top: 10px;
 }
 .login li:first-child:hover .sign-menu{
 	opacity: 1;
