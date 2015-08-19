@@ -4,9 +4,9 @@ $('a').click(function(event){
 
 $(function(){
 	$('.main-nav>li').hover(function(){
-		$('.sub-nav').stop(true, false).show(100);
+		$(this).find('.sub-nav').stop(true, false).slideDown(100);
 	}, function(){
-		$('.sub-nav').stop(true, false).hide(100);
+		$('.sub-nav').stop(true, false).slideUp(200);
 	});
 });
 
@@ -15,7 +15,12 @@ $(function(){
 	var signup = $('.sign-menu');
 	$('.m-login').on('mouseenter', function(){
 		signup.addClass('mobile-login');
-		$('nav').append(signup.clone());
+		if ($('nav .sign-menu').length > 0) {
+			// 只克隆一次
+			return false;
+		}else{
+			$('nav').append(signup.clone());
+		};
 	});
 	$('nav').mouseleave(function(){
 		$('nav').find('.sign-menu').remove();
