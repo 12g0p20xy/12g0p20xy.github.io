@@ -25,7 +25,7 @@ $(function(){
 	});
 
 	// 点击除菜单外的任何地方菜单消失，使用了closest防止冒泡
-	$(document).on('mousemove', function(e){
+	$(document).on('touchstart', function(e){
 		if (!$(e.target).closest('.sign-menu').length) {
 			$('nav').find('.sign-menu').remove();
 			signup.removeClass('mobile-login');
@@ -39,7 +39,7 @@ $(function(){
 		$('.m-submenu').stop(true, false).slideDown(100);
 	});
 	// 点击除菜单外的任何地方菜单消失
-	$(document).on('mousemove', function(e){
+	$(document).on('touchstart', function(e){
 		if ($(e.target).parent().attr('class') != 'm-submenu') {
 			$('.m-submenu').stop(true, false).slideUp(100);
 		};
