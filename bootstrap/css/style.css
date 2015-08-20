@@ -2,7 +2,7 @@ html, body{
 	height: 100%;
 	font-size: 16px;
 	color: #666;
-	font-family: "微软雅黑",STHeitiSC-Light,sans-serif;
+	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
 ol, ul{
 	list-style: none;

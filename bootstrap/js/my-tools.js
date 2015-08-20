@@ -13,27 +13,35 @@ $(function(){
 // 移动端登录按钮
 $(function(){
 	var signup = $('.sign-menu');
-	$('.m-login').on('mouseenter', function(){
+	$('.m-login').on('mousedown', function(){
 		signup.addClass('mobile-login');
 		if ($('nav .sign-menu').length > 0) {
 			// 只克隆一次
 			return false;
 		}else{
 			$('nav').append(signup.clone());
+			$('#account').focus();
 		};
 	});
-	$('nav').mouseleave(function(){
-		$('nav').find('.sign-menu').remove();
-		signup.removeClass('mobile-login');
+
+	// 点击除菜单外的任何地方菜单消失，使用了closest防止冒泡
+	$(document).on('mousemove', function(e){
+		if (!$(e.target).closest('.sign-menu').length) {
+			$('nav').find('.sign-menu').remove();
+			signup.removeClass('mobile-login');
+		};
 	});
 });
 
 // 移动端菜单按钮
 $(function(){
-	$('.m-menu').on('mouseenter',function(){
+	$('.m-menu').on('mousedown',function(){
 		$('.m-submenu').stop(true, false).slideDown(100);
 	});
-	$('.m-submenu').mouseleave(function(){
-		$(this).stop(true, false).slideUp(100);
+	// 点击除菜单外的任何地方菜单消失
+	$(document).on('mousemove', function(e){
+		if ($(e.target).parent().attr('class') != 'm-submenu') {
+			$('.m-submenu').stop(true, false).slideUp(100);
+		};
 	});
 });
