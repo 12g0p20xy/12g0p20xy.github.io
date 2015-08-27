@@ -1,0 +1,149 @@
+
+html, body{margin: 0; padding: 0; height: 100%;}
+.event-page{background: url(../images/bg2.jpg) no-repeat top; background-size: cover;}
+.event-page2{background: url(../images/bg3.jpg) no-repeat top; background-size: cover;}
+
+@-webkit-keyframes SCALE {
+	0% {width: 0;top: 0;left: 46vw;}
+	100% {width: 43vw;top: 3vw;left: 28vw;}
+}
+@-webkit-keyframes UFO {
+	0% {top: 10vw;right: -20vw;}
+	100% {top: 20vw;right: 18vw;}
+}
+@-webkit-keyframes SHAKE {
+	0% {-webkit-transform: rotate(-15deg);-webkit-transform-origin:50% 100%;}
+	50% {-webkit-transform: rotate(0deg);-webkit-transform-origin:50% 100%;}
+	100% {-webkit-transform: rotate(15deg);-webkit-transform-origin:50% 100%;}
+}
+
+/*移动动画*/
+@-webkit-keyframes MOVE {
+	0% {top: 60vw; right: 82vw;}
+	2% {top: 96vw; right: 82vw;}
+	4% {top: 96vw; right: 45vw;}
+	6% {top: 60vw; right: 45vw;}
+	8% {top: 60vw; right: 0vw;}
+	10% {top: 115vw; right: 0vw;}
+	11% {top: 115vw; right: 10vw;}
+	12% {top: 132vw; right: 10vw;}
+	14% {top: 132vw; right: 54vw;}
+	15% {top: 125vw; right: 54vw;}
+	18% {top: 126vw; right: 82vw;}
+	20% {top: 152vw; right: 82vw;}
+	22% {top: 152vw; right: 56vw;}
+	23% {top: 162vw; right: 56vw;}
+	25% {top: 162vw; right: 28vw;}
+	26% {top: 152vw; right: 28vw;}
+	28% {top: 152vw; right: 0vw;}
+	30% {top: 188vw; right: 0vw;}
+	32% {top: 188vw; right: 18vw;}
+	34% {top: 208vw; right: 18vw;}
+	38% {top: 208vw; right: 82vw;}
+	40% {top: 236vw; right: 82vw;}
+	42% {top: 236vw; right: 63vw;}
+	44% {top: 272vw; right: 63vw;}
+	46% {top: 272vw; right: 82vw;}
+	48% {top: 300vw; right: 82vw;}
+	52% {top: 300vw; right: 21vw;}
+	54% {top: 256vw; right: 19vw;}
+	55% {top: 256vw; right: 28vw;}
+	57% {top: 246vw; right: 28vw;}
+	58% {top: 246vw; right: 10vw;}
+	60% {top: 236vw; right: 10vw;}
+	61% {top: 236vw; right: 0vw;}
+	66% {top: 318vw; right: 0vw;}
+	68% {top: 318vw; right: 18vw;}
+	70% {top: 356vw; right: 18vw;}
+	72% {top: 356vw; right: 0vw;}
+	74% {top: 385vw; right: 0vw;}
+	78% {top: 385vw; right: 63vw;}
+	80% {top: 340vw; right: 63vw;}
+	81% {top: 340vw; right: 55vw;}
+	82% {top: 330vw; right: 55vw;}
+	83% {top: 330vw; right: 72vw;}
+	84% {top: 320vw; right: 72vw;}
+	85% {top: 320vw; right: 82vw;}
+	88% {top: 405vw; right: 82vw;}
+	90% {top: 405vw; right: 63vw;}
+	92% {top: 440vw; right: 63vw;}
+	94% {top: 440vw; right: 82vw;}
+	96% {top: 470vw; right: 82vw;}
+	98% {top: 470vw; right: 20vw;}
+	100% {top: 470vw; right: 0vw;}
+}
+
+
+
+section{
+	font-size: 0;
+}
+section img{
+	width: 100%;
+}
+
+/*主要动画*/
+.logo{
+	position: absolute;
+	-webkit-animation: SCALE 1s alternate ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+}
+.ufo{
+	position: absolute;
+	width: 12vw;
+	top: 10vw;
+	right: -20vw;
+	-webkit-animation: UFO 0.6s alternate ease-in-out;
+	-webkit-animation-delay: 0.3s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+}
+.clickme{
+	position: absolute;
+	width: 18vw;
+	/*border: 1px green dashed;*/
+	top: 470vw;
+	right: 20vw;
+	-webkit-animation: MOVE 60s normal linear, SHAKE .5s alternate linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-delay: 1.2s;
+}
+.logo img, .ufo img, .clickme img{
+	width: 100%;
+}
+
+/*小零件*/
+.s2 span{
+	position: absolute;
+	width: 20vw;
+	top: 172vw;
+	left: 15vw;
+	-webkit-animation: SHAKE 2s alternate linear;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes BRUSH {
+	0% {top: 236vw;left: 61vw;-webkit-transform: rotate(-5deg);-webkit-transform-origin:50% 100%;}
+	100% {top: 239vw;left:58vw;-webkit-transform: rotate(5deg);-webkit-transform-origin:50% 100%;}
+}
+.s4 span{
+	position: absolute;
+	width: 12vw;
+	top: 236vw;
+	left: 60vw;
+	-webkit-animation: BRUSH 1.5s alternate ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes HEART {
+	0% {transform:scale(1);}
+	100% {transform:scale(1.5);}
+}
+.s7 span{
+	position: absolute;
+	width: 6vw;
+	top: 328vw;
+	left: 60vw;
+	-webkit-animation: HEART 1.5s alternate ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+}
