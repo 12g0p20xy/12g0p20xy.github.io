@@ -169,18 +169,12 @@ h3{
 	width: 48%;
 }
 .t-num{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 }
 .t-num a{
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
 	flex: 1;
 }
 .t-num input{
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
 	flex: 4;
 }
 
