@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>孕妈体验师</title>
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<style type="text/css">
+	html, body{margin: 0; padding: 0; background: #f8cb16}
+	article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display: block}
+	header{
+		background: url(images/header.jpg) no-repeat top;
+		height: 574px
+	}
+	.container{
+		margin-left: auto;
+		margin-right: auto;
+		margin: 45px auto;
+		width: 1000px;
+		position: relative
+	}
+	.section1 .figure{
+		position: absolute;
+		right: 150px;
+		top: 110px
+	}
+	.section1 .shining{
+		position: absolute;
+		left: -30px;
+		top: 450px
+	}
+	.section2 .shining{
+		position: absolute;
+		right: 0;
+		top: 450px
+	}
+	.star, .star2{
+		position: absolute;
+		display: block;
+		width: 47px; height: 125px
+	}
+	.star{
+		background: url(images/star.png) no-repeat
+	}
+	.star2{
+		background: url(images/star.png) no-repeat -47px 0
+	}
+	section:hover .star2{
+		-webkit-animation: shining .6s alternate linear infinite;
+		   -moz-animation: shining .6s alternate linear infinite;
+		     -o-animation: shining .6s alternate linear infinite;
+		        animation: shining .6s alternate linear infinite
+	}
+	.section2 .hd{
+		position: relative;
+		left: 510px;
+		width: 496px;
+		right: 30px;
+		top: -580px;
+	}
+	.title-bg{
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: block;
+		width: 469px; height: 151px;
+		background: url(images/hd0.png);
+		-webkit-transition: .2s ease-out;
+		   -moz-transition: .2s ease-out;
+		     -o-transition: .2s ease-out;
+			    transition: .2s ease-out
+	}
+	.title-ft{
+		position: absolute;
+		left: 0;
+		top: 40px;
+		display: block;
+		width: 486px; height: 186px;
+		background: url(images/hd1.png) no-repeat;
+		-webkit-transition: .2s ease-out;
+		   -moz-transition: .2s ease-out;
+		     -o-transition: .2s ease-out;
+			    transition: .2s ease-out
+	}
+	.section2 .title-ft{
+		background: url(images/hd2.png) no-repeat;
+	}
+	.section2 .figure{
+		position: absolute;
+		top: 160px;
+		left: 60px;
+	}
+	.container:hover .title-bg{
+		left: 5px;
+		top: -15px
+	}
+	.container:hover .title-ft{
+		left: -5px;
+		top: 46px
+	}
+	.container:hover .figure{
+		-webkit-animation: shake .1s alternate ease-in-out 2 .6s;
+		   -moz-animation: shake .1s alternate ease-in-out 2 .6s;
+		     -o-animation: shake .1s alternate ease-in-out 2 .6s;
+		        animation: shake .1s alternate ease-in-out 2 .6s
+	}
+	
+	@-webkit-keyframes shining {
+		from {opacity: 0}
+		to {opacity: 1}
+	}
+	@keyframes shining {
+		from {opacity: 0}
+		to {opacity: 1}
+	}
+	@-webkit-keyframes shake {
+		0% {-webkit-transform: rotate(0deg)}
+		10% {-webkit-transform: rotate(-5deg)}
+		20% {-webkit-transform: rotate(5deg)}
+	}
+	@keyframes shake {
+		0% {transform: rotate(0deg)}
+		10% {transform: rotate(-5deg)}
+		20% {transform: rotate(5deg)}
+	}
+
+	.section3{
+		background: url(images/bt.jpg) no-repeat top;
+		height: 1084px;
+	}
+	.section3 .register{
+		position: absolute;
+		left: 315px;
+		top: 280px;
+		*margin-top: -45px;
+	}
+	.section3 input{
+		display: block;
+		width: 350px;
+		height: 40px;
+		line-height: 40px;
+		margin-bottom: 16px;
+		border-radius: 4px;
+		border: 0;
+		outline: 0;
+		background: #6148af;
+		font-size: 18px;
+		color: white;
+		padding: 0 10px;
+		font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+		-webkit-transition: .2s ease-out;
+		   -moz-transition: .2s ease-out;
+		     -o-transition: .2s ease-out;
+			    transition: .2s ease-out;
+	}
+	.add-on{
+		position: absolute;
+		top: 66px;
+		right: 10px;
+	}
+	.section3 input[type="text"]:focus{
+		background: #957FD8;
+		box-shadow: 3px 3px 6px rgba(0,0,0,.1);
+	}
+	input.btn{
+		background: #f7ca16;
+		color: #440c90;
+		width: 370px;
+		font-size: 20px;
+	}
+	input.btn:active{
+		background: #F7AC16;
+	}
+	video{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: -15px;
+	}
+	footer{
+		padding-top: 15px;
+		background: white
+	}
+	</style>
+	<!--[if lt IE 9]>
+	<script>
+		var html5 = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i = html5.length;
+		while(i--) document.createElement(html5[i]);
+	</script>
+	<![endif]-->
+</head>
+<body>
+	<header></header>
+	<div class="wrap">
+		<div class="trailer">
+			<div class="container">
+				<video controls="controls" autoplay="autoplay">
+					<source src="movie.mp4" type="video/mp4"/>
+					    <embed src="movie.mp4" width="900" height="506" autostart="true"/>
+				</video>
+			</div>
+		</div>
+		<section class="section1">
+			<div class="container">
+				<img src="images/s1bg.jpg">
+				<div class="hd">
+					<span class="title-bg"></span>
+					<span class="title-ft"></span>
+				</div>
+				<img class="figure" src="images/f1.png">
+				<div class="shining">
+					<span class="star"></span>
+					<span class="star2"></span>
+				</div>
+			</div>
+		</section>
+		<section class="section2">
+			<div class="container">
+				<img src="images/s2bg.jpg">
+				<div class="hd">
+					<span class="title-bg"></span>
+					<span class="title-ft"></span>
+				</div>
+				<img class="figure" src="images/f2.png">
+				<div class="shining">
+					<span class="star"></span>
+					<span class="star2"></span>
+				</div>
+			</div>
+		</section>
+		<section class="section3">
+			<div class="container">
+				<div class="register">
+					<input type="text" placeholder="您的姓名">
+					<div class="control-group">
+				        <div class="controls input-append date form_date" data-date="" data-date-format="yyyy年 MM dd日" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+				            <input type="text" value="" placeholder="选择您的预产期" readonly="readonly">
+							<span class="add-on"><i class="icon-th"></i></span>
+				        </div>
+				    </div>
+					<input type="text" placeholder="您的联系方式">
+					<input type="text" placeholder="您的联系地址">
+					<input class="btn" type="button" value="现在报名">
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<iframe src=" http://www.wuhunews.cn/Iframe/footer.html" height="100px" width="100%" scrolling="no" frameborder="0"></iframe>
+	</footer>
+
+	<script src="http://www.wuhunews.cn/res/index/js/jquery.js"></script>
+	<script src="js/bootstrap-datetimepicker.js"></script>
+	<script>
+		$('.form_date').datetimepicker({
+	        language:  'zh-CN',
+	        weekStart: 1,
+	        todayBtn:  1,
+			autoclose: 1,
+			todayHighlight: 1,
+			startView: 2,
+			minView: 2,
+			forceParse: 0
+	    });
+	</script>
+</body>
+</html>
