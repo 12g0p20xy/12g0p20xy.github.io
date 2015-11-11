@@ -3,7 +3,7 @@
   background-image:none;
   position:static;
   left:auto;
-  width:910px;
+  width:330px;
   margin-left:0;
   margin-right:0;
   text-align:left;
@@ -60,53 +60,4 @@
   height:40px;
   overflow:hidden;
   background-image:url('../../resources/images/transparent.gif');
-}
-#u5 {
-  position:absolute;
-  left:0px;
-  top:700px;
-  width:910px;
-  height:10px;
-}
-#u5_start {
-  position:absolute;
-  left:0px;
-  top:-5px;
-  width:18px;
-  height:20px;
-}
-#u5_end {
-  position:absolute;
-  left:893px;
-  top:-5px;
-  width:18px;
-  height:20px;
-}
-#u5_line {
-  position:absolute;
-  left:0px;
-  top:5px;
-  width:910px;
-  height:1px;
-}
-#u6 {
-  position:absolute;
-  left:80px;
-  top:754px;
-  width:800px;
-  height:226px;
-}
-#u6_img {
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:800px;
-  height:226px;
-}
-#u7 {
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:800px;
-  word-wrap:break-word;
 }

@@ -118,54 +118,38 @@
         </div>
       </div>
 
-      <!-- Unnamed (水平线) -->
-      <div id="u16" class="ax_水平线">
-        <img id="u16_start" class="img " src="resources/images/transparent.gif" alt="u16_start"/>
-        <img id="u16_end" class="img " src="resources/images/transparent.gif" alt="u16_end"/>
-        <img id="u16_line" class="img " src="images/书架/u25_line.png" alt="u16_line"/>
-      </div>
-
-      <!-- Unnamed (形状) -->
-      <div id="u17" class="ax_文本段落">
-        <img id="u17_img" class="img " src="resources/images/transparent.gif"/>
-        <!-- Unnamed () -->
-        <div id="u18" class="text">
-          <p><span>1. 书城主要功能是找书，按照几大种类对书籍提供分类，也可以通过搜索进行</span></p><p><span>&nbsp;</span></p><p><span>2. 点击书城中的任何一本书的封面可以进入到书籍简介界面</span></p><p><span>&nbsp;</span></p><p><span>3.当然其实书城也是有很多入口的，比如写想法时如果发现你还没看过书会提示你去找书，毕竟书城才是为产品提供收入的地方。本原型为了方便起见没有做该功能而已</span></p><p><span>&nbsp;</span></p><p><span>4. 微信读书有很多地方有用到上下拖动的功能，本原型以书城为案例进行了该拖动功能的实现。</span><span>有些左右跟随的移动的效果实现也是类似。</span><span>另外</span><span>拖动效果还可以根据拖动的时间的长短来判断是跟随手指移动，还是直接切换到下一屏，安卓版微信主菜单的左右移动效果。</span></p><p><span>&nbsp;</span></p><p><span>对于</span><span>拖动效果很简单设定动态面板</span><span>沿</span><span>Y轴即可。</span></p><p><span>&nbsp;</span></p><p><span>顶部往下拉到一定程度不能继续拉的功能的具体做法是在顶部设置</span><span>一块</span><span>图片热区。然后给动态面板设定拖动时</span><span>用例</span><span>，</span><span>当动态面板未接触该图片热区</span><span>，则将动态面板</span><span></span><span>移动到一个绝对位置，其中要注意的是必须将这个用例放在动态面板</span><span>沿</span><span>Y轴移动的前面。</span></p><p><span>&nbsp;</span></p><p><span>顶部直接下拉松手后的返回功能也是类似，在上面放一个很小的图片热区</span><span>，然后设定动态面板拖动结束后用例，如果动态面板未接触到该图片</span><span>热</span><span>区，则将动态面板移动到绝对位置。</span></p><p><span>&nbsp;</span></p><p><span>底部的实现就和顶部基本完全一样了。</span></p>
-        </div>
-      </div>
-
       <!-- timer (动态面板) -->
-      <div id="u19" class="ax_动态面板" data-label="timer">
-        <div id="u19_state0" class="panel_state" data-label="状态1">
-          <div id="u19_state0_content" class="panel_state_content">
+      <div id="u16" class="ax_动态面板" data-label="timer">
+        <div id="u16_state0" class="panel_state" data-label="状态1">
+          <div id="u16_state0_content" class="panel_state_content">
           </div>
         </div>
-        <div id="u19_state1" class="panel_state" data-label="State2">
-          <div id="u19_state1_content" class="panel_state_content">
+        <div id="u16_state1" class="panel_state" data-label="State2">
+          <div id="u16_state1_content" class="panel_state_content">
           </div>
         </div>
       </div>
 
       <!-- bar (Image) -->
-      <div id="u20" class="ax_image" data-label="bar">
-        <img id="u20_img" class="img " src="images/发现/bar_u1.png"/>
+      <div id="u17" class="ax_image" data-label="bar">
+        <img id="u17_img" class="img " src="images/发现/bar_u1.png"/>
         <!-- Unnamed () -->
-        <div id="u21" class="text">
+        <div id="u18" class="text">
           <p><span></span></p>
         </div>
       </div>
 
       <!-- search (Image) -->
-      <div id="u22" class="ax_image" data-label="search">
-        <img id="u22_img" class="img " src="images/书城/search_u22.png"/>
+      <div id="u19" class="ax_image" data-label="search">
+        <img id="u19_img" class="img " src="images/书城/search_u19.png"/>
         <!-- Unnamed () -->
-        <div id="u23" class="text">
+        <div id="u20" class="text">
           <p><span></span></p>
         </div>
       </div>
 
       <!-- Unnamed (热区) -->
-      <div id="u24" class="ax_热区">
+      <div id="u21" class="ax_热区">
       </div>
     </div>
   </body>
