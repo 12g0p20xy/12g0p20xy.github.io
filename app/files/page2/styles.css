@@ -43,3 +43,12 @@
   overflow:hidden;
   background-image:url('../../resources/images/transparent.gif');
 }
+#u3 {
+  position:absolute;
+  left:142px;
+  top:500px;
+  width:37px;
+  height:40px;
+  overflow:hidden;
+  background-image:url('../../resources/images/transparent.gif');
+}
