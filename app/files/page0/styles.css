@@ -36,22 +36,10 @@
 }
 #u2 {
   position:absolute;
-  left:5px;
+  left:4px;
   top:483px;
-  width:138px;
+  width:139px;
   height:50px;
-}
-#u2_input {
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:138px;
-  height:50px;
-  font-family:'Arial Normal', 'Arial';
-  font-weight:400;
-  font-style:normal;
-  font-size:13px;
-  text-decoration:none;
-  color:#000000;
-  text-align:center;
+  overflow:hidden;
+  background-image:url('../../resources/images/transparent.gif');
 }
