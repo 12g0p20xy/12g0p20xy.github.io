@@ -65,6 +65,7 @@ header h1{
 .iphone img{
 	width: 100%;
 	max-width: 480px;
+	max-height: 540px; /*ie hack*/
 }
 
 .download{
@@ -142,7 +143,8 @@ header h1{
 nav{
 	text-align: center;
 	background: url(../images/nav.png) repeat-x;
-	padding-top: 60px;
+	margin-top: -30px;
+	padding-top: 50px;
 	padding-bottom: 45px;
 }
 nav ul{
