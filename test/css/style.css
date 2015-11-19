@@ -124,18 +124,22 @@ header h1{
 	color: white;
 }
 .btn.android{
+	background: #2AB2B0;
 	background: -webkit-linear-gradient(top, #20b8b6, #1ca2a1);
 	background: linear-gradient(top, #20b8b6, #1ca2a1);
 }
 .btn.android:hover{
+	background: #20bcba;
 	background: -webkit-linear-gradient(top, #20bcba, #1ca8a7);
 	background: linear-gradient(top, #20bcba, #1ca8a7);
 }
 .btn.ios{
+	background: #C8B59A;
 	background: -webkit-linear-gradient(top, #c9b59c, #b2a08a);
 	background: linear-gradient(top, #c9b59c, #b2a08a);
 }
 .btn.ios:hover{
+	background: #cbb9a0;
 	background: -webkit-linear-gradient(top, #cbb9a0, #b7a490);
 	background: linear-gradient(top, #cbb9a0, #b7a490);
 }
