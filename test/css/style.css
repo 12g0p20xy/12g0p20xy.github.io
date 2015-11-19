@@ -38,12 +38,6 @@ a, a:hover, a:focus{
 	*zoom: 1;
 	vertical-align: top;
 }
-.left{
-	float: left;
-}
-.right{
-	float: right;
-}
 
 header{
 	width: 100%;
@@ -148,7 +142,6 @@ header h1{
 nav{
 	text-align: center;
 	background: url(../images/nav.png) repeat-x;
-	margin-top: -40px;
 	padding-top: 60px;
 	padding-bottom: 45px;
 }
