@@ -17,24 +17,19 @@ body {
 	padding-bottom:10%;
 	color: #666;
 }
-section {
-	margin-bottom: .6rem;
-}
 img {
 	width: 100%;
 }
 article {
 	width: 100%;
-	margin-top: .6em;
 }
 section p {
-	width: 85%;
-	margin: 0 auto;
-	color: #D1D1D1;
+	width: 100%;
+	color: #fff;
 	font-size: 16px;
-	line-height: 1.5em;
+	line-height: 1.7em;
 	text-align: justify;
-	margin-bottom: 1rem;
+	margin-bottom: .8em;
 	word-break: break-all;
 }
 section span {
@@ -99,6 +94,9 @@ input[type=text]:focus {
 	border-top: 1px dashed #fff;
 	margin-top: 0;
 	padding-top: .5em;
+}
+.register article:first-child{
+	border-top: 0;
 }
 .register .last{
 	border-bottom: 0;
@@ -217,6 +215,65 @@ a {
 }
 
 
+/*刮奖页面*/
+body.game-page{
+	background: #d41c23;
+}
+.game-page section {
+	margin: 4%;
+	padding: 4%;
+	background: #c3161c;
+	border: 3px solid #d6141f;
+}
+.wrap{
+	margin-top: -9rem;
+}
+.game{
+	position: relative;
+}
+.ribbon{
+	position: absolute;
+	left: 50%;
+	margin-left: -40%;
+	top: -1.3rem;
+	width: 80%;
+	z-index: 99;
+}
+.gua{
+	width: 85%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+}
+/*.gua iframe{
+	width: 100%;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+}*/
+#mask{
+	width: 96%;
+	position: absolute;
+	left: 2%;
+	top: 2%;
+	z-index: 2;
+}
+#prize{
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
+.event{
+	padding-top: 8rem;
+}
+.event h3{
+	line-height: 1;
+	margin: .3em;
+	font-weight: normal;
+	color: #ffe963;
+	text-align: center;
+}
 
 /*pc查看效果 记得注释掉*/
 body{font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", sans-serif;}

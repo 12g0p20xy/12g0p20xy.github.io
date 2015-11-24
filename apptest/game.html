@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>奇瑞金融刮奖页面</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<link href="css/style.css" rel="stylesheet">
+<script src="http://www.wuhunews.cn/res/index/js/jquery.js"></script>
+<script src="js/jquery.eraser.js"></script>
+</head>
+<body class="game-page">
+    <header>
+      <img src="images/hd.jpg">
+    </header>
+    <div class="wrap">
+        <article class="game">
+        	<img class="ribbon" src="images/ribbon.png"></img>
+    	    <!-- <div class="gua">
+    	    	<iframe frameborder="0" scrolling="no" src="gua.html"></iframe>
+    	    	<img class="gua-bg" src="images/gua-bg.png">
+    	    </div> -->
+            <div class="gua">
+                <img id="prize" src="images/prize.jpg">
+                <img id="mask" src="images/mask.gif">
+            </div>
+        </article>
+        <article class="event">
+            <section>
+                <h3>奖项设置</h3>
+                <p>【一等奖】 飞利浦电动牙刷 1份<br>【二等奖】 笔记本 3份<br>【三等奖】 圆珠笔 10份</p>
+            </section>
+            <section>
+                <h3>活动说明</h3>
+                <p>1、关注奇瑞金融官方微信，即可获得一次抽奖机会。（每个ID限抽奖一次）。</p>
+                <p>2、个人信息作为兑换奖品的凭证，请确保填写的个人信息真实有效。</p>
+                <p>3、此次抽奖活动仅限于12月1日参与上海车展的客户。</p>
+                <p>4、其他区域恕不可参与，抽奖结果也不可兑换奖品；同时领取二等奖、三等奖的客户须在车展现场领取奖品；领取一等奖的客户须在12月31日前成功申请贷款，并到指定4S店申请。</p>
+            </section>
+        </article>
+    </div>
+    <script>
+        $(function(){
+            $('#mask').eraser();
+        })
+    </script>
+</body>
+</html>
