@@ -48,7 +48,6 @@ section p {
 }
 .btn {
 	display: block;
-	-webkit-appearance: none;
 	width: 100%;
 	padding: .4em 0;
 	margin: 0 auto;
@@ -98,11 +97,11 @@ input[type=text]:focus {
 	font-size: 14px;
 }
 .top-banner .bd{
-	width: 21em;
+	width: 22em;
 	margin: 0 auto;
 }
 .logo{
-	display: inline-block;
+	display: block;
 	background: url(../images/logo.gif) no-repeat 50%;
 	background-size: cover;
 	width: 2.4em;
