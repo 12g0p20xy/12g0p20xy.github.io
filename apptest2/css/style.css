@@ -71,7 +71,7 @@ section p {
 .top-banner{
 	position: fixed;
 	width: 100%;
-	padding: .5em 0;
+	padding: 0;
 	color: #fff;
 	background: rgba(0,0,0,.6);
 	font-size: 14px;
