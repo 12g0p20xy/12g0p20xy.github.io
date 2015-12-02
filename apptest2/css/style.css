@@ -69,9 +69,11 @@ section p {
 
 /*头部漂浮*/
 .top-banner{
-	position: fixed;
-	width: 100%;
-	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: .5em 0;
 	color: #fff;
 	background: rgba(0,0,0,.6);
 	font-size: 14px;
