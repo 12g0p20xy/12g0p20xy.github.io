@@ -39,6 +39,7 @@ section p {
 }
 .btn {
 	display: block;
+	-webkit-appearance: none;
 	width: 100%;
 	padding: .4em 0;
 	margin: 0 auto;
