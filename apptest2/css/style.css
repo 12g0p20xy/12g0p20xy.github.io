@@ -71,9 +71,6 @@ section p {
 .top-banner{
 	position: fixed;
 	width: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
 	padding: .5em 0;
 	color: #fff;
 	background: rgba(0,0,0,.6);
