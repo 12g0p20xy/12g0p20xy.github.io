@@ -6,9 +6,6 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-input[type="submit"], input[type="reset"], input[type="button"], select, button {
-	-webkit-appearance: none;
-}
 html, body {
 	margin:0;
 	padding:0;
@@ -47,7 +44,6 @@ section p {
 	float: right;
 }
 .btn {
-	border-radius: 0;
 	display: block;
 	width: 100%;
 	padding: .4em 0;
@@ -58,6 +54,9 @@ section p {
 	background: -webkit-gradient(linear, left top, left bottom, from(#5f4fc1), to(#2f2cb3));
 	font-size: 18px;
 	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.1), 0px 1px 1px rgba(0,0,0,0.18);
+	/*ios-reset*/
+	border-radius: 0;
+	line-height: 1;
 }
 .btn.voted{
 	background: #aeafca;
