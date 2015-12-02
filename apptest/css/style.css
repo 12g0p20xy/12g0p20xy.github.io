@@ -69,7 +69,7 @@ section p {
 
 /*头部漂浮*/
 .top-banner{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
