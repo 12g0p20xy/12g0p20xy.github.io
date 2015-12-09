@@ -6,6 +6,9 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
+input[type="submit"], input[type="reset"], input[type="button"], select, button {
+	-webkit-appearance: none;
+}
 html, body {
 	margin:0;
 	padding:0;
@@ -13,189 +16,158 @@ html, body {
 	font-size: 24px;
 }
 body {
-	background: #eef4f5;
+	background: #fa2950;
 	padding-bottom:10%;
-	color: #666;
 }
-header img{
-	width: 100%;
-	height: auto;
+section {
+	margin-bottom: .6rem;
 }
 img {
 	width: 100%;
-	height: 100%;
 }
-section {
+article {
 	width: 100%;
 }
 section p {
-	width: 100%;
-	color: #2f282a;
+	width: 85%;
+	margin: 0 auto;
+	color: #fff;
 	font-size: 16px;
-	line-height: 1.7em;
+	line-height: 1.5em;
 	text-align: justify;
-	margin-bottom: .8em;
+	margin-bottom: 1rem;
 	word-break: break-all;
 }
-.left{
-	float: left;
+section span {
+	display: block;
+	color: #fcdb25;
+	font-size: 20px;
+	margin-bottom: .5em;
 }
-.right{
-	float: right;
+section img {
+	margin-bottom: .3rem;
 }
 .btn {
 	display: block;
 	width: 100%;
 	padding: .4em 0;
 	margin: 0 auto;
-	color: white;
-	outline: none;
+	color: #C90531;
 	border: none;
-	background: -webkit-gradient(linear, left top, left bottom, from(#5f4fc1), to(#2f2cb3));
-	font-size: 18px;
-	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.1), 0px 1px 1px rgba(0,0,0,0.18);
-	/*ios-reset*/
-	border-radius: 0;
-	line-height: 1;
+	outline: none;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFE300), to(#FFC900));
+	font-size: 20px;
+	border-radius: 3px;
+	/*box-shadow: inset 0px 1px 0px rgba(255,255,255,0.1),0px 1px 1px rgba(0,0,0,0.18);*/
 }
-.btn.voted{
-	background: #aeafca;
+.btn:active {
+	background: #FFAF00;
 }
 .login .container{
 	width:90%;
 	margin: 0 auto;
 	max-width: 20rem;
 }
-
-/*头部漂浮*/
-.top-banner{
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding: .5em 0;
-	color: #fff;
-	background: rgba(0,0,0,.6);
-	font-size: 14px;
+input[type=text] {
+	width:100%;
+	height:1.6rem;
+	border:none;
+	outline: none;
+	color:#fa2951;
+	font-size:18px;
+	text-indent:1em;
+	border-radius: 3px;
+	margin-bottom: .6rem;
+	background: #F3E7E7;
+	-webkit-transition: .2s ease-out;
+		    transition: .2s ease-out;
 }
-.top-banner .bd{
-	width: 21em;
+input[type=text]:focus {
+	box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	background: #fff;
+}
+#outer-cont {
+	position: relative;
+	width: 100%;
+}
+#inner-cont {
+	position: relative;
+	width: 100%;
+	top: -232px;
+}
+#outer {
+	width: 310px;
+	max-width: 310px;
+	height: 310px;
 	margin: 0 auto;
 }
-.logo{
-	display: block;
-	background: url(../images/logo.gif) no-repeat 50%;
-	background-size: cover;
-	width: 2.4em;
-	height: 2.4em;
-	border-radius: 50%;
-	margin-top: .4em;
-	margin-right: .5em;
-}
-.social-btn{
-	width: auto;
-	padding: .2em 1em;
-	border-radius: 3px;
-	font-size: 14px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#3CBD31), to(#319A23));
-	margin-left: .5em;
-	margin-top: .8em;
+#inner {
+	width: 112px;
+	max-width: 112px;
+	height: 142px;
+	margin: 0 auto;
+	cursor: pointer;
 }
 
-/*活动说明*/
-.event{
-	text-align: center;
+/*中奖页面*/
+.content02 {
+	margin-top:1rem;
 }
-.event h2{
-	font-size: 32px;
-	font-weight: 500;
-	color: #4f49a8;
-	margin: .4em auto;
-	max-width: 80%;
-}
-.event p{
-	text-align: center;
-}
-.event b{
-	display: block;
-	font-size: 20px;
+.content02 h2 {
+	color: white;
+	font-size: 18px;
 	font-weight: normal;
-	color: #392d8b;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: .1rem;
 }
-
-/*投票*/
-ul, li{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-ul{
-	font-size: 0;
-}
-.vote li{
-	width: 50%;
+h2.success {
+	width: 8rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-size: 20px;
+	text-align: center;
 	padding: 5px;
-	display: inline-block;
-}
-.item{
-	background: #fff;
-	width: 100%;
-	height: 100%;
-	border-radius: 3px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-	overflow: hidden;
-}
-.overlay{
-	display: block;
-	width: 100%;
-	height: 160px;
-	background: silver;
-	overflow: hidden;
+	background: #EC1134;
+	border-radius: 6px;
+	font-weight: bold;
+	margin-bottom: 1rem;
 }
 .info{
-	padding: 10px 5px;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 1rem;
 }
-.info p{
-	line-height: 1.2;
-	margin: 0;
-	width: 100%;
-	white-space:nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.title b{
+.info th{
 	font-weight: normal;
+	font-size: 18px;
+	color: #fff;
+	padding: .5rem;
 }
-.ticket{
-	color: #ff6e3b;
-	font-size: 20px;
-	padding-left: .3em;
+th:first-child{
+	text-align: right;
+}
+th:last-child{
+	text-align: left;
 }
 
-/*2级页面*/
-.detail header{
-	height: 154px;
-	overflow: hidden;
+/*自定义部分*/
+.game {
+	height: 310px;
+	margin-top: -.6rem;
 }
-.detail .wrap{
-	padding: 4%;
+.qr{
+	padding: 5% 25%;
 }
-.detail img{
-	width: 100%;
-	height: auto;
-}
-.detail p{
-	width: 100%;
-	font-size: 16px;
-	line-height: 1.7em;
-	text-align: justify;
-	margin-bottom: .8em;
-	word-break: break-all;
-}
-a{
-	text-decoration: none;
+.event h3{
+	margin: 0 auto;
+	padding: 0;
+	font-size: 30px;
+	color: #fff;
+	max-width: 100%;
+	margin-bottom: 1rem;
 	text-align: center;
 }
 
-/*pc查看效果 可以注释掉*/
-/*body{font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", sans-serif;}*/
+/*pc查看效果 记得注释掉*/
+body{font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", sans-serif;}
