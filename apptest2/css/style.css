@@ -16,8 +16,7 @@ html, body {
 	font-size: 24px;
 }
 body {
-	background: #fa2950;
-	padding-bottom:10%;
+	background: #fff;
 }
 section {
 	margin-bottom: .6rem;
@@ -28,24 +27,18 @@ img {
 article {
 	width: 100%;
 }
-section p {
+p {
 	width: 85%;
 	margin: 0 auto;
 	color: #fff;
 	font-size: 16px;
-	line-height: 1.5em;
+	line-height: 1.5;
 	text-align: justify;
-	margin-bottom: 1rem;
+	margin-bottom: .8em;
 	word-break: break-all;
 }
-section span {
-	display: block;
-	color: #fcdb25;
-	font-size: 20px;
-	margin-bottom: .5em;
-}
 section img {
-	margin-bottom: .3rem;
+	margin-bottom: .2rem;
 }
 .btn {
 	display: block;
@@ -55,13 +48,23 @@ section img {
 	color: #C90531;
 	border: none;
 	outline: none;
-	background: -webkit-gradient(linear, left top, left bottom, from(#FFE300), to(#FFC900));
+	/*background: -webkit-gradient(linear, left top, left bottom, from(#FFE300), to(#FFC900));*/
+	background: #FFC900;
+    background-image: repeating-linear-gradient(30deg,
+                        hsla(0,0%,100%,.2),
+                        hsla(0,0%,100%,.2) 15px,
+                        transparent 0, transparent 30px);
 	font-size: 20px;
 	border-radius: 3px;
-	/*box-shadow: inset 0px 1px 0px rgba(255,255,255,0.1),0px 1px 1px rgba(0,0,0,0.18);*/
+	box-shadow: inset 0 -3px 0 #F1AA1D;
 }
 .btn:active {
 	background: #FFAF00;
+	box-shadow: inset 0 -1px 0 #F1AA1D;
+	background-image: repeating-linear-gradient(30deg,
+	                    hsla(0,0%,100%,.2),
+	                    hsla(0,0%,100%,.2) 15px,
+	                    transparent 0, transparent 30px);
 }
 .login .container{
 	width:90%;
@@ -73,18 +76,19 @@ input[type=text] {
 	height:1.6rem;
 	border:none;
 	outline: none;
-	color:#fa2951;
+	color:#A90B0B;
 	font-size:18px;
 	text-indent:1em;
 	border-radius: 3px;
 	margin-bottom: .6rem;
-	background: #F3E7E7;
 	-webkit-transition: .2s ease-out;
 		    transition: .2s ease-out;
+	background: #EFEFEF;
 }
 input[type=text]:focus {
-	box-shadow: 0 1px 2px rgba(0,0,0,.3);
-	background: #fff;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+	background: #D10000;
+	color:#fff;
 }
 #outer-cont {
 	position: relative;
@@ -110,10 +114,10 @@ input[type=text]:focus {
 }
 
 /*中奖页面*/
-.content02 {
+.result {
 	margin-top:1rem;
 }
-.content02 h2 {
+.result h2 {
 	color: white;
 	font-size: 18px;
 	font-weight: normal;
@@ -123,7 +127,6 @@ input[type=text]:focus {
 }
 h2.success {
 	width: 8rem;
-	height: 1.2rem;
 	line-height: 1.2rem;
 	font-size: 20px;
 	text-align: center;
@@ -134,7 +137,7 @@ h2.success {
 	margin-bottom: 1rem;
 }
 .info{
-	width: 80%;
+	width: 86%;
 	margin: 0 auto;
 	margin-bottom: 1rem;
 }
@@ -156,18 +159,24 @@ th:last-child{
 	height: 310px;
 	margin-top: -.6rem;
 }
-.qr{
-	padding: 5% 25%;
+p{
+	color: #4D4D4D;
 }
 .event{
-	margin-top: -1rem;
+	margin-top: 1rem;
 }
-.event h3{
-	margin: 0 auto;
-	padding-left: 7%;
-	font-size: 28px;
-	color: #fff;
-	margin-bottom: 1rem;
+.event b{
+	color: #D10000;
+	display: block;
+	font-size: 20px;
+}
+.event i{
+	font-weight: bold;
+	font-style: normal;
+	color: #D10000;
+}
+.center{
+	text-align: center;
 }
 
 /*pc查看效果 记得注释掉*/
