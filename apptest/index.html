@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>徽商银行刮刮卡</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="top-banner">
+		<div class="bd">
+			<span class="logo left"></span>
+			<p class="left">关注微信号#徽商银行芜湖分行</p>
+			<a class="social-btn left" href="http://mp.weixin.qq.com/s?__biz=MzAwODUzNDI3NA==&mid=400683961&idx=1&sn=98a992be721af88a2b0b52b69fb00884#rd">关注</a>
+		</div>
+	</div>
+    <header>
+      <img src="images/hd.jpg">
+    </header>
+    <div class="wrap">
+        <article class="game">
+            <div class="gua">
+                <img id="prize" src="images/prize2.jpg">
+                <img id="mask" src="images/mask.jpg">
+            </div>
+        </article>
+        <article class="event">
+            <section>
+                <h3>活动时间</h3>
+                <p>2015年12月21日-2016年1月10日</p>
+                <p>每日8点、12点、18点、21点、23点五个整点开抢。</p>
+            </section>
+            <section>
+                <h3>活动说明</h3>
+                <p>关注#徽商银行芜湖分行#公众号，即可参加持续20天抢红包活动。</p>
+                <p>每日5个整点开展抢红包活动，每个微信号一天只能抢一次。</p>
+                <p>为了保证个人信息和账户的安全，徽商银行工作人员会在3个工作日内将红包发送到您的微信钱包！</p>
+            </section>
+        </article>
+    </div>
+    <footer><img src="images/ft.jpg"></footer>
+
+    <script src="http://www.wuhunews.cn/res/index/js/jquery.js"></script>
+    <script src="js/jquery.eraser.js"></script>
+    <script>
+        $(function(){
+            $('#mask').eraser({
+                size: 40,
+                completeRatio: .65,
+                completeFunction: register
+            });
+            function register(){
+                if (confirm("请登陆领取红包")) {
+                  window.location.href="register.html";
+                }
+            }
+        }) 
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* CSS Document*/
+
+*{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html, body {
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	font-size: 24px;
+}
+body {
+	background: red;
+	background: url(../images/bg.jpg);
+	background-size: 100%;
+	color: #666;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+img {
+	width: 100%;
+}
+article {
+	width: 100%;
+}
+section p {
+	width: 100%;
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.7em;
+	text-align: justify;
+	margin-bottom: .8em;
+	word-break: break-all;
+}
+section span {
+	display: block;
+	color: #fcdb25;
+	font-size: 20px;
+	margin-bottom: .5em;
+}
+section img {
+	margin-bottom: .3rem;
+}
+.btn {
+	display: block;
+	width: 100%;
+	padding: .4em 0;
+	margin: 0 auto;
+	color: white;
+	outline: none;
+	border: none;
+	background: #bf1a20;
+	font-size: 20px;
+	border-radius: 3px;
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.1), 0px 1px 1px rgba(0,0,0,0.18);
+}
+.btn:active {
+	background: #E41C1C;
+}
+.login .container{
+	width:90%;
+	margin: 0 auto;
+	max-width: 20rem;
+}
+input[type=text] {
+	width:100%;
+	height:1.6rem;
+	border:none;
+	outline: none;
+	color:#999;
+	font-size:18px;
+	text-indent:1em;
+	background-color:#FFF;
+	border-radius: 3px;
+	margin-bottom: .6rem;
+	opacity: .9;
+	-webkit-transition: .2s ease-out;
+		    transition: .2s ease-out;
+}
+input[type=text]:focus {
+	box-shadow: inset 0 0 3px #bf1a20;
+	opacity: 1;
+}
+/*刮奖页面*/
+.gua{
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	margin-top: -.6rem;
+}
+#mask{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+#prize{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.event{
+	padding-top: 5.6rem;
+}
+.event h3, .info h3{
+	line-height: 1;
+	margin: .3em;
+	font-size: 20px;
+	font-weight: normal;
+	color: #ffe963;
+	text-align: center;
+	margin-top: 1em;
+}
+.event h3:before, .event h3:after{
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height: .6em;
+	margin: 0 .5em; 
+	background: url(../images/dec.gif) no-repeat 0 50%;
+	background-size: cover;
+}
+.event h3:before{
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.event p{
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+}
+footer{
+	padding-top: .6rem;
+}
+
+.time{
+	text-align: center;
+	color: #ffe963;
+	padding-bottom: 1rem;
+}
+.time h3{
+	font-size: 26px;
+}
+.info p{
+	padding: 0 10%;
+}
+.info h3{
+	line-height: 1px;
+	border-left: 3em solid #ffe963;
+	border-right: 3em solid #ffe963;
+}
+ul, li{
+	padding: 0;
+	margin: 0;
+}
+.name-list{
+	list-style: none;
+	margin-top: 1.5rem;
+}
+.name-list li{
+	margin: 0 auto;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	margin-bottom: .3rem;
+}
+
+/*pc查看效果 可以注释掉*/
+body{font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", sans-serif;}
+
+
+/*头部漂浮*/
+.top-banner{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: .5em 0;
+	color: #fff;
+	background: rgba(0,0,0,.6);
+	font-size: 14px;
+}
+.top-banner .bd{
+	width: 21em;
+	margin: 0 auto;
+}
+.logo{
+	display: block;
+	background: url(../images/logo.gif) no-repeat 50%;
+	background-size: cover;
+	width: 2.4em;
+	height: 2.4em;
+	border-radius: 50%;
+	margin-top: .4em;
+	margin-right: .5em;
+}
+.social-btn{
+	text-decoration: none;
+	width: auto;
+	padding: .2em 1em;
+	border-radius: 3px;
+	font-size: 14px;
+	color: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3CBD31), to(#319A23));
+	margin-left: .5em;
+	margin-top: .8em;
+}

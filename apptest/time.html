@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>徽商银行刮刮卡</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <img src="images/hd.jpg">
+    </header>
+    <div class="wrap">
+        <article class="time">
+            <h3>【8：00  早起加个油】</h3>
+            <h3>距离下次刮奖开始还有</h3>
+            <div id="fnTimeCountDown">
+                <span class="hour">00</span>时
+                <span class="mini">00</span>分
+                <span class="sec">00</span>秒
+                <p><span class="sec">倒计时为0时,点击下方"抢红包"按钮开抢</span></p>
+            </div>
+        </article>
+        <article class="info">
+            <h3>已经中奖的用户</h3>
+            <ul class="name-list">
+                <li>姓名1 13033049930 10元</li>
+                <li>姓名1 13033049930 10元</li>
+                <li>姓名1 13033049930 10元</li>
+            </ul>
+        </article>
+    </div>
+    <footer><img src="images/ft.jpg"></footer>
+
+    <script src="http://www.wuhunews.cn/res/index/js/jquery.js"></script>
+    <script src="js/fnTimeCountDown.js"></script>
+    <script>
+    $("#fnTimeCountDown").fnTimeCountDown("2015/12/20 15:45:13");
+    </script>
+</body>
+</html>
