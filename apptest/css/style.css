@@ -155,7 +155,7 @@ th:last-child{
 }
 
 /*自定义部分*/
-video{
+.video iframe{
 	width: 90%;
 	margin-left: 5%;
 	margin-bottom: .6rem;
