@@ -6,6 +6,9 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
+input[type="submit"], input[type="reset"], input[type="button"], select, button {
+	-webkit-appearance: none;
+}
 html, body {
 	margin:0;
 	padding:0;
@@ -13,16 +16,11 @@ html, body {
 	font-size: 24px;
 }
 body {
-	background: red;
-	background: url(../images/bg.jpg);
+	background: #10102e;
 	background-size: 100%;
-	color: #666;
 }
-.left{
-	float: left;
-}
-.right{
-	float: right;
+section {
+	margin-bottom: .6rem;
 }
 img {
 	width: 100%;
@@ -30,39 +28,34 @@ img {
 article {
 	width: 100%;
 }
-section p {
-	width: 100%;
+p {
+	width: 90%;
+	margin: 0 auto;
 	color: #fff;
 	font-size: 16px;
-	line-height: 1.7em;
+	line-height: 1.5;
 	text-align: justify;
 	margin-bottom: .8em;
 	word-break: break-all;
 }
-section span {
-	display: block;
-	color: #fcdb25;
-	font-size: 20px;
-	margin-bottom: .5em;
-}
 section img {
-	margin-bottom: .3rem;
+	margin-bottom: .2rem;
 }
 .btn {
 	display: block;
 	width: 100%;
 	padding: .4em 0;
 	margin: 0 auto;
-	color: white;
-	outline: none;
+	color: #fff;
 	border: none;
-	background: #bf1a20;
+	outline: none;
+	background: #B20C20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#CF192F), to(#B20C20));
 	font-size: 20px;
 	border-radius: 3px;
-	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.1), 0px 1px 1px rgba(0,0,0,0.18);
 }
 .btn:active {
-	background: #E41C1C;
+	background: #70000E;
 }
 .login .container{
 	width:90%;
@@ -74,146 +67,127 @@ input[type=text] {
 	height:1.6rem;
 	border:none;
 	outline: none;
-	color:#999;
+	color:#A90B0B;
 	font-size:18px;
 	text-indent:1em;
-	background-color:#FFF;
 	border-radius: 3px;
 	margin-bottom: .6rem;
-	opacity: .9;
 	-webkit-transition: .2s ease-out;
 		    transition: .2s ease-out;
+	background: #827E8F;
+	box-shadow: 0 1px 1px rgba(0,0,0,.2);
 }
 input[type=text]:focus {
-	box-shadow: inset 0 0 3px #bf1a20;
-	opacity: 1;
+	box-shadow: 0 1px 1px rgba(0,0,0,.2);
+	background: #4F4D6A;
+	color:#fff;
+	/*outline: 3px solid #A76ECC;*/
+	outline-offset: -3px; 
 }
-/*刮奖页面*/
-.gua{
-	width: 90%;
-	height: auto;
-	margin: 0 auto;
+input::-webkit-input-placeholder{
+	color: #DCDCDC;
+}
+input:hover::-webkit-input-placeholder{
+	color: #DCDCDC;
+}
+#outer-cont {
 	position: relative;
-	margin-top: -.6rem;
-}
-#mask{
 	width: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 2;
 }
-#prize{
+#inner-cont {
+	position: relative;
 	width: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 1;
+	top: -232px;
 }
-
-.event{
-	padding-top: 5.6rem;
-}
-.event h3, .info h3{
-	line-height: 1;
-	margin: .3em;
-	font-size: 20px;
-	font-weight: normal;
-	color: #ffe963;
-	text-align: center;
-	margin-top: 1em;
-}
-.event h3:before, .event h3:after{
-	content: "";
-	display: inline-block;
-	width: 1em;
-	height: .6em;
-	margin: 0 .5em; 
-	background: url(../images/dec.gif) no-repeat 0 50%;
-	background-size: cover;
-}
-.event h3:before{
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
-}
-.event p{
-	text-align: center;
-	width: 90%;
+#outer {
+	width: 310px;
+	max-width: 310px;
+	height: 310px;
 	margin: 0 auto;
 }
-footer{
-	padding-top: .6rem;
+#inner {
+	width: 112px;
+	max-width: 112px;
+	height: 142px;
+	margin: 0 auto;
+	cursor: pointer;
 }
 
-.time{
-	text-align: center;
-	color: #ffe963;
-	padding-bottom: 1rem;
+/*中奖页面*/
+.result {
+	margin-top:1rem;
 }
-.time h3{
-	font-size: 26px;
-}
-.info p{
-	padding: 0 10%;
-}
-.info h3{
-	line-height: 1px;
-	border-left: 3em solid #ffe963;
-	border-right: 3em solid #ffe963;
-}
-ul, li{
-	padding: 0;
-	margin: 0;
-}
-.name-list{
-	list-style: none;
-	margin-top: 1.5rem;
-}
-.name-list li{
-	margin: 0 auto;
-	text-align: center;
+.result h2 {
+	color: white;
 	font-size: 18px;
-	color: #fff;
-	margin-bottom: .3rem;
-}
-
-/*pc查看效果 可以注释掉*/
-body{font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", sans-serif;}
-
-
-/*头部漂浮*/
-.top-banner{
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding: .5em 0;
-	color: #fff;
-	background: rgba(0,0,0,.6);
-	font-size: 14px;
-}
-.top-banner .bd{
-	width: 21.5em;
+	font-weight: normal;
+	width: 80%;
 	margin: 0 auto;
+	margin-bottom: .1rem;
 }
-.logo{
+h2.success {
+	width: 8rem;
+	line-height: 1.2rem;
+	font-size: 20px;
+	text-align: center;
+	padding: 5px;
+	background: #EC1134;
+	border-radius: 6px;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+.info{
+	width: 86%;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+}
+.info th{
+	font-weight: normal;
+	font-size: 18px;
+	color: #4D4D4D;
+	padding: .5rem;
+}
+th:first-child{
+	text-align: right;
+}
+th:last-child{
+	text-align: left;
+}
+
+/*自定义部分*/
+video{
+	width: 90%;
+	margin-left: 5%;
+	margin-bottom: .6rem;
+}
+.game {
+	height: 310px;
+	margin-top: -1rem;
+}
+.event img{
+	width: 90%;
+	margin-left: 5%;
+}
+p{
+	color: #D8D8D8;
+}
+.event{
+	margin-top: 1rem;
+}
+.event b{
+	color: #CF192F;
 	display: block;
-	background: url(../images/logo.gif) no-repeat 50%;
-	background-size: cover;
-	width: 2.4em;
-	height: 2.4em;
-	border-radius: 50%;
-	margin-top: .4em;
-	margin-right: .5em;
+	font-size: 20px;
 }
-.social-btn{
-	text-decoration: none;
-	width: auto;
-	padding: .2em 1em;
-	border-radius: 3px;
-	font-size: 14px;
-	color: #fff;
-	background: -webkit-gradient(linear, left top, left bottom, from(#3CBD31), to(#319A23));
-	margin-left: .5em;
-	margin-top: .8em;
+.event i{
+	font-size: 18px;
+	font-weight: bold;
+	font-style: normal;
+	color: #CF192F;
 }
+.center{
+	text-align: center;
+}
+
+/*pc查看效果 记得注释掉*/
+body{font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", sans-serif;}
