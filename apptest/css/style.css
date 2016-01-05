@@ -16,8 +16,9 @@ html, body {
 	font-size: 24px;
 }
 body {
-	background: #10102e;
-	background-size: 100%;
+	background: #17797c;
+	background: -webkit-linear-gradient(to left, #006366, #1a7d81, #005c61);
+	background: linear-gradient(to left, #006366, #1a7d81, #005c61);
 }
 section {
 	margin-bottom: .6rem;
@@ -44,18 +45,19 @@ section img {
 .btn {
 	display: block;
 	width: 100%;
-	padding: .4em 0;
+	height: 1.6rem;
 	margin: 0 auto;
 	color: #fff;
 	border: none;
 	outline: none;
-	background: #B20C20;
-	background: -webkit-gradient(linear, left top, left bottom, from(#CF192F), to(#B20C20));
+	background: #F29136;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F1A21D), to(#F29136));
+	background: gradient(linear, left top, left bottom, from(#F1A21D), to(#F29136));
 	font-size: 20px;
 	border-radius: 3px;
 }
 .btn:active {
-	background: #70000E;
+	background: #EB7024;
 }
 .login .container{
 	width:90%;
@@ -74,21 +76,21 @@ input[type=text] {
 	margin-bottom: .6rem;
 	-webkit-transition: .2s ease-out;
 		    transition: .2s ease-out;
-	background: #827E8F;
+	background: #F7F0D7;
 	box-shadow: 0 1px 1px rgba(0,0,0,.2);
 }
 input[type=text]:focus {
 	box-shadow: 0 1px 1px rgba(0,0,0,.2);
-	background: #4F4D6A;
+	background: #F9D490;
 	color:#fff;
 	/*outline: 3px solid #A76ECC;*/
 	outline-offset: -3px; 
 }
 input::-webkit-input-placeholder{
-	color: #DCDCDC;
+	color: #8D8D8D;
 }
 input:hover::-webkit-input-placeholder{
-	color: #DCDCDC;
+	color: #8D8D8D;
 }
 #outer-cont {
 	position: relative;
@@ -144,7 +146,7 @@ h2.success {
 .info th{
 	font-weight: normal;
 	font-size: 18px;
-	color: #4D4D4D;
+	color: #fff;
 	padding: .5rem;
 }
 th:first-child{
@@ -155,21 +157,6 @@ th:last-child{
 }
 
 /*自定义部分*/
-.videobox{
-	width: 90%;
-	margin-left: 5%;
-	position: relative;
-	padding-bottom: 56.25%;
-	height: 0;
-	/*overflow: hidden;*/
-}
-.videobox iframe{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
 .game {
 	height: 310px;
 }
@@ -177,24 +164,31 @@ th:last-child{
 	width: 90%;
 	margin-left: 5%;
 }
-p{
-	color: #D8D8D8;
-}
 .event{
 	margin-top: 1rem;
 }
-.event b{
-	color: #CF192F;
+b{
 	display: block;
+	color: #CF192F;
 	font-size: 20px;
 }
-.event i{
+i{
+	display: block;
 	font-size: 18px;
 	font-weight: bold;
 	font-style: normal;
-	color: #CF192F;
+	color: #FFDA40;
 }
 .center{
+	text-align: center;
+}
+.guide{
+	display: block;
+	color: #fff;
+	font-size: 18px;
+	background: #F39800;
+	padding: .2em 0;
+	text-decoration: none;
 	text-align: center;
 }
 
