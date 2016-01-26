@@ -16,9 +16,7 @@ html, body {
 	font-size: 24px;
 }
 body {
-	background: #17797c;
-	background: -webkit-linear-gradient(to left, #006366, #1a7d81, #005c61);
-	background: linear-gradient(to left, #006366, #1a7d81, #005c61);
+	background: #310000;
 }
 section {
 	margin-bottom: .6rem;
@@ -56,9 +54,6 @@ section img {
 	font-size: 20px;
 	border-radius: 3px;
 }
-.btn:active {
-	background: #EB7024;
-}
 .login .container{
 	width:90%;
 	margin: 0 auto;
@@ -69,7 +64,7 @@ input[type=text] {
 	height:1.6rem;
 	border:none;
 	outline: none;
-	color:#A90B0B;
+	color:#d81245;
 	font-size:18px;
 	text-indent:1em;
 	border-radius: 3px;
@@ -81,16 +76,10 @@ input[type=text] {
 }
 input[type=text]:focus {
 	box-shadow: 0 1px 1px rgba(0,0,0,.2);
-	background: #F9D490;
+	/*background: #F990A5;*/
 	color:#fff;
 	/*outline: 3px solid #A76ECC;*/
 	outline-offset: -3px; 
-}
-input::-webkit-input-placeholder{
-	color: #8D8D8D;
-}
-input:hover::-webkit-input-placeholder{
-	color: #8D8D8D;
 }
 #outer-cont {
 	position: relative;
@@ -159,10 +148,12 @@ th:last-child{
 /*自定义部分*/
 .game {
 	height: 310px;
+	margin-top: -3.6rem;
 }
 .event img{
 	width: 90%;
 	margin-left: 5%;
+	margin-bottom: .5em;
 }
 .event{
 	margin-top: 1rem;
@@ -179,18 +170,18 @@ i{
 	font-style: normal;
 	color: #FFDA40;
 }
-.center{
-	text-align: center;
+.control-group .controls{
+	position: relative;
 }
-.guide{
-	display: block;
-	color: #fff;
-	font-size: 18px;
-	background: #F39800;
-	padding: .2em 0;
-	text-decoration: none;
-	text-align: center;
+.add-on{
+	position: absolute;
+    top: .36rem;
+    right: 10px;
+}
+i.icon-th{
+	background: url("../images/glyphicons-halflings.png");
+	background-position: -240px 0;
 }
 
 /*pc查看效果 记得注释掉*/
-body{font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", sans-serif;}
+/*body{font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", sans-serif;}*/
