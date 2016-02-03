@@ -21,6 +21,11 @@ body {
 section {
 	margin-bottom: .6rem;
 }
+ul, li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 img {
 	width: 100%;
 }
@@ -74,116 +79,116 @@ input[type=text] {
 	background: #F7F0D7;
 	box-shadow: 0 1px 1px rgba(0,0,0,.2);
 }
-input[type=text]:focus {
-	box-shadow: 0 1px 1px rgba(0,0,0,.2);
-	/*background: #F990A5;*/
-	color:#fff;
-	/*outline: 3px solid #A76ECC;*/
-	outline-offset: -3px; 
-}
-#outer-cont {
-	position: relative;
-	width: 100%;
-}
-#inner-cont {
-	position: relative;
-	width: 100%;
-	top: -232px;
-}
-#outer {
-	width: 310px;
-	max-width: 310px;
-	height: 310px;
-	margin: 0 auto;
-}
-#inner {
-	width: 112px;
-	max-width: 112px;
-	height: 142px;
-	margin: 0 auto;
-	cursor: pointer;
-}
-
-/*中奖页面*/
-.result {
-	margin-top:1rem;
-}
-.result h2 {
-	color: white;
-	font-size: 18px;
-	font-weight: normal;
-	width: 80%;
-	margin: 0 auto;
-	margin-bottom: .1rem;
-}
-h2.success {
-	width: 8rem;
-	line-height: 1.2rem;
-	font-size: 20px;
-	text-align: center;
-	padding: 5px;
-	background: #EC1134;
-	border-radius: 6px;
-	font-weight: bold;
-	margin-bottom: 1rem;
-}
-.info{
-	width: 86%;
-	margin: 0 auto;
-	margin-bottom: 1rem;
-}
-.info th{
-	font-weight: normal;
-	font-size: 18px;
-	color: #fff;
-	padding: .5rem;
-}
-th:first-child{
-	text-align: right;
-}
-th:last-child{
-	text-align: left;
-}
 
 /*自定义部分*/
-.game {
-	height: 310px;
-	margin-top: -3.6rem;
+a, a:active{
+	text-decoration: none;
 }
-.event img{
-	width: 90%;
-	margin-left: 5%;
-	margin-bottom: .5em;
+body{
+	background: url(../images/bg.gif);
+	background-size: 100%;
 }
-.event{
-	margin-top: 1rem;
+.vote{
+	margin-top: -.5rem;
 }
-b{
-	display: block;
-	color: #CF192F;
-	font-size: 20px;
+.vote h3{
+	width: 100%;
+	height: 31.5px;
+	background: url(../images/hbg.jpg);
+	background-size: 100%;
+	text-indent: -9999em;
 }
-i{
-	display: block;
-	font-size: 18px;
-	font-weight: bold;
-	font-style: normal;
-	color: #FFDA40;
+
+.item{
+	padding: 0 12px;
+	font-size: 0;
 }
-.control-group .controls{
+.item li{
+	width: 50%;
+	display: inline-block;
+	padding: 5px;
+	margin-bottom: 2%;
 	position: relative;
 }
-.add-on{
+.item img{
+	width: 100%;
+}
+.info i{
 	position: absolute;
-    top: .36rem;
-    right: 10px;
+	left: 5px;
+	top: 5px;
+	font-size: 14px;
+	color: #fff6ab;
+	font-style: normal;
+	padding: .3em .5em;
+	background: rgba(0,0,0,.6);
+	z-index: 10;
 }
-i.icon-th{
-	background: url("../images/glyphicons-halflings.png");
-	background-position: -240px 0;
+.info i:before{
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-right: .3em;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADh0lEQVRoQ+1ZXVLaUBT+joXOJDzU7kBXULqC4g5gpsmruILWFYgrEFcgfU06g65AugJ1BeIK1IeEmUI5ndyQQDTk3pBcRcb75AxyOd/5+c53ziVsyKENwYF3IOsWSS0RYe5vYzQ5AqMtABN6MCrHRK0HXQ7QA8R3LwE0EkYzX8Os7ukCUzoQ9twOCEcA7kCVEMx0fA6iL2AcU83q6IhKqUB45DbACKIBVPgrfbSvgz/5r1PHhK4AHpJp7641EFEX/uQWhO00z7PvsigX0yrVeZFTSruUfacPUBPgP2TaifqII8J8QzW7vrYRYd/9CeAEzI8wqztPC5p9pwvQDzB+Uc0KmazkUzgi8/wPioFaVPt+/tRG9tx7kXILdVMyjmKdPayL8SWI6gCfkmkHkUmy7shpg+kMGtMqbFUFDnvOGYjaWUay51wJoMQHZNi9Aj+X+dWVgbD3uwnivqiLKhoR1S7+WkzHzI9Us7d1gVg5Ijzq72A6uRJ5n+Fp9tweCPs6G2Eh+o3TBbgg02qmeVqA5cmt+MyofNYlTVYGElNpIEGMSn2ZgS9BuYsOzFUjyyTIM6Za7PJU2SWjNdRZH7lqRCZBEkUeNciVrOchQEOAz8m0T1WvUI4Ix9L8uQR53gBnjKZqxbL/yyH9lYDIJEhRe5OUHTDivzow7cykv5KskQJJplS6BCkTSHTXnPXUpL8cSJzv8pQqG1Ae6a8AxBkA9G2ZICzb+Dgi0TCmqNEUgIQDkU7lmt5QZ9Mm4wFbfCjTacpAdE12ywkr2MSMO2KOCc6SEUG5s+fJUx1pFjNmyuSZq7O/OpBwR3YvunfGvL+2qZVS9JmjwFoDUZlA30SNLIwLmUpbSTS+Zo2wP+thoaV7ZFiDZYSy1qklWDdaJQEDMq29twtk41gLuCPT2nmTEQmXHOO+WCdJtpTyGvGcazEXaNwSpmstp40pnYRLcb7BVrWZNTIrAHm5lU5iwIpXSXwDs9qQbWHkQKI3j0CFmpVd2YVl6a28bypSIDMKDGeScCHQKstY2T15epgakLDoglr5FICBUT3QHRmOlt8StlKWKAnxNsZAgBHDDrr4wBdpO1+Zp7M+D1+Ex/tgCt4ig33xIZlWV3anUkRiMGINOu6FafYCJ8fDUC4gc0BuA9PgDZ3rgprLPoJu0ZWNt7kGq7Jt1HXfShHRZUyRe9+BFPGeju9uTET+AyVsBVE1CRHGAAAAAElFTkSuQmCC") no-repeat;
+	background-size: 1em;
 }
-.datetimepicker{
+h4, h5{
+	margin: 0;
+	padding: 0;
+	margin-bottom: .5em;
+	line-height: 1.2;
+	font-weight: normal;
+	width: 100%;
+	font-size: 14px;
+	color: #fff6ab;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+h4{
+	margin-top: .2em;
+	height: 2.2em;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+h5{
+	height: 1em;
+	white-space: nowrap;
+}
+
+.btn{
+	margin-top: .8em;
+	background: transparent;
+	border: 2px solid #fff6ab;
+	border-radius: 0;
 	font-size: 16px;
+	padding: .3em 0;
+	color: #fff6ab;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+.voted{
+	background: #fff6ab;
+	color: #b80617;
+}
+
+.big-btn{
+	width: 90%;
+	background: #F29136;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F1A21D), to(#F29136));
+	background: gradient(linear, left top, left bottom, from(#F1A21D), to(#F29136));
+	border: none;
+	outline: none;
+	color: #fff;
+}
+
+.intro{
+	margin-bottom: 0;
+}
+.intro p{
+	color: #fff6ab;
+	margin-bottom: 0;
 }
 
 /*pc查看效果 记得注释掉*/
