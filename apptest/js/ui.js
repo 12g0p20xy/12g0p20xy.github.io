@@ -1,40 +1,28 @@
 $(function(){
 
-	$('.delete').on('click', function() {
-		$(this).parent().animate({opacity: 0}, 'fast',
-			function(){
-				$(this).remove();
-			});
+	var $yuan = $('.yuan img').not('.cover');
+	$yuan.on('click', function(event) {
+		event.preventDefault();
+		chozenCSS = {
+			'animation': 'none',
+			'-webkit-transform': 'translateY(-30px) scale(1.5)',
+			'transform': 'translateY(-30px) scale(1.5)'
+		};
+		$(this).css(chozenCSS);
+		window.setTimeout(
+			function(){ 
+				location.href = "register.html";
+			},600);
 	});
 
-  $('.grid-item .btn').on('click', function() {
-    $(this).css('background', '#BFADA0').val('已投票');
-  });
-
-
-	// 瀑布流布局
-	var $grid = $('.grid').imagesLoaded( function() {
-	  $grid.masonry();
-	});
-
-    $grid.infinitescroll({
-        navSelector: "#next",     // 页面分页元素，成功后会被隐藏
-        nextSelector: "#next a",    // 翻页的链接
-        itemSelector: ".grid-item",   // ajax回来之后，每一项的selecter
-        animate: true,          // 加载完毕是否采用动态效果
-        extraScrollPx: 100,       //向下滚动的像素，必须开启动态效果
-        bufferPx: 3,          // 提示语展现的时长，数字越大，展现时间越短
-        loading:{
-          msgText: '正在加载',
-          finishedMsg: '已经是最后一页!',
-        },
-    }, function(newElements, opts){
-       var page = opts.state.currPage;
-       console.log(page);
-
-       var $newElems = $(newElements);
-       $grid.masonry('appended', $newElems); 
-       // 新加载的内容插入grid并重新排列
-  });
+	$('.get-reward').on('click', function(event) {
+		event.preventDefault();
+		if (true) {
+			confirm('关注徽商银行宣城分行公众号后即可领取奖品(本地活动仅限宣城微信用户)');
+		}
+		else{
+			alert('成功领取奖品！');
+		}
+	});	
 
 })

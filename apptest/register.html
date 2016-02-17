@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>元宵节</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <img src="images/hd.jpg">
+    </header>
+    <section class="reward">
+        <div class="container">
+            <p>恭喜！您获得了<b>100元</b>红包！</p>
+            <input type="submit" class="btn" value="转发到朋友圈">
+        </div>
+    </section>
+    <section class="register">
+        <div class="container">
+           <!-- <div class="weixin">
+            <p>关注徽商银行宣城分行公众号后即可领取奖品(本地活动仅限宣城微信用户)</p>
+            <input type="submit" class="btn" value="关注微信">
+            <input type="submit" class="btn" value="取消">
+           </div> -->
+           <input type="text" placeholder="请输入您的姓名" required />
+           <input type="text" placeholder="请输入手机号码" required />
+           <select required>
+             <option value="" disabled selected hidden>请选择所属地区</option>
+             <option value="">宣州区</option>
+             <option value="">宁国</option>
+             <option value="">广德</option>
+             <option value="">郎溪</option>
+             <option value="">泾县</option>
+             <option value="">旌德</option>
+             <option value="">绩溪</option>
+           </select>
+           <p class="code">
+            <input type="text" placeholder="短信验证码" required />
+            <input type="button" class="btn" value="获取验证码"/>
+           </p>
+		   <input type="submit" class="get-reward btn" value="领取奖品">
+        </div>
+    </section>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
