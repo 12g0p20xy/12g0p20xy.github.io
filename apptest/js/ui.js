@@ -12,7 +12,7 @@ $(function(){
 		window.setTimeout(
 			function(){ 
 				location.href = "register.html";
-			},600);
+			}, 100);
 	});
 
 	$('.get-reward').on('click', function(event) {
