@@ -1,5 +1,5 @@
 $(function(){
-  
+
   // 瀑布流布局
   var $grid = $('.grid').imagesLoaded( function() {
     $grid.masonry();
@@ -9,7 +9,7 @@ $(function(){
     event.preventDefault();
     var $allItem = $('.brief').removeClass('open');
     $(this).addClass('open');
-    $grid.masonry();
+    $('.grid').masonry();
   });
 
 })
