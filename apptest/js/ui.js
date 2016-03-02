@@ -6,7 +6,9 @@ $(function(){
     event.preventDefault();
     var $allItem = $('.brief').removeClass('open');
     $(this).addClass('open');
-    $grid.masonry();
+    var $grid = $('.grid').imagesLoaded( function() {
+      $grid.masonry();
+    });
   });
 
 	// 瀑布流布局
