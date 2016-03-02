@@ -9,7 +9,7 @@ $(function(){
     event.preventDefault();
     var $allItem = $('.brief').removeClass('open');
     $(this).addClass('open');
-    $('.grid').masonry();
+    $('.grid').masonry('layout');
   });
 
 })
