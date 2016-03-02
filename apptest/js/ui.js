@@ -7,8 +7,8 @@ $(function(){
 
   $('.brief').on('click', function(event) {
     event.preventDefault();
-    var $allItem = $('.brief').removeClass('open');
-    $(this).addClass('open');
+    var $allItem = $('.brief').not($(this)).removeClass('open');
+    $(this).toggleClass('open');
     $('.grid').masonry('layout');
   });
 
