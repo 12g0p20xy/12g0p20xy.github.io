@@ -80,8 +80,6 @@ main{
 	font-size: 20px;
 	font-weight: bold;
 	/*color: #d10616;*/
-	margin-top: 1em;
-	padding-bottom: 0;
 	/*background: #F6D7A3;*/
 }
 .intro p{
@@ -179,4 +177,19 @@ nav a:nth-child(2){
 }
 nav a:nth-child(3){
 	background: #D8AF00;
+}
+
+.mask{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.6);
+}
+.mask img{
+	width: 66%;
+	position: absolute;
+	top: 3%;
+	right: 3%;
 }

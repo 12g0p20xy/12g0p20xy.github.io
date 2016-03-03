@@ -12,4 +12,9 @@ $(function(){
     $('.grid').masonry('layout');
   });
 
+  $('.mask').on('click', function(event) {
+    event.preventDefault();
+    $(this).addClass('hide');
+  });
+
 })
