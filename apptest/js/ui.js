@@ -1,20 +1,23 @@
 $(function(){
 
-  // 瀑布流布局
-  var $grid = $('.grid').imagesLoaded( function() {
-    $grid.masonry();
-  });
+	$('.vote-area').on('click', '.vote-btn', function(event) {
+		event.preventDefault();
+		var $name = $(this).parent().find('.info>p').text();
+		if (confirm('要投票给' + $name + '吗？（每天限投1票哦）')) {
+			$(this).addClass('voted').text('已投票')
+				.parents('.vote-area').find('.vote-btn').not($(this)).hide();
+		}
+		else{
 
-  $('.brief').on('click', function(event) {
-    event.preventDefault();
-    var $allItem = $('.brief').not($(this)).removeClass('open');
-    $(this).toggleClass('open');
-    $('.grid').masonry('layout');
-  });
+		}
+	});
 
-  $('.mask').on('click', function(event) {
-    event.preventDefault();
-    $(this).addClass('hide');
-  });
+	//initialize swiper when document ready  
+    var swiper = new Swiper ('.swiper-container', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev'
+    });
 
 })
