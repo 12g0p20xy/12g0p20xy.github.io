@@ -6,6 +6,9 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
+input[type="submit"], input[type="reset"], input[type="button"], select, button {
+	-webkit-appearance: none;
+}
 html, body {
 	margin:0;
 	padding:0;
@@ -14,6 +17,7 @@ html, body {
 }
 body {
 	background: #fff;
+	background: url(../images/bg.jpg);
 	background-size: 100%;
 	color: #666;
 }
@@ -64,28 +68,37 @@ ul, li{
 	padding: 0;
 	list-style: none;
 }
+a{
+	text-decoration: none;
+}
 .vote-area{
 	font-size: 14px;
+	padding: 0 4%;
+	margin-top: -5%;
 }
 .vote-area li{
 	position: relative;
 	padding: 2% 4%;
-	border-bottom: 1px dashed silver;
+	margin-bottom: .6em;
+	/*border-bottom: 1px dashed silver;*/
+	background: #fff;
+	background: -webkit-linear-gradient(to top, #dcd3d0, #f5eeed);
+	background: linear-gradient(to top, #dcd3d0, #f5eeed);
+	border-radius: 4px;
 }
 .vote-btn{
 	position: absolute;
 	top: 50%;
 	margin-top: -1.1em;
 	right: 4%;
-	border: 1px solid #DE094A;
-	color: #DE094A;
+	border: 1px solid #1609DE;
+	color: #1609DE;
 	border-radius: 2px;
 	padding: .6em 1.2em;
-
 }
 .vote-btn.voted{
-	color: #B9AEAE;
-	background: #F4EFEF;
+	color: #B1AEB9;
+	background: #F0EFF4;
 	border: none;
 }
 .vote-btn input{
@@ -98,34 +111,53 @@ ul, li{
 	display: inline-block;
 	overflow: hidden;
 }
+.avatar:after{
+	content: "";
+	position: absolute;
+	top: -.3em;
+	left: 20%;
+	width: 2.4em;
+	height: 1.5em;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background: url(../images/crown.png) no-repeat;
+	background-size: cover;
+	z-index: 99;
+}
 .info{
 	display: inline-block;
 	vertical-align: top;
-	margin-left: 1em;
+	margin-left: .6em;
 }
 .info p{
 	color: grey;
 	line-height: 1;
+	margin-bottom: .5em;
 }
 .info span{
 	display: block;
 	position: relative;
 	width: 30%;
-	height: 1.2em;
-	font-size: 12px;
-	background: #F797B4;
+	height: 1.4em;
+	line-height: 1.4;
+	font-size: 13px;
+	background: #A39EF5;
+}
+.vote-area li:nth-child(2n) .info span{
+	background: #CC9EF5;
 }
 .info i{
 	font-style: normal;
-	color: grey;
+	color: #fff;
 	position: absolute;
 	top: 0;
-	right: -3.5em;
+	right: 0;
 }
 
 /*轮播*/
 .detail{
-	padding: 4%;
+	/*padding: 4%;*/
+	font-size: 0;
 }
 .swiper-container {
     width: 100%;
@@ -152,4 +184,24 @@ ul, li{
 .detail b{
 	font-size: 16px;
 	text-align: left;
+}
+.back-btn{
+	font-size: 14px;
+	background: #7144EF;
+}
+.back-btn a{
+	position: relative;
+	z-index: 99;
+	display: block;
+	color: #fff;
+	padding: .6em;
+	text-decoration: none;
+}
+
+.swiper-slide .btn{
+	font-size: 14px;
+	padding: .6em;
+}
+.swiper-pagination{
+	opacity: 0;
 }

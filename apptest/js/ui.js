@@ -1,6 +1,6 @@
 $(function(){
 
-	$('.vote-area').on('click', '.vote-btn', function(event) {
+	$('.vote-area').one('click', '.vote-btn', function(event) {
 		event.preventDefault();
 		var $name = $(this).parent().find('.info>p').text();
 		if (confirm('要投票给' + $name + '吗？（每天限投1票哦）')) {
@@ -19,5 +19,7 @@ $(function(){
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev'
     });
+
+    $('.swiper-pagination-bullet').eq(1).trigger('click');
 
 })
