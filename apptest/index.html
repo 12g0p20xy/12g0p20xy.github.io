@@ -9,10 +9,12 @@
 <body>
     <script src="js/zepto.min.js"></script>
     <script>
-      var name = promote("请输入您的姓名");
-      if (name) {
-        document.write("Hello " + name + "!");
-      }
+    $(function(){
+    	var name = promote("请输入您的姓名");
+    	if (name) {
+    	  document.write("Hello " + name + "!");
+    	}
+    })
     </script>
 </body>
 </html>
