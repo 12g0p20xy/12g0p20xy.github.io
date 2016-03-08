@@ -1,0 +1,233 @@
+@charset "utf-8";
+/* CSS Document*/
+
+*{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+input[type="submit"], input[type="reset"], input[type="button"], select, button {
+	-webkit-appearance: none;
+}
+html, body {
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	font-family: roboto, "Hiragino Sans GB", sans-serif;
+}
+body {
+	color: #777;
+	background: #fff4f5;
+	padding-bottom: 20%;
+}
+a{
+	text-decoration: none;
+}
+ul, ol{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img, article, section{
+	width: 100%;
+}
+p {
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: justify;
+	margin-bottom: .8em;
+	word-break: break-all;
+}
+.btn {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	color: #fff;
+	border: none;
+	outline: none;
+	background: #F29136;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F1A21D), to(#F29136));
+	background: gradient(linear, left top, left bottom, from(#F1A21D), to(#F29136));
+	font-size: 20px;
+	border-radius: 3px;
+}
+input[type=text] {
+	width:100%;
+	height:1.6rem;
+	border:none;
+	outline: none;
+	color:#d81245;
+	font-size:18px;
+	text-indent:1em;
+	border-radius: 3px;
+	margin-bottom: .6rem;
+	-webkit-transition: .2s ease-out;
+		    transition: .2s ease-out;
+	background: #F7F0D7;
+	box-shadow: 0 1px 1px rgba(0,0,0,.2);
+}
+
+
+b{
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: .5em;
+}
+p{
+	font-size: 14px;
+}
+
+/*首页*/
+.intro p, .game p{
+	width: 90%;
+}
+.intro b{
+	position: relative;
+	color: #FF4E63;
+	font-weight: bold;
+	text-indent: 1em;
+}
+.intro b:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -.25em;
+	width: .5em;
+	height: .5em;
+	background: #FF4E63;
+}
+/*点赞*/
+.like-btn{
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	height: 0;
+	padding-bottom: 50%;
+	margin-bottom: 4rem;
+	text-align: center;
+}
+.like-btn img{
+	width: 100%;
+}
+.like-btn b{
+	display: inline-block;
+	text-align: center;
+	padding: .3em 1em;
+	color: #fff;
+	background: #FF364E;
+	border-radius: 4px;
+	margin-top: .5em;
+}
+.game p{
+	color: #FF364E;
+}
+/*排名*/
+.ranking{
+	font-size: 14px;
+	padding: 0 4%;
+	margin-top: -5%;
+}
+.ranking li{
+	position: relative;
+	padding: 2% 4%;
+	margin-bottom: .6em;
+	/*border-bottom: 1px dashed silver;*/
+	background: #fff;
+	background: -webkit-linear-gradient(to bottom, #FAF0F0, #F6E4E5);
+	background: linear-gradient(to bottom, #FAF0F0, #F6E4E5);
+	border-radius: 4px;
+	box-shadow: 0 1px 1px #D8CBCB;
+}
+.avatar{
+	margin-left: .5em;
+	display: inline-block;
+	width: 3.6rem;
+	height: 3.6rem;
+	overflow: hidden;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.info{
+	display: inline-block;
+	width: 50%;
+	margin-left: .8em;
+	margin-right: .8em;
+	vertical-align: middle;
+}
+.info p{
+	margin-bottom: 0;
+	font-weight: bold;
+	color: #FF4E63;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.info b{
+	font-size: 14px;
+	display: inline;
+}
+.rank-num{
+	position: relative;
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	background: #FCC8C8;
+	border: 4px solid rgba(255,255,255,.36);
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.rank-num i{
+	display: block;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	font-size: 16px;
+	top: 50%;
+	margin-top: -8px;
+	font-style: normal;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.ranking li:nth-child(1) .rank-num{
+	background: #FFAE5B;
+}
+.ranking li:nth-child(2) .rank-num{
+	background: #ADD7E8;
+}
+.ranking li:nth-child(3) .rank-num{
+	background: #E9A675;
+}
+
+/*导航*/
+nav{
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	font-size: 0;
+	background: red;
+	left: 0;
+	bottom: 0;
+}
+nav a{
+	display: inline-block;
+	font-size: 16px;
+	color: #fff;
+	padding: .8em 0;
+	/*width: 33.3%;*/
+	text-align: center;
+}
+nav a:nth-child(1){
+	width: 33.3%;
+	background: #DA4713;
+}
+nav a:nth-child(2){
+	width: 33.3%;
+	background: #11AB7B;
+}
+nav a:nth-child(3){
+	width: 33.3%;
+	background: #CBA20C;
+}

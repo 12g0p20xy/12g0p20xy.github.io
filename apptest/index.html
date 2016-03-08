@@ -2,19 +2,32 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>弹出框</title>
+<title>梅花节助力</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <header>
+      <img src="images/hd.jpg">
+    </header>
+    <main>
+      <section class="intro">
+      	<p><b>活动主题</b>春风十里赏梅花 助力赢得免费礼</p>
+      	<p><b>活动时间</b>3月7日至3月14日，3月14日至3月21日</p>
+      	<p><b>活动形式</b>关注芜湖新闻网微信公众号，回复“抢票”即可参与活动，点击“为自己拉票”，也可以将你的活动链接转发给好友帮忙助力，根据助力排名就有机会赢得门票。</p>
+      	<p><b>活动奖品</b>梅花节门票。</p>
+      	<p><b>活动规则</b>根据网友的集赞数进行排名，前十名都将获得门票，第一名5张梅花节门票，第二名4张梅花节门票，第三名3张梅花节门票，第四到第十名1张梅花节门票。</p>
+        <p>网友把活动分享到朋友圈后，1个好友助力成功后即可增加1次人气指数。</p>
+      	<p><b>领取方式</b>来芜湖新闻网领取门票</p>
+      </section>
+      <nav>
+        <a href="index.html">活动规则</a>
+        <a href="rank.html">当前排名</a>
+        <a href="game.html">参与点赞</a>
+      </nav>
+    </main>
+
     <script src="js/zepto.min.js"></script>
-    <script>
-    var askName = function(){
-    	var name = promote("请输入您的姓名");
-    	if (name) {
-    	  document.write("Hello " + name + "!");
-    	}
-    askName();
-    </script>
+    <script src="js/ui.js"></script>
 </body>
 </html>
