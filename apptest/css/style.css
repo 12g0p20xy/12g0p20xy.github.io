@@ -13,42 +13,33 @@ html, body {
 	margin:0;
 	padding:0;
 	font-family: sans-serif;
-	/*font-family: roboto, "Hiragino Sans GB", sans-serif;*/
+	font-size: 24px;
 }
 body {
-	color: #777;
-	background: #fff4f5;
-	padding-bottom: 20%;
+	background: #fff;
+	background: url(../images/bg.jpg);
+	background-size: 100%;
+	color: #666;
 }
-a{
-	text-decoration: none;
-}
-ul, ol{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-img, article, section{
+img {
 	width: 100%;
 }
 p {
-	margin: 0 auto;
+	width: 100%;
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.7;
 	text-align: justify;
-	margin-bottom: .8em;
 	word-break: break-all;
 }
 .btn {
 	display: block;
 	width: 100%;
+	padding: .4em 0;
 	margin: 0 auto;
-	color: #fff;
-	border: none;
+	color: #A40A0A;
 	outline: none;
-	background: #F29136;
-	background: -webkit-gradient(linear, left top, left bottom, from(#F1A21D), to(#F29136));
-	background: gradient(linear, left top, left bottom, from(#F1A21D), to(#F29136));
+	border: none;
+	background: #FFDF99;
 	font-size: 20px;
 	border-radius: 3px;
 }
@@ -57,176 +48,160 @@ input[type=text] {
 	height:1.6rem;
 	border:none;
 	outline: none;
-	color:#d81245;
+	color:#999;
 	font-size:18px;
 	text-indent:1em;
+	background-color:#FFF;
 	border-radius: 3px;
 	margin-bottom: .6rem;
+	opacity: .9;
 	-webkit-transition: .2s ease-out;
 		    transition: .2s ease-out;
-	background: #F7F0D7;
-	box-shadow: 0 1px 1px rgba(0,0,0,.2);
+}
+input[type=text]:focus {
+	box-shadow: 0 0 3px rgba(0,0,0,.3);
+	opacity: 1;
 }
 
-
-b{
-	display: block;
-	font-size: 16px;
-	font-weight: normal;
-	margin-bottom: .5em;
+ul, li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
-p{
-	font-size: 14px;
+a{
+	text-decoration: none;
 }
-
-/*首页*/
-.intro p, .game p{
-	width: 90%;
-}
-.intro b{
-	position: relative;
-	color: #FF4E63;
-	font-weight: bold;
-	text-indent: 1em;
-}
-.intro b:before{
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 0;
-	margin-top: -.25em;
-	width: .5em;
-	height: .5em;
-	background: #FF4E63;
-}
-/*点赞*/
-.like-btn{
-	display: block;
-	margin: 0 auto;
-	width: 50%;
-	height: 0;
-	padding-bottom: 50%;
-	margin-bottom: 4rem;
-	text-align: center;
-}
-.like-btn img{
-	width: 100%;
-}
-.like-btn b{
-	display: inline-block;
-	text-align: center;
-	padding: .3em 1em;
-	color: #fff;
-	background: #FF364E;
-	border-radius: 4px;
-	margin-top: .5em;
-}
-.game p{
-	color: #FF364E;
-}
-/*排名*/
-.ranking{
+.vote-area{
 	font-size: 14px;
 	padding: 0 4%;
 	margin-top: -5%;
 }
-.ranking li{
+.vote-area li{
 	position: relative;
 	padding: 2% 4%;
 	margin-bottom: .6em;
 	/*border-bottom: 1px dashed silver;*/
 	background: #fff;
-	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FFF7F8));
-	background: gradient(linear, left top, left bottom, from(#FFFFFF), to(#FFF7F8));
+	background: -webkit-linear-gradient(to top, #dcd3d0, #f5eeed);
+	background: linear-gradient(to top, #dcd3d0, #f5eeed);
 	border-radius: 4px;
-	box-shadow: 0 1px 1px #D8CBCB;
+}
+.vote-btn{
+	position: absolute;
+	top: 50%;
+	margin-top: -1.1em;
+	right: 4%;
+	border: 1px solid #1609DE;
+	color: #1609DE;
+	border-radius: 2px;
+	padding: .6em 1.2em;
+}
+.vote-btn.voted{
+	color: #B1AEB9;
+	background: #F0EFF4;
+	border: none;
+}
+.vote-btn input{
+	display: none;
 }
 .avatar{
-	margin-left: .5em;
+	width: 24%;
+	height: 0;
+	padding-bottom: 24%;
 	display: inline-block;
-	width: 3.6rem;
-	height: 3.6rem;
 	overflow: hidden;
-	border-radius: 50%;
-	vertical-align: middle;
+}
+.avatar:after{
+	content: "";
+	position: absolute;
+	top: -.3em;
+	left: 20%;
+	width: 2.4em;
+	height: 1.5em;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background: url(../images/crown.png) no-repeat;
+	background-size: cover;
+	z-index: 99;
 }
 .info{
 	display: inline-block;
-	width: 50%;
-	margin-left: .8em;
-	margin-right: .8em;
-	vertical-align: middle;
+	vertical-align: top;
+	margin-left: .6em;
 }
 .info p{
-	margin-bottom: 0;
-	font-weight: bold;
-	color: #FF4E63;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	color: grey;
+	line-height: 1;
+	margin-bottom: .5em;
 }
-.info b{
-	font-size: 14px;
-	display: inline;
-}
-.rank-num{
-	position: relative;
-	display: inline-block;
-	width: 2rem;
-	height: 2rem;
-	background: #FCC8C8;
-	border: 4px solid rgba(255,255,255,.36);
-	border-radius: 50%;
-	vertical-align: middle;
-}
-.rank-num i{
+.info span{
 	display: block;
-	width: 100%;
-	text-align: center;
-	position: absolute;
-	font-size: 16px;
-	top: 50%;
-	margin-top: -.5em;
+	position: relative;
+	width: 30%;
+	height: 1.4em;
+	line-height: 1.4;
+	font-size: 13px;
+	background: #A39EF5;
+}
+.vote-area li:nth-child(2n) .info span{
+	background: #CC9EF5;
+}
+.info i{
 	font-style: normal;
 	color: #fff;
-	text-shadow: 0 1px 2px rgba(0,0,0,.15);
-}
-.ranking li:nth-child(1) .rank-num{
-	background: #FFAE5B;
-}
-.ranking li:nth-child(2) .rank-num{
-	background: #ADD7E8;
-}
-.ranking li:nth-child(3) .rank-num{
-	background: #E9A675;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
-/*导航*/
-nav{
-	position: fixed;
-	z-index: 100;
-	width: 100%;
+/*轮播*/
+.detail{
+	/*padding: 4%;*/
 	font-size: 0;
-	left: 0;
-	bottom: 0;
 }
-nav a{
-	display: inline-block;
-	font-size: 16px;
-	color: #fff;
-	padding: .8em 0;
-	/*width: 33.3%;*/
+.swiper-container {
+    width: 100%;
+}
+.detail{
 	text-align: center;
 }
-nav a:nth-child(1){
-	width: 33.3%;
-	background: #DA4713;
+.detail .photo{
+	width: 60%;
+	height: 0;
+	padding-bottom: 80%;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 5%;
 }
-nav a:nth-child(2){
-	width: 33.3%;
-	background: #11AB7B;
+.detail .info{
+	width: 60%;
+	margin: 0 auto;
 }
-nav a:nth-child(3){
-	width: 33.3%;
-	background: #CBA20C;
+.detail p{
+	font-size: 13px;
+	line-height: 1.5;
+}
+.detail b{
+	font-size: 16px;
+	text-align: left;
+}
+.back-btn{
+	font-size: 14px;
+	background: #7144EF;
+}
+.back-btn a{
+	position: relative;
+	z-index: 99;
+	display: block;
+	color: #fff;
+	padding: .6em;
+	text-decoration: none;
+}
+
+.swiper-slide .btn{
+	font-size: 14px;
+	padding: .6em;
+}
+.swiper-pagination{
+	opacity: 0;
 }
