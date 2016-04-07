@@ -6,6 +6,9 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
+input[type="submit"], input[type="reset"], input[type="button"], select, button {
+	-webkit-appearance: none;
+}
 html, body {
 	margin:0;
 	padding:0;
@@ -162,6 +165,7 @@ b{
 	}
 	100% {
 		transform: translateY(3px);
+		background: #6CCE10;
 		box-shadow: 0 3px 10px #BFDBA4;
 	}
 }
@@ -176,6 +180,7 @@ b{
 	100% {
 		transform: translateY(3px);
 		-webkit-transform: translateY(3px);
+		background: #6CCE10;
 		box-shadow: 0 3px 10px #BFDBA4;
 	}
 }
