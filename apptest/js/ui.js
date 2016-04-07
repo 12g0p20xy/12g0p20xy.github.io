@@ -25,7 +25,7 @@ $(function(){
 		}
 
 	    setTimeout(function(){
-	        $(window).scrollTop($(this).offset().top - 10);
+	        $(window).scrollTop($(this).offset() - 10);
 	    }, 200);
 	});
 
