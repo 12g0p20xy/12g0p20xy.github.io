@@ -23,10 +23,7 @@ $(function(){
 		else{
 			$(this).parent().siblings('.submit-btn').removeClass('active');
 		}
-
-	    setTimeout(function(){
-	        $(window).scrollTop($(this).offset() - 10);
-	    }, 200);
+		$('body').scrollTop($(this).offset().top - 10);
 	});
 
 })
