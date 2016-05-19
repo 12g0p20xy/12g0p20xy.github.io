@@ -155,6 +155,10 @@ p{
 	font-weight: bold;
 	color: #f46a6b;
 }
+.register input[type="text"]{
+	box-shadow: none;
+	border-bottom: 1px solid #ccc;
+}
 
 .bd2{
 	background: #00b3ca;
