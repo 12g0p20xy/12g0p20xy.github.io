@@ -11,7 +11,7 @@ $(function(){
 
   $('.game').on('tap', '.item', function() {
     if ($(this).hasClass('able')) {
-      var ypos = $('body').scrollTop(),
+      var ypos = window.pageYOffset,
           $option = $(this).find('.option');
       $option.removeClass('hide');
       
@@ -19,7 +19,7 @@ $(function(){
       $option.css('top', ypos - optionHeight);
       $('.mask').removeClass('hide');
       setInterval(function(){
-        ypos = $('body').scrollTop();
+        ypos = window.pageYOffset;
         $option.css('top', ypos - optionHeight);
       }, 600);
     }
