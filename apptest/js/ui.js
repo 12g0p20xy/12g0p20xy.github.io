@@ -1,43 +1,44 @@
 $(function(){
 
-  // 瀑布流布局
-  var $grid = $('.grid').imagesLoaded( function() {
-    $grid.masonry();
+  $('.option').on('tap', 'li', function() {
+    var itemID = $(this).attr('id');
+    var partID = $(this).parents('.item').index();
+    console.log(partID);
+    $('.result div').eq(partID).find('img').attr({
+      'src': "images/" + itemID + ".gif"
+    });
   });
 
-  $('.mask').on('click', function(e) {
-    if (!$(e.target).closest('.register').length) {
-      $('.mask').addClass('hide').removeClass('show');
+  $('.game').on('tap', '.item', function() {
+    if ($(this).hasClass('able')) {
+      var ypos = $('body').scrollTop(),
+          $option = $(this).find('.option');
+      $option.removeClass('hide');
+      
+      var optionHeight = $option.height();
+      $option.css('top', ypos - optionHeight);
+      $('.mask').removeClass('hide');
+      setInterval(function(){
+        ypos = $('body').scrollTop();
+        $option.css('top', ypos - optionHeight);
+      }, 600);
+    }
+    else{
+      alert('快快分享！');
     }
   });
+  
+  $('.close-btn').on('tap', function(e) {
+    event.stopPropagation();
+    $(this).parent().addClass('hide');
+    $('.mask').addClass('hide');
+  });
 
-  $('.btn-3').on('click', function(event) {
+  $('.confirm-btn').on('tap', function(event) {
     event.preventDefault();
-    $('.mask').addClass('show').removeClass('hide');
+    $('.register').removeClass('hide');
+    $('.mask').removeClass('hide');
+    $('body').scrollTop(0);
   });
-
-  $('.delete').on('click', function() {
-    $(this).parent().animate({opacity: 0}, 'fast',
-      function(){
-        $(this).remove();
-      });
-  });
-
-  $('.vote-btn').on('click', function(e) {
-    e.preventDefault();
-    if (!$(this).hasClass('voted')) {
-      $(this).val('已投票').addClass('voted');
-    }
-  });
-
-  // //initialize swiper when document ready  
-  // var swiper = new Swiper ('.swiper-container', {
-  //   pagination: '.swiper-pagination',
-  //   paginationClickable: true,
-  //   nextButton: '.swiper-button-next',
-  //   prevButton: '.swiper-button-prev'
-  // });
-
-  // $('.swiper-pagination-bullet').eq(1).trigger('click');
 
 });

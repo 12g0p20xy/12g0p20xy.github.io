@@ -2,29 +2,103 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>徽商银行61儿童节</title>
+<title>换装play</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <header>
       <img src="images/hd.jpg">
-      <div class="btn-area">
-      	<a href="show.html" class="game-btn"><img src="images/btn1.jpg" alt=""></a>
-      	<a href="upload.html" class="show-btn"><img src="images/btn2.jpg" alt=""></a>
-      </div>
     </header>
     <main>
-      <section class="intro">
-        <p>1、参与者上传的小时候的照片形式不定，可以是小时候的萌照，亦或是与自己的童年有关的照片皆可；
-2、上传照片后应提交个人信息（姓名+手机号码）；
-3、上传照片（我要报名）与投票（我要投票）同时进行，5月31日为“我要报名”的截止时间，6月2号为“我要投票”的截止时间。</p>
+      <section class="show">
+        <img src="images/show.jpg" alt="">
+        <div class="result">
+          <div class="item"><img src="images/h01.gif" alt=""></div>
+          <div class="item"><img src="images/0.gif" alt=""></div>
+          <div class="item"><img src="images/0.gif" alt=""></div>
+          <div class="item"><img src="images/0.gif" alt=""></div>
+          <div class="item"><img src="images/0.gif" alt=""></div>
+        </div>
       </section>
-      
+      <section class="game">
+         <div class="item hairstyle able">
+           <img src="images/btn01.gif" alt="">
+           <ul class="option hide">
+             <li id="h01"><img src="images/ih01.jpg" alt=""></li>
+             <li id="h02"><img src="images/ih02.jpg" alt=""></li>
+             <li id="h03"><img src="images/ih03.jpg" alt=""></li>
+             <li id="h04"><img src="images/ih04.jpg" alt=""></li>
+             <li id="h05"><img src="images/ih05.jpg" alt=""></li>
+             <li id="h06"><img src="images/ih06.jpg" alt=""></li>
+             <li id="h07"><img src="images/ih07.jpg" alt=""></li>
+             <li id="h08"><img src="images/ih08.jpg" alt=""></li>
+             <a class="btn close-btn" href="##">确定</a>
+           </ul>
+         </div>
+         <div class="item eye able">
+           <img src="images/btn02.gif" alt="">
+           <ul class="option hide">
+             <li id="e01"><img src="images/ie01.jpg" alt=""></li>
+             <li id="e02"><img src="images/ie02.jpg" alt=""></li>
+             <li id="e03"><img src="images/ie03.jpg" alt=""></li>
+             <li id="e04"><img src="images/ie04.jpg" alt=""></li>
+             <li id="e05"><img src="images/ie05.jpg" alt=""></li>
+             <li id="e06"><img src="images/ie06.jpg" alt=""></li>
+             <a class="btn close-btn" href="##">确定</a>
+           </ul>
+         </div>
+         <div class="item mouth able">
+           <img src="images/btn03.gif" alt="">
+           <ul class="option hide">
+             <li id="m01"><img src="images/im01.jpg" alt=""></li>
+             <li id="m02"><img src="images/im02.jpg" alt=""></li>
+             <li id="m03"><img src="images/im03.jpg" alt=""></li>
+             <li id="m04"><img src="images/im04.jpg" alt=""></li>
+             <li id="m05"><img src="images/im05.jpg" alt=""></li>
+             <li id="m06"><img src="images/im06.jpg" alt=""></li>
+             <a class="btn close-btn" href="##">确定</a>
+           </ul>
+         </div>
+         <div class="item cloth">
+           <img src="images/btn04.gif" alt="">
+           <ul class="option hide">
+             <li id="c01"><img src="images/ic01.jpg" alt=""></li>
+             <li id="c02"><img src="images/ic02.jpg" alt=""></li>
+             <li id="c03"><img src="images/ic03.jpg" alt=""></li>
+             <li id="c04"><img src="images/ic04.jpg" alt=""></li>
+             <li id="c05"><i class="for-girl"></i><img src="images/ic05.jpg" alt=""></li>
+             <li id="c06"><i class="for-girl"></i><img src="images/ic06.jpg" alt=""></li>
+             <a class="btn close-btn" href="##">确定</a>
+           </ul>
+         </div>
+         <div class="item dec">
+           <img src="images/btn05.gif" alt="">
+           <ul class="option hide">
+             <li id="d01"><img src="images/id01.jpg" alt=""></li>
+             <li id="d02"><img src="images/id02.jpg" alt=""></li>
+             <li id="d03"><img src="images/id03.jpg" alt=""></li>
+             <li id="d04"><img src="images/id04.jpg" alt=""></li>
+             <li id="d05"><img src="images/id05.jpg" alt=""></li>
+             <li id="d06"><img src="images/id06.jpg" alt=""></li>
+             <a class="btn close-btn" href="##">确定</a>
+           </ul>
+         </div>
+      </section>
+      <section class="confirm"><div class="container">
+        <a class="btn confirm-btn" href="##">提交我的造型</a>
+        <div class="register hide">
+          <p>请填写真实信息</p>
+          <input type="text" class="info" placeholder="您的姓名" required />
+          <input type="text" class="info" placeholder="手机号码" required />
+          <input type="submit" class="btn" value="确 定">
+          <a href="##" class="close-btn"></a>
+        </div>
+      </div></section>
+      <div class="mask hide"></div>
     </main>
 
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/tools.js"></script>
+    <script src="js/zepto.min.js"></script>
     <script src="js/ui.js"></script>
 </body>
 </html>
