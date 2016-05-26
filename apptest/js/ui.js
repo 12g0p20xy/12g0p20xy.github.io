@@ -16,11 +16,11 @@ $(function(){
       $option.removeClass('hide');
       
       var optionHeight = $option.height();
-      $option.css('top', ypos - optionHeight);
+      $option.css('top', ypos - optionHeight - 64);
       $('.mask').removeClass('hide');
       setInterval(function(){
         ypos = window.pageYOffset;
-        $option.css('top', ypos - optionHeight);
+        $option.css('top', ypos - optionHeight - 64);
       }, 600);
     }
     else{
