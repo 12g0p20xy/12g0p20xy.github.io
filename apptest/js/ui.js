@@ -41,6 +41,10 @@ $(function(){
 		if(pocket == 5){
 			$(".result").addClass('show');
 			clearTimeout(timer, 20);
+			setTimeout(function(){
+				$('.result .btn').attr('href', 'register.html');
+				$('.result .more').attr('href', '');
+			}, 2000);
 		}
 	});
 
