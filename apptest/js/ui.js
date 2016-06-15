@@ -27,14 +27,14 @@ $(function(){
 		// }
 	}
 
-	$(document).on('touchstart', '.start-game', function(event) {
+	$(document).on('click', '.start-game', function(event) {
 		event.preventDefault();
 		setTimeout(rain, 200);
 		$(this).addClass('hide');
 		$(".div").addClass("bg_1");
 	});
 
-	$(document).on('touchstart', '.dd', function(event){
+	$(document).on('click', '.dd', function(event){
 		event.stopPropagation();
 		$(this).css("background-position","0 -100px");
 		pocket++;
