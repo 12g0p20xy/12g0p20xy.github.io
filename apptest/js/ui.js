@@ -1,44 +1,68 @@
 $(function(){
 
-  $('.option').on('tap', 'li', function() {
-    var itemID = $(this).attr('id');
-    var partID = $(this).parents('.item').index();
-    console.log(partID);
-    $('.result div').eq(partID).find('img').attr({
-      'src': "images/" + itemID + ".gif"
-    });
-  });
+	var pocket =0;
+	var removepackage = setInterval(function(){
+				for(var jj=0;jj<$('.div>div').size()/4;jj++){
+					$('.div>div').eq($('.div>div').size()-jj).remove();
+				}
+			},1000);
+	var t = 0;
 
-  $('.game').on('tap', '.item', function() {
-    if ($(this).hasClass('able')) {
-      var ypos = window.pageYOffset,
-          $option = $(this).find('.option');
-      $option.removeClass('hide');
-      
-      var optionHeight = $option.height();
-      $option.css('top', ypos - optionHeight - 64);
-      $('.mask').removeClass('hide');
-      setInterval(function(){
-        ypos = window.pageYOffset;
-        $option.css('top', ypos - optionHeight - 64);
-      }, 600);
-    }
-    else{
-      alert('快快分享！');
-    }
-  });
-  
-  $('.close-btn').on('tap', function(e) {
-    event.stopPropagation();
-    $(this).parent().addClass('hide');
-    $('.mask').addClass('hide');
-  });
+	function rain(){
+		t++;
+		for(var i=0;i<4;i++){
+			var m=parseInt(Math.random()*700+100);
+			var j2=parseInt(Math.random()*300+1200);
+			var j=parseInt(Math.random()*1600+000);
+			var j1=0;
+			var n=parseInt(Math.random()*10+(-10));
+			$('.div').prepend('<div class="dd"></div>');
+			$('.div').children('div').eq(0).css({'left':j,'top':n});
+			$('.div').children('div').eq(0).animate({'left':j-j1,'top':$(window).height()+20},3000);
+		}
+		timer = setTimeout(rain, 200);
+		// if (t >= 30) {
+		// 	$(".result-box").show();
+		// 	clearTimeout(timer, 20);
+		// }
+	}
 
-  $('.confirm-btn').on('tap', function(event) {
-    event.preventDefault();
-    $('.register').removeClass('hide');
-    $('.mask').removeClass('hide');
-    $('body').scrollTop(0);
-  });
+	$(document).on('touchstart', '.start-game', function(event) {
+		event.preventDefault();
+		setTimeout(rain, 200);
+		$(this).addClass('hide');
+		$(".div").addClass("bg_1");
+	});
+
+	$(document).on('touchstart', '.dd', function(event){
+		event.stopPropagation();
+		$(this).css("background-position","0 -100px");
+		pocket++;
+		if(pocket == 5){
+			$(".result").addClass('show');
+			clearTimeout(timer, 20);
+		}
+	});
+
+	var $weixin = $('.weixin').on('click', function(event) {
+		event.preventDefault();
+		$(this).siblings('.qr')
+			.animate({
+				width: 60 + "%",
+				right: 20 + '%',
+				bottom: 200 + '%'
+			}, 200);
+	});
+
+	$(document).on('click', function() {
+		if(!$(event.target).closest('nav').length){
+			$weixin.siblings('.qr')
+			.animate({
+				width: 0,
+				right: 0,
+				bottom: 0
+			}, 200);
+		} 
+	});
 
 });
