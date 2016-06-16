@@ -27,14 +27,14 @@ $(function(){
 		// }
 	}
 
-	$(document).on('click', '.start-game', function(event) {
+	$(document).on('touchend', '.start-game', function(event) {
 		event.preventDefault();
 		setTimeout(rain, 200);
 		$(this).addClass('hide');
 		$(".div").addClass("bg_1");
 	});
 
-	$(document).on('click', '.dd', function(event){
+	$(document).on('touchend', '.dd', function(event){
 		event.stopPropagation();
 		$(this).css("background-position","0 -100px");
 		pocket++;
@@ -48,7 +48,7 @@ $(function(){
 		}
 	});
 
-	var $weixin = $('.weixin').on('click', function(event) {
+	var $weixin = $('.weixin').on('touchend', function(event) {
 		event.preventDefault();
 		$(this).siblings('.qr')
 			.animate({
@@ -58,7 +58,7 @@ $(function(){
 			}, 200);
 	});
 
-	$(document).on('click', function() {
+	$(document).on('touchend', function() {
 		if(!$(event.target).closest('nav').length){
 			$weixin.siblings('.qr')
 			.animate({
