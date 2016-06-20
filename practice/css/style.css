@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document*/
+
+*{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+input[type="submit"], input[type="reset"], input[type="button"], select, button {
+	-webkit-appearance: none;
+}
+html, body {
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+}
+body {
+	color: #666;
+	background: #F0F0F0;
+	padding-bottom: 5%;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img, article, section{
+	width: 100%;
+}
+p {
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: justify;
+	margin-bottom: .8em;
+	word-break: break-all;
+}
+.btn {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	color: #fff;
+	border: none;
+	outline: none;
+	background: #ddd;
+	font-size: 20px;
+	border-radius: 2px;
+}
+input[type=text] {
+	width:100%;
+	height:1.6rem;
+	border:none;
+	outline: none;
+	color:#d81245;
+	font-size:18px;
+	text-indent:1em;
+	border-radius: 2px;
+	margin-bottom: .6rem;
+	-webkit-transition: .2s ease-out;
+		    transition: .2s ease-out;
+	background: #F7F0D7;
+	box-shadow: 0 1px 1px rgba(0,0,0,.2);
+}
+
+body{
+	font-family: Lato;
+	background: #fff;
+}
+header{
+	position: relative;
+}
+.mask{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,.6) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,.6) 100%);
+	z-index: 0;
+}
+.user-bg{
+	/*position: fixed;*/
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	/*background: url(../images/bg.jpg) no-repeat;*/
+	/*background-size: cover;*/
+	z-index: -1;
+}
+main{
+	position: absolute;
+	top: 200px;
+	width: 100%;
+	height: 400px;
+	padding: 5%;
+	background: #fff;
+}
+.go-back{
+	-webkit-animation: back .3s ease-in forwards;
+	animation: back .3s ease-in forwards;
+}
+@-webkit-keyframes back{
+	100%{
+		top: 200px;
+	}
+}
+@keyframes back{
+	100%{
+		top: 200px;
+	}
+}
+.spread{
+	-webkit-animation: spread .3s ease-out forwards;
+	animation: spread .3s ease-out forwards;
+}
+@-webkit-keyframes spread{
+	100%{
+		top: 100%;
+	}
+}
+@keyframes spread{
+	100%{
+		top: 100%;
+	}
+}
+.user-name{
+	position: absolute;
+	top: -2.5rem;
+	left: 0;
+}
+.online{
+	display: inline-block;
+	margin-left: 5%;
+	margin-right: .5em;
+	width: .6em;
+	height: .6em;
+	background: #6aaf4c;
+	border-radius: 50%;
+}
+.user-name h3{
+	display: inline-block;
+	color: #fff;
+	margin: 0;
+}
+
+.my-faves li{
+	position: relative;
+	display: inline-block;
+	width: 20%;
+	padding-bottom: 20%;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.my-faves li img{
+	position: absolute;
+}
+
+
