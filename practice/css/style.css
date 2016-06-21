@@ -71,30 +71,47 @@ body{
 }
 header{
 	position: relative;
+	overflow: hidden;
 }
 .mask{
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	top: 0;
 	bottom: 0;
-	background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,.6) 100%);
-	background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,.6) 100%);
+	background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 100%);
 	z-index: 0;
 }
 .user-bg{
-	/*position: fixed;*/
+	position: fixed;
 	top: 0;
+	bottom: 0;
 	width: 100%;
 	overflow: hidden;
-	/*background: url(../images/bg.jpg) no-repeat;*/
-	/*background-size: cover;*/
+	background: url(../images/bg.jpg) no-repeat top;
+	background-size: 100%;
 	z-index: -1;
+}
+.intro{
+	position: fixed;
+	padding: 10%;
+	color: #fff;
+	-webkit-transform: translate3d(0, 150%, 0);
+	transform: translate3d(0, 150%, 0);
+	opacity: 0;
+	-webkit-transition: .3s ease-in;
+	transition: .3s ease-in;
+	z-index: 1;
+}
+.intro.in{
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
 }
 main{
 	position: absolute;
 	top: 200px;
 	width: 100%;
-	height: 400px;
 	padding: 5%;
 	background: #fff;
 }
@@ -104,41 +121,50 @@ main{
 }
 @-webkit-keyframes back{
 	100%{
-		top: 200px;
+		-webkit-transform: translate3d(0, 0, 0);
+		opacity: 1;
+		font-size: 16px;
+		background-size: 100%;
 	}
 }
 @keyframes back{
 	100%{
-		top: 200px;
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+		font-size: 16px;
+		background-size: 100%;
 	}
 }
 .spread{
-	-webkit-animation: spread .3s ease-out forwards;
-	animation: spread .3s ease-out forwards;
+	-webkit-animation: spread .1s ease-out forwards;
+	animation: spread .1s ease-out forwards;
 }
 @-webkit-keyframes spread{
 	100%{
-		top: 100%;
+		-webkit-transform: translate3d(0, 100%, 0);
 	}
 }
 @keyframes spread{
 	100%{
-		top: 100%;
+		transform: translate3d(0, 100%, 0);
 	}
 }
+
 .user-name{
 	position: absolute;
 	top: -2.5rem;
 	left: 0;
+	font-size: 16px;
 }
 .online{
 	display: inline-block;
 	margin-left: 5%;
 	margin-right: .5em;
-	width: .6em;
-	height: .6em;
+	width: .8em;
+	height: .8em;
 	background: #6aaf4c;
 	border-radius: 50%;
+	border: 2px #fff solid;
 }
 .user-name h3{
 	display: inline-block;
@@ -146,16 +172,24 @@ main{
 	margin: 0;
 }
 
+.my-faves ul{
+	font-size: 0;
+	margin-left: -2%;
+}
 .my-faves li{
 	position: relative;
 	display: inline-block;
-	width: 20%;
-	padding-bottom: 20%;
-	border-radius: 50%;
+	width: 18%;
+	padding-bottom: 18%;
+	margin-left: 2%;
+	font-size: 16px;
+	background: #eee;
+	outline: 1px solid red;
 	overflow: hidden;
 }
-.my-faves li img{
+.my-faves li img, .my-faves li span{
 	position: absolute;
+	top: 0;
+	left: 0;
 }
-
 
