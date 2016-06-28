@@ -7,7 +7,7 @@
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="cover">
+  <div class="cover" id="c">
     <a class="c-btn1" href="intro.html">活动说明</a>
     <a class="c-btn2 start-btn" href="javascript:;">开始游戏</a>
     <img src="images/cover.jpg">
@@ -23,13 +23,13 @@
         <span class="close-btn btn">取 消</span>
      </div>
   </div>
-  <script src="js/zepto.min.js"></script>
-  <script src="js/ui.js"></script>
   <script>
-  setTimeout(function() {
-    document.body.scrollTop = 1;
-    document.body.scrollTop = 0;
-  }, 100);
+  // setTimeout(function() {
+  //   document.body.scrollTop = 1;
+  //   document.body.scrollTop = 0;
+  // }, 100);
+  var cover = document.getElementById("c");
+  cover.innerHTML += document.body.clientHeight;
   </script>
 </body>
 </html>
