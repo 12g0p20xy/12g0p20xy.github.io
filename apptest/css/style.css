@@ -238,7 +238,7 @@ html, body{
 	height: 100%;
 	top: 0;
 	background: url(../images/cover.jpg) no-repeat top;
-	background-size: contain;
+	background-size: cover;
 }
 .c-btn1, .c-btn2{
 	outline: 1px solid red;
