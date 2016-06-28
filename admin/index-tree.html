@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<title>网站后台综合管理系统</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<!-- 全局样式开始 -->
+<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<!-- 全局样式结束 -->
+<!-- 内容页样式开始 -->
+<link rel="stylesheet" type="text/css" href="plugins/jstree/dist/themes/default/style.min.css"/>
+<!-- 内容页样式结束 -->
+<!-- BEGIN THEME STYLES -->
+<link href="css/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+<!-- 插件样式 -->
+<link href="css/plugins.css" rel="stylesheet" type="text/css"/>
+<!-- 布局 -->
+<link href="css/layout.css" rel="stylesheet" type="text/css"/>
+<!-- 更改皮肤 -->
+<link href="css/themes/darkblue.css" rel="stylesheet" type="text/css" id="style_color"/>
+<!-- END THEME STYLES -->
+<!-- 自定义样式 -->
+<link href="css/custom.css" rel="stylesheet" type="text/css"/>
+</head>
+
+
+<body class="page-header-fixed page-quick-sidebar-over-content theme-tree">
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="index.html">
+			<img src="img/logo.png" alt="logo" class="logo-default"/>
+			</a>
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<div class="top-menu">
+			<!-- 头部菜单开始 -->
+			<ul class="nav navbar-nav">
+				<li><a href="javascript:;">模块管理</a></li>
+				<li><a href="javascript:;">栏目管理</a></li>
+				<li><a href="javascript:;">用户管理</a></li>
+				<li><a href="javascript:;">系统管理</a></li>
+			</ul>
+			<!-- 头部菜单结束 -->
+			<ul class="nav navbar-nav pull-right">
+				<!-- BEGIN NOTIFICATION DROPDOWN -->
+				<li class="dropdown dropdown-extended dropdown-dark dropdown-notification" id="header_notification_bar">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<i class="icon-bell"></i>
+					<span class="badge badge-danger">
+					7 </span>
+					</a>
+					<ul class="dropdown-menu">
+						<li class="external">
+							<h3><span class="bold">12条未处理消息</span></h3>
+							<a href="extra_profile.html">查看全部</a>
+						</li>
+						<li>
+							<ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+								<li>
+									<a href="javascript:;">
+									<span class="time">just now</span>
+									<span class="details">
+									<span class="label label-sm label-icon label-success">
+									<i class="fa fa-plus"></i>
+									</span>
+									New user registered. </span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									<span class="time">3 mins</span>
+									<span class="details">
+									<span class="label label-sm label-icon label-danger">
+									<i class="fa fa-bolt"></i>
+									</span>
+									Server #12 overloaded. </span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									<span class="time">10 mins</span>
+									<span class="details">
+									<span class="label label-sm label-icon label-warning">
+									<i class="fa fa-bell-o"></i>
+									</span>
+									Server #2 not responding. </span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									<span class="time">14 hrs</span>
+									<span class="details">
+									<span class="label label-sm label-icon label-info">
+									<i class="fa fa-bullhorn"></i>
+									</span>
+									Application error. </span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									<span class="time">2 days</span>
+									<span class="details">
+									<span class="label label-sm label-icon label-danger">
+									<i class="fa fa-bolt"></i>
+									</span>
+									Database overloaded 68%. </span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									<span class="time">3 days</span>
+									<span class="details">
+									<span class="label label-sm label-icon label-danger">
+									<i class="fa fa-bolt"></i>
+									</span>
+									A user IP blocked. </span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									<span class="time">4 days</span>
+									<span class="details">
+									<span class="label label-sm label-icon label-warning">
+									<i class="fa fa-bell-o"></i>
+									</span>
+									Storage Server #4 not responding dfdfdfd. </span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									<span class="time">5 days</span>
+									<span class="details">
+									<span class="label label-sm label-icon label-info">
+									<i class="fa fa-bullhorn"></i>
+									</span>
+									System Error. </span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									<span class="time">9 days</span>
+									<span class="details">
+									<span class="label label-sm label-icon label-danger">
+									<i class="fa fa-bolt"></i>
+									</span>
+									Storage server failed. </span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<!-- END NOTIFICATION DROPDOWN -->
+				<!-- BEGIN USER LOGIN DROPDOWN -->
+				<li class="dropdown dropdown-dark dropdown-user">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<img alt="" class="img-circle" src="img/avatar8.jpg"/>
+					<span class="username username-hide-on-mobile">
+					Admin </span>
+					<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-default">
+						<li>
+							<a href="extra_profile.html">
+							<i class="icon-user"></i> 个人档案 </a>
+						</li>
+						<li>
+							<a href="page_calendar.html">
+							<i class="icon-calendar"></i> 计划任务 </a>
+						</li>
+						<li>
+							<a href="inbox.html">
+							<i class="icon-envelope-open"></i> 我的邮件 <span class="badge badge-danger">
+							3 </span>
+							</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="extra_lock.html">
+							<i class="icon-lock"></i> 修改密码 </a>
+						</li>
+						<li>
+							<a href="login.html">
+							<i class="icon-key"></i> 注销 </a>
+						</li>
+					</ul>
+				</li>
+				<!-- END USER LOGIN DROPDOWN -->
+			</ul>
+		</div>
+		<!-- END TOP NAVIGATION MENU -->
+	</div>
+	<!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+	<!-- 树形导航开始 -->
+	<div class="page-sidebar-wrapper light-color">
+		<div class="sidebar-tree page-sidebar navbar-collapse collapse">
+			<div class="portlet blue-hoki box">
+				<div class="portlet-body">
+					<div id="tree_1" class="tree-demo">
+						<ul>
+							<li>
+								 父目录
+								<ul>
+									<li data-jstree='{ "selected" : true }'>
+										<a href="#">
+										子目录 </a>
+									</li>
+									<li data-jstree='{ "icon" : "fa fa-briefcase icon-state-success " }'>
+										 带图标的子目录
+									</li>
+									<li data-jstree='{ "opened" : true }'>
+										 展开
+										<ul>
+											<li data-jstree='{ "disabled" : true }'>
+												 子目录
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												 子目录
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												 子目录
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												 子目录
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												 子目录
+											</li>
+										</ul>
+									</li>
+									<li data-jstree='{ "icon" : "fa fa-warning icon-state-danger" }'>
+										 带图标的子目录
+									</li>
+									<li data-jstree='{ "opened" : false }'>
+										 子目录
+										<ul>
+											<li data-jstree='{ "disabled" : true }'>
+												 子目录
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												 子目录
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												 子目录
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												 子目录
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												 子目录
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li data-jstree='{ "type" : "file" }'>
+								<a href="http://www.jstree.com">
+								外部链接 </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 树形导航结束 -->
+	<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper">
+		<div class="page-content">
+
+		</div>
+	</div>
+	<!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div class="page-footer">
+	<div class="page-footer-inner">
+		 2016 &copy; 版权声明 啦啦啦
+	</div>
+	<div class="scroll-to-top">
+		<i class="icon-arrow-up"></i>
+	</div>
+</div>
+<!-- END FOOTER -->
+
+<!-- ****** 核心插件 ****** -->
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<!-- 滚动条 -->
+<script src="plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<!-- 表单美化 -->
+<!-- <script src="plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script> -->
+<!-- ****** 核心插件结束 ****** -->
+
+<!-- ****** 内容页插件 ****** -->
+<script src="plugins/jstree/dist/jstree.min.js"></script>
+<script src="js/metronic.js" type="text/javascript"></script>
+<script src="js/layout.js" type="text/javascript"></script>
+<script src="js/quick-sidebar.js" type="text/javascript"></script>
+<script src="js/ui-tree.js"></script>
+<script src="js/my-script.js"></script>
+<!-- ****** 内容页插件结束 ****** -->
+<script>
+jQuery(document).ready(function() {
+	Metronic.init();
+	Layout.init();
+	QuickSidebar.init();
+	UITree.init();
+});
+</script>
+</body>
+</html>
