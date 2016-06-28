@@ -229,13 +229,16 @@ thead td{
 	box-shadow: none;
 }
 
-.cover img{
+html, body{
+	height: 100%;
+}
+.cover{
 	position: fixed;
 	width: 100%;
+	height: 100%;
 	top: 0;
-	font-size: 0;
-	/*background: url(../images/cover.jpg) no-repeat top;
-	background-size: contain;*/
+	background: url(../images/cover.jpg) no-repeat top;
+	background-size: contain;
 }
 .c-btn1, .c-btn2{
 	outline: 1px solid red;
@@ -243,7 +246,7 @@ thead td{
 	width: 50%;
 	bottom: 0;
 	display: inline-block;
-	height: 6em;
+	height: 10em;
 	opacity: 0;
 	z-index: 99;
 }
