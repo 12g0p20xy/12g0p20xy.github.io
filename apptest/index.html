@@ -1,73 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-	<meta charset="UTF-8">
-	<title>Chat APP</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-	<link href="css/style.css" rel="stylesheet">
+<meta charset="utf-8">
+<title>简单答题 万元奖品</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div class="mask"></div>
-		<div class="user-bg">
-			<img src="images/bg.jpg" alt="">
-		</div>
-	</header>
-	<main>
-		<section class="user-name">
-			<span class="online"></span>
-			<h3>Taylor_Marie</h3>
-		</section>
-		<section class="user-interest">
-			<div class="level">
-				<i></i>
-				<b>5 level</b>
-			</div>
-			<div class="fave">
-				<i></i>
-				Faved you
-			</div>
-		</section>
-		<section class="my-faves">
-			<div class="hd">
-				<p>MY FAVES</p>
-			</div>
-			<div class="bd">
-				<ul>
-					<li><img src="images/001.jpg" alt=""></li>
-					<li><img src="images/002.jpg" alt=""></li>
-					<li><img src="images/003.jpg" alt=""></li>
-					<li><img src="images/004.jpg" alt=""></li>
-					<li><img src="images/005.jpg" alt=""></li>
-					<li>+132</li>
-				</ul>
-			</div>
-		</section>
-		<section class="info">
-			<div class="hd">
-				<p>INFO</p>
-			</div>
-			<div class="bd">
-				<dl>
-					<dt></dt>
-					<dd></dd>
-				</dl>
-			</div>
-		</section>
-		<div id="qrcode" style="width: 60%; padding-bottom: 60%; margin: 1rem auto;"></div>
-	</main>
-
-	<script src="js/zepto.min.js"></script>
-	<script src="js/hammer.min.js"></script>
-	<script src="js/ui.js"></script>
-	<script src="js/qrcode.min.js"></script>
-	<script>
-		$(function(){
-			new QRCode(
-				document.getElementById("qrcode"),
-				window.location.href
-				);
-		});
-	</script>
+  <div class="cover">
+    <a class="c-btn1" href="intro.html">活动说明</a>
+    <a class="c-btn2 start-btn" href="javascript:;">开始游戏</a>
+    <img src="images/cover.jpg">
+  </div>
+  <div class="register">
+     <div class="container">
+        <h3>请填写真实的个人信息</h3>
+        <p>
+          <input id="i1" class="info name" type="text" placeholder="您的姓名" required>
+          <input class="info tel" type="tel" placeholder="您的联系方式" required>
+        </p>
+        <input class="submit-btn btn active" type="submit" value="提交信息">
+        <span class="close-btn btn">取 消</span>
+     </div>
+  </div>
+  <script src="js/zepto.min.js"></script>
+  <script src="js/ui.js"></script>
 </body>
 </html>
