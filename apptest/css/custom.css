@@ -16,7 +16,7 @@ html, body {
 }
 body {
 	color: #333;
-	background: #fff;
+	background: #EFEDEA;
 	overflow-x: hidden; 
 }
 a{
@@ -108,11 +108,15 @@ main .container, .vote-page, .swiper-container{
 	overflow-y: scroll;*/
 }
 .swiper-slide{
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	height: 100%;
-	padding: 2rem 0;
 }
-
+.swiper-slide .container{
+	padding: 1.5rem 0;
+	background: #fff;
+	border-radius: 0 0 6px 6px;
+	box-shadow: 3px 3px 12px rgba(0,0,0,.3);
+}
 .intro{
 	width: 80%;
 	margin: 0 auto;
