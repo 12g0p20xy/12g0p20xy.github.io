@@ -99,6 +99,7 @@ b{
 }
 .grid-item b{
 	margin-bottom: .5em;
+	font-weight: normal;
 }
 .grid-item p{
 	color: #fff;
@@ -331,4 +332,14 @@ tr td:first-child{
 	height: 1.2em;
 	background: url(../img/g3.jpg) no-repeat;
 	background-size: cover;
+}
+
+.personal p{
+	font-size: 14px;
+	color: #333;
+}
+.personal img{
+	display: block;
+	width: 75%;
+	margin: 1.5em auto;
 }
