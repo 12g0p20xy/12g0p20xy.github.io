@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>徽商银行芜湖分行“双桥”照片征集</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+    	<div class="guide">
+    		<!-- <a href="##" class="btn submit-btn big-btn">参加活动</a> -->
+    	</div>
+    </header>
+    <main>
+    	<!-- <section class="searchbar">
+    		<input type="text" placeholder="搜索用户ID或姓名...">
+    		<button><img src="img/search_filled_100px.png" alt=""></button>
+    	</section> -->
+		<section class="photo-wall">
+			<ul class="grid">
+				<li class="grid-item">
+					<a href="personal.html"><img src="img/01.jpg" alt=""></a>
+					<div class="brief">
+						<p><b>No.01</b> Mike</p>
+						<p class="num">当前票数：999</p>
+						<p><label for="n1" class="btn vote-btn">投票</label>
+						<input type="checkbox" id="n1"></p>
+					</div>
+				</li>
+				<li class="grid-item">
+					<img src="img/02.jpg" alt="">
+					<div class="brief">
+						<p><b>No.02</b> Mike</p>
+						<p class="num">当前票数：999</p>
+						<p><label for="n2" class="btn vote-btn">投票</label>
+						<input type="checkbox" id="n2"></p>
+					</div>
+				</li>
+				<li class="grid-item">
+					<img src="img/03.jpg" alt="">
+					<div class="brief">
+						<p><b>No.03</b> Mike</p>
+						<p class="num">当前票数：999</p>.
+						<p><label for="n3" class="btn vote-btn">投票</label>
+						<input type="checkbox" id="n3"></p>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<div class="layer">
+			<div class="register">
+			   <div class="container">
+			      <h3>请填写真实的个人信息</h3>
+			      <p>
+			        <input id="i1" class="info name" type="text" placeholder="您的姓名" required>
+			        <input class="info tel" type="text" placeholder="您的联系方式" required>
+			      </p>
+			      <input class="submit-btn btn active" type="submit" value="提交信息">
+			      <!-- <span class="close-btn">取 消</span> -->
+			   </div>
+			</div>
+		</div>
+    </main>
+    <nav>
+    	<ul>
+    		<li><a href="index.html"><span>首页</span></a></li>
+    		<li><a href="upload.html"><span>上传</span></a></li>
+    		<li><a href="vote.html"><span>投票</span></a></li>
+            <li><a href="rule.html"><span>规则</span></a></li>
+    	</ul>
+    	<img src="img/nav.jpg" alt="">
+    </nav>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/ui.js"></script>
+    <script>
+		$(function(){
+			var $grid = $('.grid').imagesLoaded(function() {
+				$grid.masonry();
+			});
+		});
+    </script>
+</body>
+</html>
