@@ -442,6 +442,8 @@ tr td:first-child{
 
 body.index{
 	padding-bottom: 0;
+	background: url(../img/cover.jpg) no-repeat;
+	background-size: cover;
 }
 body.index .nav{
 	position: fixed;
@@ -453,7 +455,7 @@ body.index .nav a{
 	display: inline-block;
 	width: 50%;
 	height: 6rem;
-	/*outline: 1px solid red;*/
+	outline: 1px solid red;
 }
 .btn{
 	background: #950A0A;
