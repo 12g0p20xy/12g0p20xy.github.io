@@ -442,8 +442,6 @@ tr td:first-child{
 
 body.index{
 	padding-bottom: 0;
-	background: url(../img/cover.jpg) no-repeat;
-	background-size: cover;
 }
 body.index .nav{
 	position: fixed;
