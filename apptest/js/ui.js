@@ -1,6 +1,6 @@
 $(function(){
 
-	var login = true;
+	var login = false;
 
 	// 投票按钮和弹出框
 	var $activeBtn = $('.big-btn'),
