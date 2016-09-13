@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>中秋喜团圆</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<link href="css/style.min.css" rel="stylesheet">
+</head>
+<body class="game">
+	<!-- <header></header> -->
+	<main>
+		<section class="letter">
+			<h3>写下您的留言</h3>
+			<label for="r1">第一行：<input id="r1" type="text"></label>
+			<label for="r2">第二行：<input id="r2" type="text"></label>
+			<label for="r3">第三行：<input id="r3" type="text"></label>
+			<label for="">
+				<i></i>
+				<input class="big-btn btn" type="submit" value="提交留言">
+			</label>
+		</section>
+	</main>
+	<div class="layer">
+		<div class="modal">
+		   <div class="container">
+		      <h3>请填写真实的个人信息</h3>
+		      <p><input id="i1" class="info name" type="text" placeholder="姓名" required></p>
+		      <p><input class="info tel" type="text" placeholder="联系方式" required></p>
+		      <p class="code">
+		      	<input class="info tel" type="text" placeholder="验证号码" required>
+		      	<button class="btn border">获取验证码</button>
+		      </p>
+		      <input class="submit-btn btn" type="submit" value="提交信息">
+		      <span class="close-btn"><img src="img/multiply_50px.png" alt=""></span>
+		   </div>
+		</div>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="index.html"><span>首页</span></a></li>
+    		<li><a href="wall.html"><span>留言墙</span></a></li>
+    		<li><a href="game.html"><span>参与</span></a></li>
+            <li><a href="rule.html"><span>规则</span></a></li>
+		</ul>
+		<img src="img/nav.jpg" alt="">
+	</nav>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/ui.js"></script>
+</body>
+</html>
