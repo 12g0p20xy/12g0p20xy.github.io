@@ -8,6 +8,8 @@ $(function(){
 		$closeBtn = $layer.find('.close-btn');
 	var $letter = $('.letter'),
 		$line = $letter.find('label');
+	var $nav = $('nav');
+
 	$activeBtn.on('touchstart', function() {
 		if (login) {
 			setTimeout(function(){
@@ -27,31 +29,35 @@ $(function(){
 			}, 1200);
 		}
 		else {
-			modal();
+			modalShow();
 		}
 	});
 
-	function modal(){
+	function modalShow(){
 		$layer.addClass('show');
+		$nav.css('position', 'absolute');
 		$('main, section, nav').addClass('blur');
 		$('body').css('overflow', 'hidden');
-		$(document).on('touchstart', function() {
+		$(document).on('touchstart', function(event) {
 			if (event.target == $layer[0]) {
-				$layer.removeClass('show');
-				$('main, section, nav').removeClass('blur');
-				$('body').css('overflow', 'visible');
+				modalHide();
 			}
 		});
-		$closeBtn.on('touchstart', function() {
-			$layer.removeClass('show');
-			$('main, section, nav').removeClass('blur');
-			$('body').css('overflow', 'visible');
+		$closeBtn.on('touchstart', function(){
+			modalHide();
 		});
+	}
+
+	function modalHide(){
+		$layer.removeClass('show');
+		$nav.css('position', 'fixed');
+		$('main, section, nav').removeClass('blur');
+		$('body').css('overflow', 'visible');
 	}
 
 	var $reward = $('.big-btn2').on('touchstart', function(event) {
 		event.preventDefault();
-		modal();
+		modalShow();
 	});
 
 });
