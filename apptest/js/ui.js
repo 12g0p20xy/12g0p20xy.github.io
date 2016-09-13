@@ -1,6 +1,6 @@
 $(function(){
 
-	var login = false;
+	var login = true;
 
 	// 投票按钮和弹出框
 	var $activeBtn = $('.big-btn'),
@@ -35,7 +35,7 @@ $(function(){
 
 	function modalShow(){
 		$layer.addClass('show');
-		$nav.css('position', 'absolute');
+		$nav.css('display', 'none');
 		$('main, section, nav').addClass('blur');
 		$('body').css('overflow', 'hidden');
 		$(document).on('touchstart', function(event) {
@@ -50,7 +50,7 @@ $(function(){
 
 	function modalHide(){
 		$layer.removeClass('show');
-		$nav.css('position', 'fixed');
+		$nav.css('display', 'block');
 		$('main, section, nav').removeClass('blur');
 		$('body').css('overflow', 'visible');
 	}
