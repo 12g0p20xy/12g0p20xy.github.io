@@ -105,7 +105,7 @@ input[type="text"], textarea {
   -o-border-radius: 2px;
   border-radius: 2px;
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
   text-indent: .5em; }
 
 textarea {
@@ -132,7 +132,7 @@ textarea {
   box-sizing: content-box;
   text-align: center;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   background: #20BF06;
   cursor: pointer; }
