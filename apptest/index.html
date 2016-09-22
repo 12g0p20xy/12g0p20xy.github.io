@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<title>Demo</title>
+<base target="_blank">
+<!--[if lt IE 9]>
+<script>
+	var html5 = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,main,mark,menu,meter,nav,output,progress,section,time,video".split(','),i = html5.length;
+	while(i--) document.createElement(html5[i]);
+</script>
+<![endif]-->
+<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<header><div class="container"><span class="span1">大屏幕</span><span class="span2">平板</span><span class="span3">手机</span></div></header>
+	<main>
+		<section class="s1"><div class="container">
+			<div class="row">
+				<div class="box left">
+					<span>浮动</span>
+				</div>
+				<div class="box2 right">
+					<span>继承</span>
+				</div>
+			</div>
+			<p class="p1">单行文字截取单行文字截取单行文字截取单行文字截取</p>
+			<p class="p2">多行文字截取多行文字截取多行文字截取多行文字截取多行文字截取多行文字截取多行文字截取多行文字截取多行文字截取多行文字截取多行文字截取多行文字截取多行文字截取 <a href="javascript:;">链接 ></a></p>
+			<div class="row">
+				<div class="login left">
+					<h3>高度相同的各种input</h3>
+					<input type="text" placeholder="文本框">
+					<input type="text" placeholder="文本框">
+					<div class="row">
+						<input class="txt left" type="text" placeholder="文本框">
+						<input class="btn left" type="submit" value="提交">
+					</div>
+					<textarea name="" id="" cols="30" rows="5"></textarea>
+					<input class="btn" type="submit" value="&lt;input&gt; 按钮">
+					<a href="javascript:;" class="btn">&lt;a&gt; 按钮</a>
+					<button class="btn">&lt;button&gt; 按钮</button>
+				</div>
+			</div>
+		</div></section>
+		<section class="s2"><div class="container">
+			<ul>
+				<li><a href="">inline-block</a></li>
+				<li><a href="">inline-block</a></li>
+				<li><a href="">inline-block</a></li>
+				<li><a href="">inline-block</a></li>
+				<li><a href="">inline-block</a></li>
+				<li><a href="">inline-block</a></li>
+			</ul>
+		</div></section>
+		<section class="s3"><div class="container">
+			<ul class="grid">
+				<li class="grid-item"><img src="img/0.jpg" alt=""></li>
+				<li class="grid-item"><img src="img/1.jpg" alt=""></li>
+				<li class="grid-item"><img src="img/2.jpg" alt=""></li>
+				<li class="grid-item"><img src="img/3.jpg" alt=""></li>
+				<li class="grid-item"><img src="img/0.jpg" alt=""></li>
+				<li class="grid-item"><img src="img/1.jpg" alt=""></li>
+				<li class="grid-item"><img src="img/2.jpg" alt=""></li>
+				<li class="grid-item"><img src="img/3.jpg" alt=""></li>
+			</ul>
+		</div></section>
+	</main>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/tools.min.js"></script>
+	<script src="js/global.js"></script>
+    <script>
+	$(function(){
+		var $grid = $('.grid').imagesLoaded(function() {
+			$grid.masonry({
+				gutter: 10
+			});
+		});
+	});
+    </script>
+</body>
+</html>

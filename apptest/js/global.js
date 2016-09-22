@@ -1,0 +1,1 @@
+/*! grunt_test - v1.0.1 - 2016-09-22 */$(function(){var a=$(".grid-item");console.log("global.js更新成功, 图片数目是"+a.length)});
