@@ -1,5 +1,6 @@
 var Shake = (function() {
 
+	// 绑定事件
 	function eventStart() {
 		var SHAKE_THRESHOLD = 3000,
 			last_update = 0,
@@ -42,11 +43,20 @@ var Shake = (function() {
 			oCount.innerHTML = count;
 		}
 	}
+
+	// 移除事件
+	function eventEnd() {
+		window.removeEventListener('devicemotion', deviceMotionHandler, false);
+	}
 	
 	return {
-		init: function() {
+		init: function(t) {
 			eventStart();
-			// alert('游戏开始，请摇动手机！');
+			// 计时，t秒后游戏结束
+			setTimeout(function() {
+				eventEnd();
+				alert('游戏结束！');
+			}, t);
 		}
 	};
 

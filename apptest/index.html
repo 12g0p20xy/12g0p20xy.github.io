@@ -12,7 +12,7 @@
 		padding: 0;
 	}
 	#count{
-		font-size: 36px;
+		font-size: 60px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -38,7 +38,7 @@
 				oTimer.innerHTML = '距离比赛开始还有 ' + ss + ' 秒';
 				t = setTimeout(getTime, 1000);
 				if (ss <= 0) {
-					Shake.init();
+					Shake.init(10000); // 摇动检测开启
 					oTimer.innerHTML = '';
 					clearTimeout(t);
 				}
