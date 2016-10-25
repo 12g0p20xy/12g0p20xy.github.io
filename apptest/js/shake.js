@@ -2,13 +2,14 @@ var Shake = (function() {
 
 	var oCount = document.getElementById('count'),
 		count = 0; // 计数
+	var SHAKE_THRESHOLD = 3000, // 触发摇动的最小距离
+		last_update = 0, // 最后更新的时间
+		x = y = z = last_x = last_y = last_z = 0; // 移动距离
 
 	// 绑定事件
 	function eventStart() {
 		if (window.DeviceMotionEvent) {
 			window.addEventListener('devicemotion', deviceMotionHandler, false);
-			console.log('已绑定');
-			console.log(window);
 		}
 		else {
 			alert('本设备不支持devicemotion事件');
@@ -22,11 +23,6 @@ var Shake = (function() {
 
 	// 摇动检测
 	function deviceMotionHandler(eventData) {
-
-		var SHAKE_THRESHOLD = 3000, // 触发摇动的最小距离
-			last_update = 0, // 最后更新的时间
-			x = y = z = last_x = last_y = last_z = 0; // 移动距离
-
 		var acceleration = eventData.accelerationIncludingGravity,
 			curTime = new Date().getTime(),
 			speed = 0;
@@ -47,7 +43,6 @@ var Shake = (function() {
 			last_y = y;
 			last_z = z;
 		}
-		document.write(x);
 	}
 	
 	return {
@@ -55,8 +50,8 @@ var Shake = (function() {
 			eventStart();
 			// 计时，xx秒后游戏结束
 			setTimeout(function() {
-				// eventEnd();
-				// alert('游戏结束！');
+				eventEnd();
+				alert('游戏结束！');
 			}, 10000);
 		}
 	};
