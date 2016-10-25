@@ -5,91 +5,14 @@
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-<title>投 票</title>
-<!--[if lt IE 9]>
-<script>
-	var html5 = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,main,mark,menu,meter,nav,output,progress,section,time,video".split(','),i = html5.length;
-	while(i--) document.createElement(html5[i]);
-</script>
-<![endif]-->
-<link rel="stylesheet" href="plugins/jquery.fancybox.css">
+<title>摇一摇</title>
 <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<header><img src="img/hd.jpg" alt=""></header>
 	<main>
-		<section class="photo-wall"><div class="container">
-			<p>投票说明：</p>
-			<input type="submit" class="btn vote-btn round" value="投 票">
-			<ul class="grid">
-				<li class="grid-item">
-					<a href="img/01.jpg" class="fancybox" title="简介放这里简介放这里简介放这里简介放这里简介放这里简介放这里简介放这里"><img src="img/01.jpg" alt=""></a>
-					<div class="brief">
-						<p><b>No.01</b> Mike</p>
-						<p class="num">当前票数：999</p>
-						<label for="n1" class="btn check-btn">选 择
-						<input type="checkbox" id="n1"></label>
-					</div>
-				</li>
-				<li class="grid-item">
-					<a href="img/02.jpg" class="fancybox" title="aaa"><img src="img/02.jpg" alt=""></a>
-					<div class="brief">
-						<p><b>No.02</b> Mike</p>
-						<p class="num">当前票数：999</p>
-						<label for="n2" class="btn check-btn"><i></i>选 择
-						<input type="checkbox" id="n2"></label>
-					</div>
-				</li>
-				<li class="grid-item">
-					<a href="img/03.jpg" class="fancybox" title=""><img src="img/03.jpg" alt=""></a>
-					<div class="brief">
-						<p><b>No.03</b> Mike</p>
-						<p class="num">当前票数：999</p>
-						<label for="n3" class="btn check-btn">选 择
-						<input type="checkbox" id="n3"></label>
-					</div>
-				</li>
-			</ul>
-		</div></section>
+		<div id="count">0</div>
 	</main>
-	<div class="layer">
-		<div class="modal"><div class="container">
-			<h3>您将要投票给以下作品：</h3>
-			<div class="chozen">
-				<p><b>No.01</b> Mike</p>
-				<p><b>No.02</b> Mike</p>
-				<p><b>No.03</b> Mike</p>
-			</div>
-			<button class="btn confirm-btn">确 定</button>
-			<button class="btn close-btn border">取 消</button>
-			<!-- <span class="close-btn"><img src="img/multiply_50px.png" alt=""></span> -->
-		</div></div>
-	</div>
-	<nav>
-		<ul>
-			<li><a href="index.html"><span>首页</span></a></li>
-	        <li><a href="upload.html"><span>上传</span></a></li>
-	        <li><a href="intro.html"><span>规则</span></a></li>
-		</ul>
-		<img src="img/nav.jpg" alt="">
-	</nav>
-
 	<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-	<script src="js/tools.min.js"></script>
-	<script src="js/global.js"></script>
-    <script>
-	$(function(){
-		var $grid = $('.grid').imagesLoaded(function() {
-			$grid.masonry({
-				// gutter: 10
-			});
-		});
-
-		$('.fancybox').fancybox({
-			padding : 0,
-			speed: 200
-		});
-	});
-    </script>
+	<script src="js/shake.js"></script>
 </body>
 </html>
