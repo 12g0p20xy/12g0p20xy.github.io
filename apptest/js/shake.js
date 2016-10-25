@@ -1,6 +1,6 @@
-var Shake = (function() {
+(function() {
 
-	var SHAKE_THRESHOLD = 800,
+	var SHAKE_THRESHOLD = 3000,
 		last_update = 0,
 		count = 0,
 		x = y = z = last_x = last_y = last_z = 0;
@@ -38,7 +38,6 @@ var Shake = (function() {
 	}
 
 	function doResult(count) {
-		console.log(count);
 		oCount.innerHTML = count;
 	}
 
