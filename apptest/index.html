@@ -6,13 +6,45 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
 <title>摇一摇</title>
-<link rel="stylesheet" href="css/style.min.css">
+<style>
+	html, body{
+		margin: 0;
+		padding: 0;
+	}
+	#count{
+		font-size: 36px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		transform: translate3d(-50%, -50%, 0);
+	}
+</style>
 </head>
 <body>
 	<main>
-		<div id="count"></div>
+		<div id="timer"></div>
+		<div id="count">00</div>
 	</main>
 	<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
 	<script src="js/shake.js"></script>
+	<script>
+		window.onload = function() {
+			var oTimer = document.getElementById('timer'),
+				t = null;
+			function getTime() {
+				var ts = (new Date(2016, 10, 25, 16, 30, 00)) - (new Date());
+				var ss = parseInt(ts / 1000 % 60); // 计算剩余的秒数
+				oTimer.innerHTML = '距离比赛开始还有 ' + ss + ' 秒';
+				t = setTimeout(getTime, 1000);
+				if (ss <= 0) {
+					Shake.init();
+					oTimer.innerHTML = '';
+					clearTimeout(t);
+				}
+			}
+			t = setTimeout(getTime, 1000);
+		}
+	</script>
 </body>
 </html>
