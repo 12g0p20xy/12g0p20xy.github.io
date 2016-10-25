@@ -7,7 +7,8 @@ var Shake = (function() {
 	function eventStart() {
 		if (window.DeviceMotionEvent) {
 			window.addEventListener('devicemotion', deviceMotionHandler, false);
-			alert('已绑定');
+			console.log('已绑定');
+			console.log(window);
 		}
 		else {
 			alert('本设备不支持devicemotion事件');
@@ -40,7 +41,7 @@ var Shake = (function() {
 
 			if (speed > SHAKE_THRESHOLD) {
 				count++;
-				doResult(count);
+				oCount.innerHTML = count;
 			}
 			last_x = x;
 			last_y = y;
@@ -48,19 +49,14 @@ var Shake = (function() {
 		}
 
 	}
-
-	// 计数
-	function doResult(count) {
-		oCount.innerHTML = count;
-	}
 	
 	return {
 		init: function() {
 			eventStart();
 			// 计时，xx秒后游戏结束
 			setTimeout(function() {
-				eventEnd();
-				alert('游戏结束！');
+				// eventEnd();
+				// alert('游戏结束！');
 			}, 10000);
 		}
 	};
