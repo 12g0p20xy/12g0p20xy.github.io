@@ -2,7 +2,10 @@ var Shake = (function() {
 
 	var SHAKE_THRESHOLD = 800,
 		last_update = 0,
+		count = 0,
 		x = y = z = last_x = last_y = last_z = 0;
+
+	var oCount = document.getElementById('count');
 
 	if (window.DeviceMotionEvent) {
 		window.addEventListener('devicemotion', deviceMotionHandler, false);
@@ -24,7 +27,6 @@ var Shake = (function() {
 			z = acceleration.z;
 			speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
 
-			var count = 0;
 			if (speed > SHAKE_THRESHOLD) {
 				count++;
 				doResult(count);
@@ -35,10 +37,9 @@ var Shake = (function() {
 		}
 	}
 
-	var oCount = document.getElementById('#count');
-
 	function doResult(count) {
-		oCount.innerHTML = count + '次';
+		console.log(count);
+		oCount.innerHTML = count;
 	}
 
 })();
