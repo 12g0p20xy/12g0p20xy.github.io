@@ -1,9 +1,13 @@
 var Shake = (function() {
 
+	var oCount = document.getElementById('count'),
+		count = 0; // 计数
+
 	// 绑定事件
 	function eventStart() {
 		if (window.DeviceMotionEvent) {
 			window.addEventListener('devicemotion', deviceMotionHandler, false);
+			alert('已绑定');
 		}
 		else {
 			alert('本设备不支持devicemotion事件');
@@ -20,10 +24,7 @@ var Shake = (function() {
 
 		var SHAKE_THRESHOLD = 3000, // 触发摇动的最小距离
 			last_update = 0, // 最后更新的时间
-			count = 0, // 计数
 			x = y = z = last_x = last_y = last_z = 0; // 移动距离
-
-		var oCount = document.getElementById('count');
 
 		var acceleration = eventData.accelerationIncludingGravity,
 			curTime = new Date().getTime(),
