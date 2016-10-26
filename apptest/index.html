@@ -20,14 +20,14 @@
 		window.onload = function() {
 			var oTimer = document.getElementById('timer'),
 				oHand = document.getElementById('hand'),
-				TIME_LINE = tt = 10, // *** 这里设置倒计时的秒数(单位/秒) ***
+				TIME_LINE = tt = 10, // 这里设置倒计时的秒数(单位/秒)
 				t = null;
 			function setTime() {
 				oTimer.innerHTML = '距离比赛开始还有 ' + tt + ' 秒';
 				tt--;
 				t = setTimeout(setTime, 1000);
 				if (tt <= 0) {
-					Shake.init(10000); // *** 这里设置游戏时长(单位/毫秒) ***
+					Shake.init(10000); // 这里设置游戏时长(单位/毫秒)
 					oTimer.innerHTML = '比赛开始，摇动你的手机';
 					oHand.classList.add('animate');
 					clearTimeout(t);
