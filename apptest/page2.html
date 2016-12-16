@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<title>选择配送地区</title>
+	<link rel="stylesheet" href="plugins/Font-Awesome-3.2.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="plugins/icheck-1.x/skins/flat/Orange.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<div class="top-hint">※市区21家网点同步推出<i class="icon-remove right"></i></div>
+	<h2>选择方便您付款提货微美团商品的网点（单选）</h2>
+	<ul class="item-list">
+		<li>
+			<label for="l1">
+				<div class="iradio">
+				<input id="l1" type="radio" name="local">
+				<h3>徽商银行镜湖支行（二街柳春园小学）</h3>
+			</label>
+		</li>
+		<li>
+			<label for="l2">
+				<div class="iradio">
+				<input id="l2" type="radio" name="local">
+				<h3>徽商银行九华支行（北门四岔路口）</h3>
+			</label>
+		</li>
+		<li>
+			<label for="l3">
+				<div class="iradio">
+				<input id="l3" type="radio" name="local">
+				<h3>徽商银行弋江支行（新时代商业街191号）</h3>
+			</label>
+		</li>
+	</ul>
+	<div id="layer">
+		<div class="modal"><div class="container">
+			<h3>您的信息</h3>
+			<label for="">姓 名<input type="text"></label>
+			<label for="">联系方式<input type="text"></label>
+			<button class="confirm-btn btn">提 交</button>
+			<button class="close-btn btn">取 消</button>
+		</div></div>
+	</div>
+	<input type="submit" class="next-btn btn" value="下一步">
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script src="plugins/icheck-1.x/icheck.min.js"></script>
+	<script>
+		$('.item-list input').iCheck({
+			checkboxClass: 'icheckbox_flat-orange',
+		    radioClass: 'iradio_flat-orange',
+		    increaseArea: '20%'
+		});
+	</script>
+	<script src="js/modal.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-<title>摇一摇</title>
-<link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<title>选择地区</title>
+	<link rel="stylesheet" href="plugins/Font-Awesome-3.2.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<main>
-		<div id="timer">距离比赛开始还有 秒</div>
-		<div id="hand"><img src="img/hand.png" alt=""></div>
-		<div id="count">00</div>
-	</main>
-	<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-	<script src="js/shake.js"></script>
-	<script>
-		window.onload = function() {
-			var oTimer = document.getElementById('timer'),
-				oHand = document.getElementById('hand'),
-				TIME_LINE = tt = 10, // 这里设置倒计时的秒数(单位/秒)
-				t = null;
-			function setTime() {
-				oTimer.innerHTML = '距离比赛开始还有 ' + tt + ' 秒';
-				tt--;
-				t = setTimeout(setTime, 1000);
-				if (tt <= 0) {
-					Shake.init(10000); // 这里设置游戏时长(单位/毫秒)
-					oTimer.innerHTML = '比赛开始，摇动你的手机';
-					oHand.classList.add('animate');
-					clearTimeout(t);
-				}
-			}
-			setTime();
-		}
-	</script>
+	<h2>选择您所在的地区</h2>
+	<ul class="item-list">
+		<li><a href="page1.html"><h3>芜湖市区<i class="icon-chevron-right right"></i></h3></a></li>
+		<li><a href="page1.html"><h3>芜湖县<i class="icon-chevron-right right"></i></h3></a></li>
+		<li><a href="page1.html"><h3>南陵县<i class="icon-chevron-right right"></i></h3></a></li>
+		<li><a href="page1.html"><h3>繁昌县<i class="icon-chevron-right right"></i></h3></a></li>
+		<li><a href="page1.html"><h3>无为县<i class="icon-chevron-right right"></i></h3></a></li>
+	</ul>
 </body>
 </html>
