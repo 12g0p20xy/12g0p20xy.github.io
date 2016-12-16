@@ -5,18 +5,64 @@
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-	<title>选择地区</title>
+	<title>订单</title>
 	<link rel="stylesheet" href="plugins/Font-Awesome-3.2.1/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<h2>选择您所在的地区</h2>
-	<ul class="item-list">
-		<li><a href="page1.html"><h3>芜湖市区<i class="icon-chevron-right right"></i></h3></a></li>
-		<li><a href="page1.html"><h3>芜湖县<i class="icon-chevron-right right"></i></h3></a></li>
-		<li><a href="page1.html"><h3>南陵县<i class="icon-chevron-right right"></i></h3></a></li>
-		<li><a href="page1.html"><h3>繁昌县<i class="icon-chevron-right right"></i></h3></a></li>
-		<li><a href="page1.html"><h3>无为县<i class="icon-chevron-right right"></i></h3></a></li>
+	<h2>您已提交的订单</h2>
+	<ul class="order-list item-list">
+		<li>
+			<h3>西班牙进口蓓琳娜 PDO 橄榄油 750ml</h3>
+			<div class="detail clearfix">
+				<p><b>预订数：99</b><b>合计：&#65509;<i class="num">1000</i>.00</b></p>
+				<p><button class="remove-order btn"><i class="icon-remove"></i>撤销订单</button></p>
+			</div>
+			<div class="address">
+				<p>配送地址：徽商银行镜湖支行（二街柳春园小学）</p>
+			</div>
+			<small>提交时间：2016.12.16 3:00</small>
+		</li>
+		<li>
+			<h3>西班牙进口蓓琳娜 PDO</h3>
+			<div class="detail clearfix">
+				<p><b>预订数：99</b><b>合计：&#65509;<i class="num">1000</i>.00</b></p>
+				<p><button class="remove-order btn"><i class="icon-remove"></i>撤销订单</button></p>
+			</div>
+			<small>提交时间：2016.12.16 3:00</small>
+		</li>
+		<li>
+			<h3>西班牙</h3>
+			<div class="detail clearfix">
+				<p><b>预订数：99</b><b>合计：&#65509;<i class="num">1000</i>.00</b></p>
+				<p><button class="remove-order btn"><i class="icon-remove"></i>撤销订单</button></p>
+			</div>
+			<small>提交时间：2016.12.16 3:00</small>
+		</li>
 	</ul>
+	<div id="layer">
+		<div class="modal"><div class="container">
+			<h3>要删除此订单吗？</h3>
+			<button class="confirm-btn btn">是</button>
+			<button class="close-btn btn">否</button>
+		</div></div>
+	</div>
+	<a href="page1.html" class="btn"><i class="icon-shopping-cart"></i> 预订商品</a>
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/modal.js"></script>
+	<script>
+		$(function() {
+			var $remove = $('.remove-order').on('click', function(event) {
+				event.preventDefault();
+				Modal.init();
+				var $confirm = $('.modal .confirm-btn'),
+					$_this = $(this);
+				$confirm.on('click', function() {
+					$('#layer').removeClass('show');
+					$_this.parents('li').remove();
+				});
+			});
+		});
+	</script>
 </body>
 </html>
