@@ -5,64 +5,57 @@
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-	<title>订单</title>
+	<title>选择商品</title>
 	<link rel="stylesheet" href="plugins/Font-Awesome-3.2.1/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<h2>您已提交的订单</h2>
-	<ul class="order-list item-list">
+	<div class="top-hint">※以下商品仅供芜湖市区内支行网点销售<i class="icon-remove right"></i></div>
+	<ul class="item-list">
 		<li>
-			<h3>西班牙进口蓓琳娜 PDO 橄榄油 750ml</h3>
+			<h3>西班牙进口蓓琳娜 PDO 橄榄油 750ml<i class="icon-plus right"></i></h3>
 			<div class="detail clearfix">
-				<p><b>预订数：99</b><b>合计：&#65509;<i class="num">1000</i>.00</b></p>
-				<p><button class="remove-order btn"><i class="icon-remove"></i>撤销订单</button></p>
+				<p><b>原价：84元/瓶；</b><b>微美团价：50元/瓶</b></p>
+				<label for="">
+					预订数：
+					<button>-</button>
+					<input type="number" max="" min="0" placeholder="" value="0">
+					<button>+</button>
+				</label>
 			</div>
-			<div class="address">
-				<p>配送地址：徽商银行镜湖支行（二街柳春园小学）</p>
-			</div>
-			<small>提交时间：2016.12.16 3:00</small>
 		</li>
 		<li>
-			<h3>西班牙进口蓓琳娜 PDO</h3>
-			<div class="detail clearfix">
-				<p><b>预订数：99</b><b>合计：&#65509;<i class="num">1000</i>.00</b></p>
-				<p><button class="remove-order btn"><i class="icon-remove"></i>撤销订单</button></p>
+			<h3>法国诺亚干红 AOC 级 750ml<i class="icon-plus right"></i></h3>
+			<div class="detail">
+				<p><b>原价：132元/瓶；</b><b>微美团价：52元/瓶</b></p>
+				<label for="">
+					预订数：
+					<button>-</button>
+					<input type="number" placeholder="" value="0">
+					<button>+</button>
+				</label>
 			</div>
-			<small>提交时间：2016.12.16 3:00</small>
 		</li>
 		<li>
-			<h3>西班牙</h3>
-			<div class="detail clearfix">
-				<p><b>预订数：99</b><b>合计：&#65509;<i class="num">1000</i>.00</b></p>
-				<p><button class="remove-order btn"><i class="icon-remove"></i>撤销订单</button></p>
+			<h3>德运脱脂奶粉 1KG<i class="icon-plus right"></i></h3>
+			<div class="detail">
+				<p><b>原价：80元/包；</b><b>微美团价：66元/包</b></p>
+				<label for="">预订数：<input type="number" placeholder="" value="0"></label>
 			</div>
-			<small>提交时间：2016.12.16 3:00</small>
 		</li>
 	</ul>
+	<input type="submit" class="next-btn btn" value="下一步">
 	<div id="layer">
 		<div class="modal"><div class="container">
-			<h3>要删除此订单吗？</h3>
-			<button class="confirm-btn btn">是</button>
-			<button class="close-btn btn">否</button>
+			<h3>您已选择的商品如下：</h3>
+			<p>西班牙进口蓓琳娜PDO橄榄油750ml * 10</p>
+			<p>法国诺亚干红 AOC级750ml * 99</p>
+			<button class="confirm-btn btn">确 认</button>
+			<button class="close-btn btn">修 改</button>
 		</div></div>
 	</div>
-	<a href="page1.html" class="btn"><i class="icon-shopping-cart"></i> 预订商品</a>
 	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/modal.js"></script>
-	<script>
-		$(function() {
-			var $remove = $('.remove-order').on('click', function(event) {
-				event.preventDefault();
-				Modal.init();
-				var $confirm = $('.modal .confirm-btn'),
-					$_this = $(this);
-				$confirm.on('click', function() {
-					$('#layer').removeClass('show');
-					$_this.parents('li').remove();
-				});
-			});
-		});
-	</script>
+	<script src="js/script.js"></script>
 </body>
 </html>

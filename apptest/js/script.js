@@ -5,7 +5,9 @@ $(function() {
 		var $list = $('.item-list'),
 			$li = $list.children('li'),
 			$input = $li.find('input'),
-			$delete = $li.find('i');
+			$delete = $li.find('i'),
+			$btnL = $li.find('button:first'),
+			$btnR = $li.find('button:last');
 
 		$li.on('click', function() {
 			$(this).addClass('active')
@@ -29,6 +31,27 @@ $(function() {
 			if ($_li.hasClass('active')) {
 				$_li.find('input').val(0);
 				$_li.removeClass('active');
+			}
+		});
+
+		$btnR.on('click', function(event) {
+			event.preventDefault();
+			var $_input = $(this).siblings('input'),
+				num = $_input.val();
+			num++;
+			$_input.val(num);
+		});
+
+		$btnL.on('click', function(event) {
+			event.preventDefault();
+			var $_input = $(this).siblings('input'),
+				num = $_input.val();
+			num--;
+			if (num <= 0) {
+				$_input.val(0);
+			}
+			else{
+				$_input.val(num);
 			}
 		});
 		
