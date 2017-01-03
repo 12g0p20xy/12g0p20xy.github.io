@@ -1,13 +1,81 @@
-# Vno - Jekyll
+![](_assets/images/documentation/chalk-intro@2x.png)
 
-[Vno Jekyll](https://github.com/onevcat/vno-jekyll) is a theme for [Jekyll](http://jekyllrb.com). It is a port of my Ghost theme [vno](https://github.com/onevcat/vno), which is originally developed from [Dale Anthony's Uno](https://github.com/daleanthony/uno).
+Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.
 
-## Live Demo
+## Overview
 
-See [Vno - Jekyll](http://vno.onevcat.com) site and [my blog](http://onevcat.com).
+Features:
+  - Dark and Light theme.
+  - Filter on tags.
+  - customizable pagination.
+  - Beautified link sharing in Facebook and other social media.
+  - Automatic time to read post indicator.
+  - Automatic RSS feed.
+  - About page.
+  - 404 page.
+  - SEO optimized.
+  - PageSpeed optimized.
+  - Cross browser support (supports all modern browsers).
+  - Media embed for videos.
+  - Enlarge images on click (like Medium).
 
-You can also find some instruction as well as other sites using Vno theme in [this page](http://vno.onevcat.com/2016/02/hello-world-vno/).
+Integrations
+  - [Google Analytics](https://analytics.google.com/analytics/web/)
+  - [Google Fonts](https://fonts.google.com/)
+  - [Disqus](https://disqus.com/)
+  - [Ionicons](http://ionicons.com/)
+  - Social media links
 
-## Licence
+Used tools
+  - [Autoprefixer](https://github.com/postcss/autoprefixer)
+  - [Bower](http://bower.io/)
+  - [Circle CI](https://circleci.com/)
+  - [Html-proofer](https://github.com/gjtorikian/html-proofer)
+  - [Jekyll](http://jekyllrb.com/)
+  - [Jekyll assets](https://github.com/jekyll/jekyll-assets)
+  - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
+  - [HTML5 Boilerplate](https://html5boilerplate.com/) (Influenced by)
+  - [Kickster](http://kickster.nielsenramon.com/)
+  - [Retina.js](http://imulus.github.io/retinajs/)
+  - [STACSS](http://stacss.nielsenramon.com/)
 
-Great thanks to [Dale Anthony](https://github.com/daleanthony) and his [Uno](https://github.com/daleanthony/uno). Vno Jekyll is based on Uno, and contains a lot of modification on page layout, animation, font and some more things I can not remember. Vno Jekyll is followed with Uno and be licensed as [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/). See the link for more information.
+## Usage
+
+### Installation
+
+If you haven't installed the following tools then go ahead and do so (make sure you have [Homebrew](http://brew.sh/) installed):
+
+    brew install ruby
+    brew install npm
+
+Next setup your environment:
+
+    bin/setup
+
+### Development
+
+Run Jekyll:
+
+    bundle exec jekyll serve
+
+### Deploy to GitHub Pages
+
+Run this in the root project folder in your console:
+
+    bin/deploy
+
+You can find more info on how to use the gh-pages branch and a custom domain [here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
+
+[View this](https://github.com/nielsenramon/kickster#automated-deployment-with-circle-ci) for more info about automated deployment with Circle CI.
+
+## License
+
+MIT License
+
+## Contributing
+
+1. Fork it ( https://github.com/[my-github-username]/chalk/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request

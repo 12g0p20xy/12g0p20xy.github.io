@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body>
-
-    <span class="mobile btn-mobile-menu">
-        <i class="fa fa-list btn-mobile-menu__icon"></i>
-        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
-    </span>
-    
-    {% include side-panel.html %}
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner">
-            {{ content }}
-            {% include footer.html %}
-        </div>
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body>
+  <main role="main">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        {% include navigation.html %}
+        {{ content }}
+        {% include footer.html %}
+      </div>
     </div>
-    
-    {% include external.html %}
-    
-  </body>
-
+  </main>
+  {% include javascripts.html %}
+</body>
 </html>
