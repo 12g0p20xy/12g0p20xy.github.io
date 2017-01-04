@@ -17,14 +17,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quae similiq
 
 <button class="btn">button</button>
 
-<pre><code class="html">
+<pre><code class="js">
 	function a() {
 		var a = 1;
 		console.log(a);
 	}
 </code></pre>
 
-<pre><code class="html">
+<pre><code class="css">
 	.btn{
 		font-size: 18px;
 		background: #000;
