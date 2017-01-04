@@ -1,3 +1,6 @@
+highlighter : pygments
+encoding: utf-8
+
 # Site settings
 title: Persona
 header-img: img/home-bg.jpg
@@ -10,7 +13,6 @@ twitter_username: SBootstrap
 github_username:  davidtmiller
 facebook_username:  StartBootstrap
 email_username:  your-email@yourdomain.com
-encoding: utf-8
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
