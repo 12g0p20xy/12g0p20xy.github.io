@@ -5,7 +5,7 @@ require "bundler/setup"
 require "jekyll"
 
 # Change your GitHub reponame
-GITHUB_REPONAME    = "nandomoreirame/lora"
+GITHUB_REPONAME    = "12g0p20xy.github.io"
 GITHUB_REPO_BRANCH = "gh-pages"
 
 SOURCE = "source/"
