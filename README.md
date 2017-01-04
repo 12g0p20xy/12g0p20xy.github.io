@@ -1,81 +1,47 @@
-![](_assets/images/documentation/chalk-intro@2x.png)
+# Lora - free Jekyll theme
 
-Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.
+> :warning:
+  This theme requires ruby and rubygems installed
 
-## Overview
+---
 
-Features:
-  - Dark and Light theme.
-  - Filter on tags.
-  - customizable pagination.
-  - Beautified link sharing in Facebook and other social media.
-  - Automatic time to read post indicator.
-  - Automatic RSS feed.
-  - About page.
-  - 404 page.
-  - SEO optimized.
-  - PageSpeed optimized.
-  - Cross browser support (supports all modern browsers).
-  - Media embed for videos.
-  - Enlarge images on click (like Medium).
+### Start in 4 steps
 
-Integrations
-  - [Google Analytics](https://analytics.google.com/analytics/web/)
-  - [Google Fonts](https://fonts.google.com/)
-  - [Disqus](https://disqus.com/)
-  - [Ionicons](http://ionicons.com/)
-  - Social media links
+1. Download or clone repo `git clone git@github.com:nandomoreirame/lora.git`
+2. Enter the folder: `cd lora/`
+3. Install Ruby gems: `bundle install`
+4. Start Jekyll server: `jekyll serve`
 
-Used tools
-  - [Autoprefixer](https://github.com/postcss/autoprefixer)
-  - [Bower](http://bower.io/)
-  - [Circle CI](https://circleci.com/)
-  - [Html-proofer](https://github.com/gjtorikian/html-proofer)
-  - [Jekyll](http://jekyllrb.com/)
-  - [Jekyll assets](https://github.com/jekyll/jekyll-assets)
-  - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
-  - [HTML5 Boilerplate](https://html5boilerplate.com/) (Influenced by)
-  - [Kickster](http://kickster.nielsenramon.com/)
-  - [Retina.js](http://imulus.github.io/retinajs/)
-  - [STACSS](http://stacss.nielsenramon.com/)
+Access, [localhost:4000](http://localhost:4000/)
 
-## Usage
+### Deploy in Github pages in 2 steps
 
-### Installation
+1. Change the variables `GITHUB_REPONAME` and `GITHUB_REPO_BRANCH` in `Rakefile`
+2. Run `rake` or `rake publish` for build and publish on Github
 
-If you haven't installed the following tools then go ahead and do so (make sure you have [Homebrew](http://brew.sh/) installed):
+---
 
-    brew install ruby
-    brew install npm
+### Using Rake tasks
 
-Next setup your environment:
+* Create a new page: `rake page name="contact.md"`
+* Create a new post: `rake post title="TITLE OF THE POST"`
 
-    bin/setup
+---
 
-### Development
+### Demo and Download
 
-Run Jekyll:
+[Demo](https://nandomoreira.me/lora/)
+[Download](https://github.com/nandomoreirame/lora/archive/master.zip)
 
-    bundle exec jekyll serve
+![Lora - free Jekyll theme](/screenshot.png)
 
-### Deploy to GitHub Pages
+---
 
-Run this in the root project folder in your console:
+### Copyright and license
 
-    bin/deploy
+Lora is under [the MIT license](/LICENSE).
 
-You can find more info on how to use the gh-pages branch and a custom domain [here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
+> :warning:
+  Please remove metas `<meta name="robots" content="noindex">` and `<meta name="googlebot" content="noindex">` in `_layouts/default.html`
 
-[View this](https://github.com/nielsenramon/kickster#automated-deployment-with-circle-ci) for more info about automated deployment with Circle CI.
-
-## License
-
-MIT License
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/chalk/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Enjoy :yum:
