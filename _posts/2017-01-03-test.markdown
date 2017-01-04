@@ -1,0 +1,18 @@
+---
+layout: post
+title: 试一下效果:)
+date: 2017-01-03 11:10:06
+comments: true
+tags: hello first
+---
+
+我是标题
+======
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quae similique deleniti facilis voluptatem ex laborum cum, magnam quod praesentium rerum illo excepturi libero facere nisi doloremque perspiciatis, eius impedit.
+
+海绵宝宝跟派大星无意中发现失传已久的亚特兰提斯神古金币，打开了通往亚特兰提斯古城的神秘通道，来到了那座消失的古城。蟹老板、珊迪、章鱼哥跟皮老板都在那里实现了他们一生中的梦想，但是却因为海绵宝宝和派大星弄破了最古老的泡泡，被迫要离开那里，回到现实之中，和亚特兰提斯说再见...
+
+    def g(x):
+        yield from range(x, 0, -1)
+    yield from range(x)
