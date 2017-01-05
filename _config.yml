@@ -1,28 +1,27 @@
-highlighter : pygments
-encoding: utf-8
-
 # Site settings
-title: Persona
+title: Stand Alone Complex
 header-img: img/home-bg.jpg
 email: 12g0p20xy@gmail.com
 copyright_name: monad
-description: "Write your site description here. It will be used as your sites meta description as well!"
+description: "monad's personal blog, about designing and coding"
 baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  StartBootstrap
-email_username:  your-email@yourdomain.com
+url: "12g0p20xy.github.io"
+twitter: MonadoProxy
+github:  12g0p20xy
+facebook:  
+tumblr: monadblog
+dribbble: monad
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
-# google_tracking_id:
+# google_tracking_id: UA-89863402-1
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
+# highlighter: rouge
+encoding: utf-8
 permalink: pretty
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-gems: [jekyll-paginate, jekyll-feed]
+gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap, jemoji]
