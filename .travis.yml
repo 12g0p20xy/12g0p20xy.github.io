@@ -3,8 +3,6 @@ rvm:
  - 2.2
  - jruby
  - rbx-2
-bundle:
- - 1.13
 before_install:
-  - nokogiri install
+  - gem install bundler
 script: bundle exec jekyll build
