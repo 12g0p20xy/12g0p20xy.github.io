@@ -6,6 +6,5 @@ rvm:
 before_install:
  
 script: 
- gem install bundle --version '1.13.7'
- bundle --version
+ bundle install
  bundle exec jekyll build
