@@ -3,4 +3,6 @@ rvm:
  - 2.2
  - jruby
  - rbx-2
-script: bundle exec jekyll build
+script:
+ -bundler update
+ -bundle exec jekyll build
