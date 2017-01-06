@@ -14,11 +14,11 @@ dribbble: monad
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
-google_tracking_id: UA-89863402-1
+# google_tracking_id: UA-89863402-1
 
 # Build settings
 markdown: kramdown
-# highlighter: rouge
+highlighter: rouge
 encoding: utf-8
 permalink: pretty
 paginate: 5
