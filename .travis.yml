@@ -4,6 +4,8 @@ rvm:
  - jruby
  - rbx-2
 before_install:
-  - gem install bundle --version '1.13.7'
-  - bundle --version
-script: bundle exec jekyll build
+ 
+script: 
+ gem install bundle --version '1.13.7'
+ bundle --version
+ bundle exec jekyll build
