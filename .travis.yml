@@ -3,6 +3,6 @@ rvm:
  - 2.2
  - jruby
  - rbx-2
-before_install:
- - bundle install 1.13.7
+bundle:
+ - 1.13
 script: bundle exec jekyll build
