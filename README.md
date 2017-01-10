@@ -5,7 +5,9 @@ Based on [Hux Blog](https://github.com/Huxpro/huxpro.github.io)
 # Package Version
 
 GEM
+
   remote: http://gems.ruby-china.org/
+
   specs:
 
     activesupport (4.2.7.1)
@@ -17,7 +19,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     colorator (1.1.0)
-    ffi (1.9.14-x64-mingw32)
+    ffi (1.9.14)
     forwardable-extended (2.6.0)
     gemoji (2.1.0)
     html-pipeline (2.4.2)
@@ -54,7 +56,7 @@ GEM
     mercenary (0.3.6)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
-    nokogiri (1.7.0.1-x64-mingw32)
+    nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
@@ -70,12 +72,17 @@ GEM
       thread_safe (~> 0.1)
 
 PLATFORMS
+
   x64-mingw32
 
 DEPENDENCIES
+
   jekyll
+
   jekyll-paginate
+
   jemoji
 
 BUNDLED WITH
+
    1.13.7
