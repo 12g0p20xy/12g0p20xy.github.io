@@ -6,7 +6,7 @@ email: 12g0p20xy@gmail.com
 description: "monad's personal blog, about designing and coding"
 keyword: ""
 url: "12g0p20xy.github.io" 
-baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: "12g0p20xy.github.io" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # SNS settings
 RSS: false
