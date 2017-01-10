@@ -17,16 +17,21 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quae similiq
 
 <button class="btn">button</button>
 
-<pre class="highlight"><code>
-	function a() {
-		var a = 1;
-		console.log(a);
-	}
-</code></pre>
+```js
+function a() {
+	var a = 1;
+	console.log(a);
+}
+```
 
-<pre class="highlight"><code>
-	.btn{
-		font-size: 18px;
-		background: #000;
-	}
-</code></pre>
+```css
+.btn{
+	font-size: 18px;
+	background: #000;
+}
+```
+
+```html
+<div class="a" id="b"><a href="">Hello</a></div>
+<!-- 注释 -->
+```
