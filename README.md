@@ -1,8 +1,8 @@
-## My Blog
+# My Blog
 
-based on [Hux Blog](https://github.com/Huxpro/huxpro.github.io)
+Based on [Hux Blog](https://github.com/Huxpro/huxpro.github.io)
 
-## Package Version
+# Package Version
 
 GEM
 
@@ -11,21 +11,13 @@ GEM
   specs:
 
     activesupport (4.2.7.1)
-
       i18n (~> 0.7)
-
       json (~> 1.7, >= 1.7.7)
-
       minitest (~> 5.1)
-
       thread_safe (~> 0.3, >= 0.3.4)
-
       tzinfo (~> 1.1)
-
     addressable (2.5.0)
-
       public_suffix (~> 2.0, >= 2.0.2)
-
     colorator (1.1.0)
 
     ffi (1.9.14-x64-mingw32)
@@ -39,7 +31,7 @@ GEM
       activesupport (>= 2)
 
       nokogiri (>= 1.4)
-      
+
     i18n (0.7.0)
 
     jekyll (3.3.1)
