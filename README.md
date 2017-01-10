@@ -1,8 +1,16 @@
 # My Blog
 
-Based on [Hux Blog](https://github.com/Huxpro/huxpro.github.io)
+This blog theme is based on 
+[Hux Blog](https://github.com/Huxpro/huxpro.github.io)
+[Clean Blog](https://startbootstrap.com/template-overviews/clean-blog/)
 
-# Package Version
+## Usage
+
+Run <code>jekyll serve watch</code> and visit <code>127.0.0.1:4000</code> in the browser;
+
+Run <code>npm install</code> and <code>grunt</code> if you want to start a grunt task.
+
+## Package Version
 
 GEM
 
