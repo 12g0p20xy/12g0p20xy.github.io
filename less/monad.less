@@ -1,15 +1,14 @@
-@import "variables";
+@import "theme";
 @import "mixins";
 @import "sidebar";
 
 // Global Components
 
 body {
-	.sans-serif;
-	font-size: 16px;
+	.serif;
+	font-size: 18px;
 	// Hux mpdify to 16px (Mobile First), and increase to 20px while 768+ width
 	color: @gray-dark;
-	//-webkit-user-select:text; //对于 Blog 还是先不开启这句。
 	overflow-x : hidden;
 }
 
@@ -80,10 +79,10 @@ img.shadow{
 
 @media screen and (max-width: 768px){
 	select{
-		-webkit-appearance:none;
-		margin-top:15px;
-		color:#337ab7;
-		border-color:#337ab7;
+		-webkit-appearance: none;
+		margin-top: 15px;
+		color: #337ab7;
+		border-color: #337ab7;
 		padding: 0em 0.4em;
 		background: white;
 	}
@@ -107,6 +106,7 @@ pre,.table-responsive{
 pre code{
 	display: block;
 	width: auto;
+	font-size: 15px;
 	white-space: pre;	// save it but no-wrap;
 	word-wrap: normal;	// no-wrap
 }
@@ -115,12 +115,13 @@ pre code{
 // In the post.
 .post-container{
 	a{
-		color:#337ab7;
-		// different to @brand-primary
+		color: @brand-primary;
 		&:hover,
 		&:focus {
-			color: @brand-primary;
+			color: lighten(@brand-primary, 10%);
+			text-decoration: none;
 		}
+		.transition-all();
 	}
 	h1,
 	h2,
@@ -968,8 +969,14 @@ body {
 	color: #ddd;
 }
 
-// 2017.1.10
+// 2017-1 add by monad
 img.emoji{
 	display: inline;
 	margin:  0 .5em;
+}
+
+@media (min-width: 1200px) {
+	.container {
+	    width: 80%;
+	}
 }
