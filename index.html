@@ -5,6 +5,9 @@ description: "Boilerplate of Hux Blog"
 
 {% for post in paginator.posts %}
 <div class="post-preview">
+    <p class="post-meta">
+        <!-- Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on  -->{{ post.date | date: "%B %-d, %Y" }}
+    </p>
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
             {{ post.title }}
@@ -18,9 +21,6 @@ description: "Boilerplate of Hux Blog"
             {{ post.content | strip_html | truncate:200 }}
         </div>
     </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
 </div>
 <hr>
 {% endfor %}

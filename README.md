@@ -14,12 +14,10 @@ Also you can run <code>grunt & jekyll serve</code> together if you want to build
 
 ## Package Version
 
+<code>
 GEM
-
   remote: http://gems.ruby-china.org/
-
   specs:
-
     activesupport (4.2.7.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -82,17 +80,13 @@ GEM
       thread_safe (~> 0.1)
 
 PLATFORMS
-
   x64-mingw32
 
 DEPENDENCIES
-
   jekyll
-
   jekyll-paginate
-
   jemoji
 
 BUNDLED WITH
-
    1.13.7
+</code>

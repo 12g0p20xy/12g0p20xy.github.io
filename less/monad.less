@@ -6,7 +6,7 @@
 
 body {
 	.serif;
-	font-size: 18px;
+	font-size: 20px;
 	// Hux mpdify to 16px (Mobile First), and increase to 20px while 768+ width
 	color: @gray-dark;
 	overflow-x : hidden;
@@ -54,7 +54,10 @@ article{
 	overflow-x : hidden;
 }
 blockquote {
+	padding: 20px;
 	color: @gray;
+	border-color: @brand-secondary;
+	background: lighten(@brand-secondary, 23%);
 	font-style: italic;
 	font-size: 0.95em;
 	margin: 20px 0 20px;
@@ -106,7 +109,7 @@ pre,.table-responsive{
 pre code{
 	display: block;
 	width: auto;
-	font-size: 15px;
+	font-size: 16px;
 	white-space: pre;	// save it but no-wrap;
 	word-wrap: normal;	// no-wrap
 }
@@ -115,11 +118,13 @@ pre code{
 // In the post.
 .post-container{
 	a{
-		color: @brand-primary;
+		color: spin(@brand-primary, 10%);
+		padding-bottom: .15em;
 		&:hover,
 		&:focus {
-			color: lighten(@brand-primary, 10%);
 			text-decoration: none;
+			color: spin(@brand-primary, 20%);
+			// border-bottom: 1px dashed;
 		}
 		.transition-all();
 	}
@@ -443,18 +448,49 @@ pre code{
 // Post Preview Pages (Home Page)
 
 .post-preview {
+	position: relative;
+	cursor: pointer;
+	&:after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		right: 50%;
+		top: 50%;
+		bottom: 50%;
+		background: #f7f7f7;
+		.opacity(0);
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+		border-radius: 4px;
+		z-index: -1;
+		.transition-all();
+	}
+	&:hover:after {
+		top: -20px;
+		bottom: -20px;
+		left: -20px;
+		right: -20px;
+		.opacity(1);
+	}
+	&:hover {
+		.post-title {
+			color: @brand-primary;
+		}
+	}
 	> a {
 		color: @gray-dark;
 		&:hover,
 		&:focus {
 			text-decoration: none;
-			color: @brand-primary;
 		}
 		> .post-title {
 			font-size: 21px;
 			line-height: 1.3;
 			margin-top: 30px;
 			margin-bottom: 8px;
+			.transition-all();
 		}
 		> .post-subtitle {
 			font-size: 15px;
@@ -464,12 +500,29 @@ pre code{
 			margin-bottom: 10px;
 		}
 	}
+	&.active{
+		-webkit-transform: scale(3);
+		-ms-transform: scale(3);
+		-o-transform: scale(3);
+		transform: scale(3);
+		opacity: 0;
+		-webkit-transition: transform .45s ease-out, opacity .25s ease-out;
+		-o-transition: transform .45s ease-out, opacity .25s ease-out;
+		transition: transform .45s ease-out, opacity .25s ease-out;
+	}
 	> .post-meta {
 		.serif;
-		color: @gray;
+		float: left;
+		background: #333;
+		color: #fff;
+		width: 85px;
+		height: 85px;
+		padding: 10px;
+		padding-top: 15px;
+		margin: 0 20px 15px 0;
 		font-size: 16px;
 		font-style: italic;
-		margin-top: 0;
+
 		> a {
 			text-decoration: none;
 			color: @gray-dark;
@@ -492,21 +545,18 @@ pre code{
 			}
 		}
 		.post-meta{
+			margin-top: .5em;
 			font-size: 18px;
 		}
 	}
 }
 
-// Hux add home-page post-content-preview
 .post-content-preview{
-    font-size: 13px;
+    font-size: 14px;
     font-style: italic;
-    color:#a3a3a3;
+    color: #a3a3a3;
     &:hover{
-        color: @brand-primary;
-    }
-    @media only screen and (min-width: 768px) {
-        font-size:14px;
+        // color: @brand-primary;
     }
 }
 
@@ -535,9 +585,60 @@ footer {
 	.list-inline {
 		margin: 0;
 		padding: 0;
+		a:hover, a:focus{
+			color: @gray-dark;
+		}
+		span.fa-stack{
+			width: 1.8em;
+			height: 1.8em;
+			background: #999;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+			border-radius: 50%;
+			overflow: hidden;
+			i.fa{
+				z-index: 1;
+				line-height: 1.9;
+			}
+			&:after{
+				content: "";
+				position: absolute;
+				top: 50%;
+				bottom: 50%;
+				left: 50%;
+				right: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+				border-radius: 50%;
+				z-index: 0;
+				.transition-all();
+			}
+			&:hover:after{
+				top: -10%;
+				bottom: -10%;
+				left: -10%;
+				right: -10%;
+			}
+			&.twitter:after{
+				background: @twitter-theme;
+			}
+			&.tumblr:after{
+				background: @tumblr-theme;
+			}
+			&.dribbble:after{
+				background: @dribbble-theme;
+			}
+			&.github:after{
+				background: @github-theme;
+			}
+		}
 	}
 	.copyright {
-		font-size: 14px;
+		font-size: 16px;
 		text-align: center;
 		margin-bottom: 0;
 		a{
@@ -642,7 +743,7 @@ form .row:first-child .floating-label-form-group {
 .pager {
 
 	margin: 20px 0 0 !important;
-	padding:0px !important;
+	padding: 0px !important;
 
 	li {
 		> a,
@@ -662,13 +763,57 @@ form .row:first-child .floating-label-form-group {
 		}
 
 		> a {
+			position: relative;
 			color: @gray-dark;
 		}
 		> a:hover,
 		> a:focus {
-			color: white;
-			background-color: @brand-primary;
-			border: 1px solid @brand-primary;
+			color: @brand-primary;
+			background-color: transparent;
+			border-color: #fff;
+			-webkit-transition: .3s ease-out .2s;
+			-o-transition: .3s ease-out .3s;
+			transition: .3s ease-out .3s;
+		}
+		// 按钮动画
+		> a:before, > a:after {
+		    content: "";
+		    display: block;
+		    position: absolute;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    border: 1px solid transparent;
+		    width: 0;
+		    height: 0;
+		}
+		> a:hover:before, > a:hover:after {
+		    width: 100%;
+		    height: 100%;
+		}
+		> a:before {
+		    bottom: 0;
+		    right: 0;
+		    -webkit-transition: border-color 0s ease-in .4s, width .2s ease-in .2s, height .2s ease-in;
+		    transition: border-color 0s ease-in .4s, width .2s ease-in .2s, height .2s ease-in;
+		}
+		> a:after {
+		    top: 0;
+		    left: 0;
+		    -webkit-transition: border-color 0s ease-in .8s, width .2s ease-in .6s, height .2s ease-in .4s;
+		    transition: border-color 0s ease-in .8s, width .2s ease-in .6s, height .2s ease-in .4s;
+		}
+		> a:hover:before {
+		    border-bottom-color: @brand-primary;
+		    border-left-color: @brand-primary;
+		    -webkit-transition: border-color 0s ease-out .4s, width .2s ease-out .4s, height .2s ease-out .6s;
+		    transition: border-color 0s ease-out .4s, width .2s ease-out .4s, height .2s ease-out .6s;
+		}
+		> a:hover:after {
+		    border-top-color: @brand-primary;
+		    border-right-color: @brand-primary;
+		    -webkit-transition: width .2s ease-out,height .2s ease-out .2s;
+		    transition: width .2s ease-out,height .2s ease-out .2s;
 		}
 	}
 
@@ -969,8 +1114,8 @@ body {
 	color: #ddd;
 }
 
-// 2017-1 add by monad
-img.emoji{
+// Added by monad 2017-1
+img.emoji {
 	display: inline;
 	margin:  0 .5em;
 }
@@ -978,5 +1123,81 @@ img.emoji{
 @media (min-width: 1200px) {
 	.container {
 	    width: 80%;
+	    max-width: 1920px * 0.8;
+	    min-width: 1170px;
+	}
+}
+button {
+	border: none;
+	outline: none;
+	background: transparent;
+}
+// 展开菜单按钮
+#hamburger-btn {
+	position: relative;
+	float: left;
+	width: 60px;
+	height: 60px;
+	z-index: 99;
+	span, span:before, span:after{
+		display: block;
+		position: absolute;
+		content: "";
+		width: 1.2em;
+		height: 2px;
+		left: 50%;
+		margin-left: -.6em;
+		background: #fff;
+		.transition-all();
+	}
+	span:before{
+		top: -.35em;
+	}
+	span:after{
+		bottom: -.35em;
+	}
+	&:hover span:before{
+		margin-left: -1em;
+	}
+	&:hover span:after{
+		margin-left: -.2em;
+	}
+	&.active span{
+		background: transparent;
+	}
+	&.active span:before{
+		top: 0;
+		background: @brand-primary;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	&.active span:after{
+		top: 0;
+		background: @brand-primary;
+		-webkit-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	&.active:hover span:before, &.active:hover span:after{
+		margin-left: -.6em;
+	}
+}
+
+// 全屏菜单
+.layer{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,.9);
+	visibility: hidden;
+	z-index: 2;
+	.transition-all();
+	&.show{
+		visibility: visible;
 	}
 }

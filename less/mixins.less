@@ -1,9 +1,9 @@
 // Mixins
 
 .transition-all() {
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .background-cover() {
@@ -11,6 +11,24 @@
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.opacity(@str) {
+    opacity: @str;
+    filter: opacity(alpha = (@str*100));
+}
+
+.clearfix() {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
 }
 
 .serif() {

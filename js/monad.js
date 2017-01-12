@@ -9,7 +9,6 @@ $(function() {
     $("[data-toggle='tooltip']").tooltip();
 });
 
-
 // make all images responsive
 /* 
  * Unuse by Hux
@@ -62,4 +61,57 @@ jQuery(document).ready(function($) {
                 this.previousTop = currentTop;
             });
     }
+});
+
+
+// Added by monad 2017-1
+
+// 主页面动画
+
+// (function($, window, undefined) {
+
+//     $(function() {
+//         var $li = $('.post-preview'),
+//             link = $li.children('a').attr('href');
+//         $li.on('click', function(e) {
+//             e.preventDefault();
+//             var copyStyle = {
+//                 position: 'absolute',
+//                 // visibility: 'visible',
+//                 marginTop: '-30px',
+//                 width: $(this).width(),
+//                 top: $(this).offset().top,
+//                 left: $(this).offset().left
+//             };
+
+//             // $(this).css('visibility', 'hidden');
+//             var $_li = $(this).clone().appendTo('body').css(copyStyle);
+//             // 这里需要延时再加上 class，否则不会有动画效果
+//             setTimeout(function() {
+//                 $_li.addClass('active');
+//             }, 25);
+//             setTimeout(function() {
+//                 window.location.href = link;
+//             }, 300);
+//         });
+//     });
+
+// })(jQuery, window);
+
+// 菜单按钮
+
+$(function() {
+    var $hamburgerBtn = $('#hamburger-btn'),
+        $layer = $('.layer');
+    $hamburgerBtn.on('click', function(event) {
+        event.preventDefault();
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $layer.removeClass('show');
+        }
+        else {
+            $(this).addClass('active');
+            $layer.addClass('show');
+        }
+    });
 });
