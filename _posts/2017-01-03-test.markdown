@@ -2,7 +2,7 @@
 layout: post
 title: 试一下效果:)
 date: 2017-01-03 11:10:06
-comments: true
+header-img: img/post-bg-05.jpg
 tags: test
 ---
 

@@ -98,20 +98,42 @@ jQuery(document).ready(function($) {
 
 // })(jQuery, window);
 
-// 菜单按钮
+// 导航菜单
 
-$(function() {
-    var $hamburgerBtn = $('#hamburger-btn'),
-        $layer = $('.layer');
-    $hamburgerBtn.on('click', function(event) {
-        event.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $layer.removeClass('show');
-        }
-        else {
-            $(this).addClass('active');
-            $layer.addClass('show');
-        }
+(function($, document, undefined) {
+
+    $(function() {
+        var $hamburgerBtn = $('#hamburger-btn'),
+            $layer = $('.layer'),
+            $li = $layer.find('li');
+        $hamburgerBtn.on('click', function(event) {
+            event.preventDefault();
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $layer.removeClass('show');
+                $li.each(function(index, el) {
+                    var $el = $(el);
+                    $el.css({
+                        marginTop: 30,
+                        opacity: 0
+                    });
+                });
+            }
+            else {
+                $(this).addClass('active');
+                $layer.addClass('show');
+                // $(document.body).css('overflow-y', 'hidden');
+                var t = 10;
+                $li.each(function(index, el) {
+                    var $el = $(el);
+                    $el.stop(false, true).delay(t).animate({
+                        marginTop: 0,
+                        opacity: 1
+                    }, 300);
+                    t += 10;
+                });
+            }
+        });
     });
-});
+
+})(jQuery, document);

@@ -1194,10 +1194,34 @@ button {
 	left: 0;
 	right: 0;
 	background: rgba(255,255,255,.9);
+	.opacity(0);
 	visibility: hidden;
-	z-index: 2;
 	.transition-all();
+	z-index: 2;
 	&.show{
+		.opacity(1);
 		visibility: visible;
+	}
+	ul{
+		width: 100%;
+		text-align: center;
+		list-style: none;
+		li{
+			position: relative;
+			opacity: 0;
+			margin-top: 30px;
+			// -webkit-transform: translate3d(0, 20px, 0);
+			// -ms-transform: translate3d(0, 20px, 0);
+			// -o-transform: translate3d(0, 20px, 0);
+			// transform: translate3d(0, 20px, 0);
+			a{
+				display: block;
+				padding: .8em 0;
+				text-transform: uppercase;
+				font-size: 20px;
+				font-weight: 800;
+				letter-spacing: 1px;
+			}
+		}
 	}
 }
