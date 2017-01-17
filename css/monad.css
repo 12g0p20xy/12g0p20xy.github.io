@@ -55,7 +55,7 @@
 }
 body {
   font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 20px;
+  font-size: 19px;
   color: #4d4d4d;
   overflow-x: hidden;
 }
@@ -144,7 +144,7 @@ pre,
 pre code {
   display: block;
   width: auto;
-  font-size: 16px;
+  font-size: 15px;
   white-space: pre;
   word-wrap: normal;
 }
@@ -1232,7 +1232,7 @@ img.emoji {
 }
 .layer ul li a {
   display: block;
-  padding: .8em 0;
+  padding: .5em 0;
   font-size: 25px;
   color: #f6006d;
   text-indent: .6em;
@@ -1250,7 +1250,7 @@ img.emoji {
   display: block;
   position: absolute;
   width: 100%;
-  top: .8em;
+  top: .5em;
   font-size: 25px;
   font-weight: 800;
   text-transform: uppercase;
@@ -1346,4 +1346,21 @@ img.emoji {
   opacity: 0.8;
   filter: opacity(80);
   cursor: pointer;
+}
+.anchorjs-link {
+  display: none;
+}
+#catagory {
+  display: none;
+}
+#catagory + ul {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #333;
+  color: #fff;
+  margin: 0;
+}
+#catagory + ul li {
+  list-style: none;
 }

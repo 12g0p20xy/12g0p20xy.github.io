@@ -1232,7 +1232,7 @@ img.emoji {
 			font-size: 25px;
 			a{
 				display: block;
-				padding: .8em 0;
+				padding: .5em 0;
 				font-size: 25px;
 				color: @brand-primary;
 				text-indent: .6em; // 修复 letter-spacing 位置偏移
@@ -1247,7 +1247,7 @@ img.emoji {
 				display: block;
 				position: absolute;
 				width: 100%;
-				top: .8em;
+				top: .5em;
 				font-size: 25px;
 				font-weight: 800;
 				text-transform: uppercase;
@@ -1334,6 +1334,25 @@ img.emoji {
 		&:hover{
 			.opacity(.8);
 			cursor: pointer;
+		}
+	}
+}
+
+// 博客页面内索引
+.anchorjs-link{
+	display: none;
+}
+#catagory{
+	display: none;
+	+ ul{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		background: #333;
+		color: #fff;
+		margin: 0;
+		li{
+			list-style: none;
 		}
 	}
 }
