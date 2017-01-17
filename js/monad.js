@@ -98,11 +98,11 @@ jQuery(document).ready(function($) {
 
 // })(jQuery, window);
 
-// 导航菜单
-
 (function($, document, undefined) {
 
     $(function() {
+
+        // 导航菜单
         var $hamburgerBtn = $('#hamburger-btn'),
             $layer = $('.layer'),
             $li = $layer.find('li');
@@ -111,6 +111,7 @@ jQuery(document).ready(function($) {
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
                 $layer.removeClass('show');
+                // $(document.body).css('overflow-y', 'auto');
                 $li.each(function(index, el) {
                     var $el = $(el);
                     $el.css({
@@ -133,6 +134,21 @@ jQuery(document).ready(function($) {
                     t += 10;
                 });
             }
+        });
+
+        // 搜索框
+        var $searchbar = $('.searchbar'),
+            $sInput = $searchbar.children('input'),
+            $sBtn = $searchbar.children('i');
+        $sBtn.on('click', function() {
+            $searchbar.addClass('active');
+            $sInput.focus();
+            $(document).on('click.sClick', function(e) {
+                if (!$(event.target).closest($searchbar).length) {
+                    $searchbar.removeClass('active');
+                    $(document).off('click.sClick');
+                }
+            });
         });
     });
 

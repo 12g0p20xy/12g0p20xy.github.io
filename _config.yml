@@ -48,7 +48,7 @@ sidebar-about-description: "写写代码，做做设计，看看产品。世界�
 sidebar-avatar: /img/avatar-hux.jpg
 
 # Featured Tags
-featured-tags: true
+featured-tags: false
 featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
 
 # Friends

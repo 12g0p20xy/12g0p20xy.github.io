@@ -350,7 +350,7 @@ pre code {
   .navbar-custom.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -61px;
+    top: -65px;
     background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid #f2f2f2;
     -webkit-transition: -webkit-transform 0.3s;
@@ -589,7 +589,7 @@ pre code {
     font-size: 16px;
   }
   .post-preview .post-meta {
-    margin-top: .5em;
+    color: #ddd;
     font-size: 18px;
   }
 }
@@ -615,7 +615,7 @@ pre code {
 }
 footer {
   font-size: 20px;
-  padding: 50px 0 65px;
+  padding: 30px 0 65px;
 }
 footer .list-inline {
   margin: 0;
@@ -883,7 +883,7 @@ body {
   padding: 0 10px;
   color: #ffffff;
   line-height: 24px;
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   margin: 0 1px;
   margin-bottom: 6px;
@@ -1105,6 +1105,15 @@ body {
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
 }
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+input {
+  border: none;
+  outline: none;
+}
 img.emoji {
   display: inline;
   margin: 0 .5em;
@@ -1115,11 +1124,6 @@ img.emoji {
     max-width: 1536px;
     min-width: 1170px;
   }
-}
-button {
-  border: none;
-  outline: none;
-  background: transparent;
 }
 #hamburger-btn {
   position: relative;
@@ -1156,11 +1160,11 @@ button {
   margin-left: -0.2em;
 }
 #hamburger-btn.active span {
-  background: transparent;
+  background: transparent!important;
 }
 #hamburger-btn.active span:before {
   top: 0;
-  background: #f6006d;
+  background: #f6006d !important;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -1168,7 +1172,7 @@ button {
 }
 #hamburger-btn.active span:after {
   top: 0;
-  background: #f6006d;
+  background: #f6006d !important;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
@@ -1178,20 +1182,35 @@ button {
 #hamburger-btn.active:hover span:after {
   margin-left: -0.6em;
 }
+.navbar-custom.is-fixed #hamburger-btn span,
+.navbar-custom.is-fixed #hamburger-btn span:before,
+.navbar-custom.is-fixed #hamburger-btn span:after {
+  background: #cccccc;
+}
+.navbar-custom.is-fixed .searchbar > i {
+  color: #cccccc;
+}
 .layer {
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  line-height: 1.7;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.9);
+  font-family: ;
+  background: rgba(255, 255, 255, 0.95);
   opacity: 0;
   filter: opacity(0);
   visibility: hidden;
+  z-index: 2;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  z-index: 2;
 }
 .layer.show {
   opacity: 1;
@@ -1199,6 +1218,8 @@ button {
   visibility: visible;
 }
 .layer ul {
+  margin-top: 10%;
+  padding: 0;
   width: 100%;
   text-align: center;
   list-style: none;
@@ -1207,12 +1228,122 @@ button {
   position: relative;
   opacity: 0;
   margin-top: 30px;
+  font-size: 25px;
 }
 .layer ul li a {
   display: block;
   padding: .8em 0;
-  text-transform: uppercase;
-  font-size: 20px;
+  font-size: 25px;
+  color: #f6006d;
+  text-indent: .6em;
+  letter-spacing: .6em;
+  opacity: 0;
+  filter: opacity(0);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.layer ul li a:hover {
+  text-decoration: none;
+}
+.layer ul li b {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: .8em;
+  font-size: 25px;
   font-weight: 800;
-  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-indent: .4em;
+  letter-spacing: .4em;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.layer ul li:after {
+  content: "";
+  position: absolute;
+  bottom: .3em;
+  background: #f6006d;
+  height: 3px;
+  left: 50%;
+  right: 50%;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.layer ul li:hover a {
+  opacity: 1;
+  filter: opacity(100);
+}
+.layer ul li:hover b {
+  opacity: 0;
+  filter: opacity(0);
+}
+.layer ul li:hover:after {
+  left: 45%;
+  right: 45%;
+}
+@media (min-width: 1200px) {
+  .layer ul li,
+  .layer ul li > a,
+  .layer ul li > b {
+    font-size: 30px;
+  }
+}
+.navbar-header {
+  position: relative;
+  z-index: 10;
+}
+.searchbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  font-size: 20px;
+}
+.searchbar input {
+  position: absolute;
+  width: 0;
+  left: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  line-height: 60px;
+  z-index: 99;
+  opacity: 0;
+  filter: opacity(0);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  text-align: center;
+}
+.searchbar.active input {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+  filter: opacity(100);
+}
+.searchbar.active i {
+  color: #cccccc;
+}
+.searchbar i {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.searchbar i:hover {
+  opacity: 0.8;
+  filter: opacity(80);
+  cursor: pointer;
 }
