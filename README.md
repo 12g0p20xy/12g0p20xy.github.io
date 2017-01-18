@@ -2,7 +2,7 @@
 
 This blog theme is based on [Hux Blog](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog](https://startbootstrap.com/template-overviews/clean-blog/)
 
-[Live Demo](12g0p20xy.github.io)
+[Live Demo](https://12g0p20xy.github.io)
 
 ## How To Use
 
@@ -13,6 +13,8 @@ Run <code>jekyll serve watch</code> and visit <code>127.0.0.1:4000</code> in you
 Run <code>npm install</code> and <code>grunt</code> if you want to start a grunt task.
 
 Also you can run <code>grunt & jekyll serve</code> together if you want to build site and see changes at once.
+
+For details read [this](http://12g0p20xy.github.io/2017/01/04/jekyll/)
 
 ## Package Version
 
