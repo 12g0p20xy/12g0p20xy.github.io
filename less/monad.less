@@ -10,6 +10,7 @@ body {
 	// Hux mpdify to 16px (Mobile First), and increase to 20px while 768+ width
 	color: @gray-dark;
 	overflow-x : hidden;
+	.transition-all();
 }
 
 // -- Typography
@@ -635,6 +636,12 @@ footer {
 			&.github:after{
 				background: @github-theme;
 			}
+			&.douban:after{
+				background: @douban-theme;
+			}
+			&.email:after{
+				background: @email-theme;
+			}
 		}
 	}
 	.copyright {
@@ -1133,9 +1140,9 @@ img.emoji {
 
 @media (min-width: 1200px) {
 	.container {
-	    width: 80%;
-	    max-width: 1920px * 0.8;
-	    min-width: 1170px;
+	    // // width: 80%;
+	    // // width: 1920px * 0.8;
+	    // width: 1170px;
 	}
 }
 // 汉堡菜单按钮
@@ -1209,7 +1216,6 @@ img.emoji {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	font-family: ;
 	background: rgba(255,255,255,.95);
 	.opacity(0);
 	visibility: hidden;
@@ -1251,8 +1257,8 @@ img.emoji {
 				font-size: 25px;
 				font-weight: 800;
 				text-transform: uppercase;
-				text-indent: .4em;
-				letter-spacing: .4em;
+				text-indent: .2em;
+				letter-spacing: .2em;
 				.transition-all();
 			}
 			&:after{
@@ -1344,32 +1350,69 @@ img.emoji {
 }
 #catagory{
 	display: none;
-	+ ul{
+}
+
+.catagory{
+	width: 300px;
+	.transition-all();
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	-webkit-transform: translateX(300px);
+	-ms-transform: translateX(300px);
+	-o-transform: translateX(300px);
+	transform: translateX(300px);
+	background: #333;
+	color: #fff;
+	margin: 0;
+	padding: 15px 30px;
+	z-index: 1;
+	ul{
 		position: fixed;
-		bottom: 0;
-		right: 0;
-		background: #333;
-		color: #fff;
-		margin: 0;
-		padding: 15px 30px;
-		z-index: 1;
+		padding: 0;
+	}
+	ul > li{
+		list-style: none;
+		a{
+			color: #ddd;
+		}
+		&.draw > ol{
+			display: none;
+		}
+	}
+	ol{
+		padding: 0;
 		li{
 			list-style: none;
-			a{
-				color: #ddd;
-			}
+			padding-left: 1em;
 		}
-		ol{
-			padding: 0;
-			li{
-				padding-left: 1em;
-			}
-			a{
-				font-size: 14px;
-			}
+		a{
+			font-size: 14px;
 		}
 	}
 }
 .ds-replybox{
 	z-index: 0!important;
+}
+
+// 页面右下角控制按钮，点击展开索引
+#open-btn{
+	position: fixed;
+	width: 3em;
+	height: 3em;
+	color: #fff;
+	background: #333;
+	right: 30px;
+	bottom: 30px;
+}
+body.open{
+	// 注意：如果这里给 body 使用 transform 会让 fixed 定位的元素变成 absolute
+	margin-left: -300px;
+	.catagory{
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0);
+	}
 }

@@ -8,20 +8,17 @@ This blog theme is based on [Hux Blog](https://github.com/Huxpro/huxpro.github.i
 
 Cd to your project.
 
-Run <code>jekyll serve watch</code> and visit <code>127.0.0.1:4000</code> in your browser;
+Run `jekyll serve watch` and visit `127.0.0.1:4000` in your browser;
 
-Run <code>npm install</code> and <code>grunt</code> if you want to start a grunt task.
+Run `npm install` and `grunt` if you want to start a grunt task.
 
-Also you can run <code>grunt & jekyll serve</code> together if you want to build site and see changes at once.
+Also you can run `grunt & jekyll serve` together if you want to build site and see changes at once.
 
-For details read [this](http://12g0p20xy.github.io/2017/01/04/jekyll/)
+For details read [THIS](http://12g0p20xy.github.io/2017/01/04/jekyll/).
 
 ## Package Version
 
 <code>
-GEM
-  remote: http://gems.ruby-china.org/
-  specs:
     activesupport (4.2.7.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -82,15 +79,4 @@ GEM
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-
-PLATFORMS
-  x64-mingw32
-
-DEPENDENCIES
-  jekyll
-  jekyll-paginate
-  jemoji
-
-BUNDLED WITH
-   1.13.7
 </code>

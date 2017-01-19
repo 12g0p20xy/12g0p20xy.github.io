@@ -58,6 +58,9 @@ body {
   font-size: 19px;
   color: #4d4d4d;
   overflow-x: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 p {
   margin: 1em 0;
@@ -675,6 +678,12 @@ footer .list-inline span.fa-stack.dribbble:after {
 footer .list-inline span.fa-stack.github:after {
   background: #4a2779;
 }
+footer .list-inline span.fa-stack.douban:after {
+  background: #259235;
+}
+footer .list-inline span.fa-stack.email:after {
+  background: #41abe1;
+}
 footer .copyright {
   font-size: 16px;
   text-align: center;
@@ -1118,13 +1127,6 @@ img.emoji {
   display: inline;
   margin: 0 .5em;
 }
-@media (min-width: 1200px) {
-  .container {
-    width: 80%;
-    max-width: 1536px;
-    min-width: 1170px;
-  }
-}
 #hamburger-btn {
   position: relative;
   float: left;
@@ -1202,7 +1204,6 @@ img.emoji {
   bottom: 0;
   left: 0;
   right: 0;
-  font-family: ;
   background: rgba(255, 255, 255, 0.95);
   opacity: 0;
   filter: opacity(0);
@@ -1254,8 +1255,8 @@ img.emoji {
   font-size: 25px;
   font-weight: 800;
   text-transform: uppercase;
-  text-indent: .4em;
-  letter-spacing: .4em;
+  text-indent: .2em;
+  letter-spacing: .2em;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -1353,31 +1354,66 @@ img.emoji {
 #catagory {
   display: none;
 }
-#catagory + ul {
+.catagory {
+  width: 300px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   position: fixed;
+  top: 0;
   bottom: 0;
   right: 0;
+  -webkit-transform: translateX(300px);
+  -ms-transform: translateX(300px);
+  -o-transform: translateX(300px);
+  transform: translateX(300px);
   background: #333;
   color: #fff;
   margin: 0;
   padding: 15px 30px;
   z-index: 1;
 }
-#catagory + ul li {
-  list-style: none;
-}
-#catagory + ul li a {
-  color: #eee;
-}
-#catagory + ul ol {
+.catagory ul {
+  position: fixed;
   padding: 0;
 }
-#catagory + ul ol li {
+.catagory ul > li {
+  list-style: none;
+}
+.catagory ul > li a {
+  color: #ddd;
+}
+.catagory ul > li.draw > ol {
+  display: none;
+}
+.catagory ol {
+  padding: 0;
+}
+.catagory ol li {
+  list-style: none;
   padding-left: 1em;
 }
-#catagory + ul ol a {
-  font-size: 16px;
+.catagory ol a {
+  font-size: 14px;
 }
 .ds-replybox {
   z-index: 0!important;
+}
+#open-btn {
+  position: fixed;
+  width: 3em;
+  height: 3em;
+  color: #fff;
+  background: #333;
+  right: 30px;
+  bottom: 30px;
+}
+body.open {
+  margin-left: -300px;
+}
+body.open .catagory {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }

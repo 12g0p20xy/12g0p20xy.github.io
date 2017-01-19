@@ -153,6 +153,44 @@ jQuery(document).ready(function($) {
     });
 
     // 索引
-    
+    var $catagory = $('#catagory').next('ul'),
+        $mainTitle = $catagory.children('li'),
+        $subTitle = $mainTitle.find('li');
+    $catagory.wrap('<div class="catagory"></div>');
+    // 给标题前加上 + 号
+    $mainTitle.each(function(index, el) {
+        var $el = $(el);
+        if ($el.find('li').length) {
+            $el.prepend("<i> + </i>")
+                .find('i').css('cursor', 'pointer');
+        }
+    });
+    var $cBtn = $mainTitle.find('i');
+    $cBtn.on('click', function(e) {
+        var $_li = $(this).parent();
+        if ($_li.hasClass('draw')) {
+            $_li.removeClass('draw');
+            $(this).html(' + ');
+        }
+        else{
+            $_li.addClass('draw');
+            $(this).html(' - ');
+        }
+    });
+
+    // 页面右下角控制按钮
+    var $openBtn = $('<div id="open-btn">yoo</div>');
+    $(document.body).append($openBtn);
+
+    $openBtn.on('click', function() {
+        $(document.body).addClass('open')
+            .on('click.open', function(e) {
+            if (!$(e.target).closest('.catagory').length && !$(e.target).closest($openBtn).length) {
+                $(this).removeClass('open')
+                    .off('click.open');
+            }
+        });
+    });
+
 
 })(jQuery, document);
