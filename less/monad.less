@@ -1371,6 +1371,7 @@ img.emoji {
 	ul{
 		position: fixed;
 		padding: 0;
+		margin-top: 30px;
 	}
 	ul > li{
 		list-style: none;
@@ -1397,18 +1398,34 @@ img.emoji {
 }
 
 // 页面右下角控制按钮，点击展开索引
-#open-btn{
+#open-btn, #back-top{
+	display: none;
 	position: fixed;
-	width: 3em;
-	height: 3em;
-	color: #fff;
-	background: #333;
 	right: 30px;
 	bottom: 30px;
+	width: 2em;
+	height: 2em;
+	color: #fff;
+	background: #333;
+	text-align: center;
+	line-height: 2;
+	cursor: pointer;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	.transition-all();
+}
+#open-btn{
+	bottom: 75px;
 }
 body.open{
 	// 注意：如果这里给 body 使用 transform 会让 fixed 定位的元素变成 absolute
 	margin-left: -300px;
+	#open-btn, #back-top{
+		right: 330px;
+	}
 	.catagory{
 		-webkit-transform: translateX(0);
 		-ms-transform: translateX(0);

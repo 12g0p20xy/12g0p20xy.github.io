@@ -179,8 +179,24 @@ jQuery(document).ready(function($) {
     });
 
     // 页面右下角控制按钮
-    var $openBtn = $('<div id="open-btn">yoo</div>');
-    $(document.body).append($openBtn);
+    var $openBtn = $('<div id="open-btn"><i class="fa fa-book" aria-hidden="true"></i></div>'),
+        $backTop = $('<div id="back-top"><i class="fa fa-caret-up" aria-hidden="true"></i></div>');
+    if ($catagory.length) {
+        $(document.body).append($openBtn);
+    }
+    $(document.body).append($backTop);
+
+    $(document).on('scroll', function() {
+        console.log($(this).scrollTop());
+        if ($(this).scrollTop() >= 1200) {
+           $openBtn.fadeIn();
+           $backTop.fadeIn();
+        }
+        else {
+           $openBtn.fadeOut();
+           $backTop.fadeOut();
+        }
+    });
 
     $openBtn.on('click', function() {
         $(document.body).addClass('open')
@@ -190,6 +206,10 @@ jQuery(document).ready(function($) {
                     .off('click.open');
             }
         });
+    });
+
+    $backTop.on('click', function() {
+        $(document.body).animate({scrollTop: 0}, 300);
     });
 
 
