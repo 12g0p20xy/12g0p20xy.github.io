@@ -152,7 +152,7 @@ jQuery(document).ready(function($) {
         });
     });
 
-    // 索引
+    // 侧边索引
     var $catagory = $('#catagory').next('ul'),
         $mainTitle = $catagory.children('li'),
         $subTitle = $mainTitle.find('li');
@@ -161,7 +161,7 @@ jQuery(document).ready(function($) {
     $mainTitle.each(function(index, el) {
         var $el = $(el);
         if ($el.find('li').length) {
-            $el.prepend("<i> + </i>")
+            $el.prepend("<i> - </i>")
                 .find('i').css('cursor', 'pointer');
         }
     });
@@ -170,11 +170,11 @@ jQuery(document).ready(function($) {
         var $_li = $(this).parent();
         if ($_li.hasClass('draw')) {
             $_li.removeClass('draw');
-            $(this).html(' + ');
+            $(this).html(' - ');
         }
         else{
             $_li.addClass('draw');
-            $(this).html(' - ');
+            $(this).html(' + ');
         }
     });
 
@@ -187,7 +187,6 @@ jQuery(document).ready(function($) {
     $(document.body).append($backTop);
 
     $(document).on('scroll', function() {
-        console.log($(this).scrollTop());
         if ($(this).scrollTop() >= 1200) {
            $openBtn.fadeIn();
            $backTop.fadeIn();

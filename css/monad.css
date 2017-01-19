@@ -1228,15 +1228,14 @@ img.emoji {
 .layer ul li {
   position: relative;
   opacity: 0;
-  margin-top: 30px;
+  margin-top: 45px;
+  padding: .5em 0;
   font-size: 25px;
 }
 .layer ul li a {
-  display: block;
-  padding: .5em 0;
   font-size: 25px;
   color: #f6006d;
-  text-indent: .6em;
+  padding-left: .6em;
   letter-spacing: .6em;
   opacity: 0;
   filter: opacity(0);
@@ -1370,8 +1369,8 @@ img.emoji {
   background: #333;
   color: #fff;
   margin: 0;
-  padding: 15px 30px;
-  z-index: 1;
+  padding: 15px 30px 15px 45px;
+  z-index: 5;
 }
 .catagory ul {
   position: fixed;
@@ -1379,10 +1378,16 @@ img.emoji {
   margin-top: 30px;
 }
 .catagory ul > li {
+  position: relative;
+  margin-bottom: .8em;
   list-style: none;
 }
 .catagory ul > li a {
   color: #ddd;
+}
+.catagory ul > li i {
+  position: absolute;
+  left: -0.8em;
 }
 .catagory ul > li.draw > ol {
   display: none;

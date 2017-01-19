@@ -1234,14 +1234,13 @@ img.emoji {
 		li{
 			position: relative;
 			opacity: 0;
-			margin-top: 30px;
+			margin-top: 45px;
+			padding: .5em 0;
 			font-size: 25px;
 			a{
-				display: block;
-				padding: .5em 0;
 				font-size: 25px;
 				color: @brand-primary;
-				text-indent: .6em; // 修复 letter-spacing 位置偏移
+				padding-left: .6em; // 修复 letter-spacing 位置偏移
 				letter-spacing: .6em;
 				.opacity(0);
 				.transition-all();
@@ -1366,17 +1365,23 @@ img.emoji {
 	background: #333;
 	color: #fff;
 	margin: 0;
-	padding: 15px 30px;
-	z-index: 1;
+	padding: 15px 30px 15px 45px;
+	z-index: 5;
 	ul{
 		position: fixed;
 		padding: 0;
 		margin-top: 30px;
 	}
 	ul > li{
+		position: relative;
+		margin-bottom: .8em;
 		list-style: none;
 		a{
 			color: #ddd;
+		}
+		i{
+			position: absolute;
+			left: -.8em;
 		}
 		&.draw > ol{
 			display: none;
