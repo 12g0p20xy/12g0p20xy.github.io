@@ -20,7 +20,7 @@ $ gem install compass
 $ compass create myproject
 ```
 
-就会生成一个名称为myproject的项目文件夹，里面包含一个 `config.rb` 文件，这是你的项目的配置文件。还有两个子目录 `sass` 和 `stylesheets` ，前者存放 Sass 源文件，后者存放编译后的 css 文件。
+就会生成一个名称为 myproject 的项目文件夹，里面包含一个 `config.rb` 文件，这是你的项目的配置文件。还有两个子目录 `sass` 和 `stylesheets` ，前者存放 Sass 源文件，后者存放编译后的 css 文件。
 
 ## 编译
 
@@ -62,15 +62,15 @@ $ compass compile
 
 > myproject
 >
->  ├── images
+>  │── images
 >
->    └── icons
+>  │  └── icons
 >
->       └── .png
+>  │    └── *.png
 >
->  ├── sass
+>  │── sass
 >
->  ├── stylesheets
+>  │── stylesheets
 >
 >  └── config.rb
 
