@@ -1382,8 +1382,9 @@ img.emoji {
   margin-bottom: .8em;
   list-style: none;
 }
-.catagory ul > li a {
+.catagory ul > li > a {
   color: #ddd;
+  font-size: 16px;
 }
 .catagory ul > li i {
   position: absolute;
@@ -1400,6 +1401,7 @@ img.emoji {
   padding-left: 1em;
 }
 .catagory ol a {
+  color: #ddd;
   font-size: 14px;
 }
 .ds-replybox {
