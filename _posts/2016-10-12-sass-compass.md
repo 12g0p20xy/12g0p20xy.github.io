@@ -3,7 +3,7 @@ layout: post
 title: Compass的使用 - 自动拼接精灵图
 subtitle:
 date: 2016-01-25
-author:
+author: monad
 header-img: img/post-bg-07.jpg
 tags: [Compass, Sass, Sprites, 精灵图]
 ---
