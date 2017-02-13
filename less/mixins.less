@@ -15,7 +15,7 @@
 
 .opacity(@str) {
     opacity: @str;
-    filter: opacity(alpha = (@str*100));
+    filter: ~"opacity(alpha = (@str*100))";
 }
 
 .clearfix() {

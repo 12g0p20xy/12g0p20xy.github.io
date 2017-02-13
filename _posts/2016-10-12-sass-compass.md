@@ -84,6 +84,8 @@ $icons-layout: smart; // 设置精灵地图的布局方式
 ...
 ```
 
+------
+
 附：[一个可以在线制作精灵图的网页](http://alloyteam.github.io/gopng)
 
 参考：[阮一峰的网络日志：Compass 用法指南](http://www.ruanyifeng.com/blog/2012/11/compass.html)

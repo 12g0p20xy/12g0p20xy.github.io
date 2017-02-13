@@ -124,14 +124,14 @@ jQuery(document).ready(function($) {
                 $(this).addClass('active');
                 $layer.addClass('show');
                 // $(document.body).css('overflow-y', 'hidden');
-                var t = 10;
+                var t = 100;
                 $li.each(function(index, el) {
                     var $el = $(el);
                     $el.stop(false, true).delay(t).animate({
                         marginTop: 0,
                         opacity: 1
                     }, 300);
-                    t += 10;
+                    t += 100;
                 });
             }
         });

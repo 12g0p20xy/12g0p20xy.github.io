@@ -120,6 +120,8 @@ function orientationChange() {
 
 ontouchmove="event.preventDefault()" //锁定 viewport，任何屏幕操作不移动用户界面（弹出键盘除外）。
 
+------
+
 来源：
 
 [无线Web开发经验谈](http://am-team.github.io/amg/dev-exp-doc.html)
