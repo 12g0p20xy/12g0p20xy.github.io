@@ -1521,22 +1521,16 @@ body.open{
 
 // 作品集页面
 body.demo{
-	width: 80%;
-	margin-left: 20%;
-	background: #24262b;
-	nav .searchbar{
-		display: none;
+	.navbar-custom .navbar-brand, .searchbar i{
+		color: @brand-primary;
 	}
-	header{
-		position: fixed;
-		left: 0;
-		width: 20%;
-		height: 100%;
-		background: #333;
+	#hamburger-btn span, #hamburger-btn span:before, #hamburger-btn span:after{
+		background: @brand-primary;
 	}
 	.intro-header{
 		margin-bottom: 0;
 		.site-heading{
+			display: none;
 			padding: 100px 0;
 		}
 	}
@@ -1546,11 +1540,16 @@ body.demo{
 	ul{
 		list-style: none;
 		padding: 0;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 60px;
 		.clearfix;
 		li{
-			position: relative;
-			padding: 0;
-			overflow: hidden;
+			padding: 10px;
+			.con{
+				position: relative;
+				overflow: hidden;
+			}
 			.mask{
 				position: absolute;
 				top: 0;
@@ -1560,7 +1559,7 @@ body.demo{
 				.opacity(0);
 				.transition-all;
 				background: @brand-primary;
-				z-index: 3;
+				z-index: 1;
 			}
 			a{
 				display: inline-block;
@@ -1572,6 +1571,7 @@ body.demo{
 				margin-top: -.8em;
 				margin-left: -2.5em;
 				padding: .3em .5em;
+				font-size: 14px;
 				color: #fff;
 				border: 1px solid;
 				.opacity(.8);

@@ -1451,30 +1451,28 @@ body.open .catagory {
   -o-transform: translateX(0);
   transform: translateX(0);
 }
-body.demo {
-  width: 80%;
-  margin-left: 20%;
-  background: #24262b;
+body.demo .navbar-custom .navbar-brand,
+body.demo .searchbar i {
+  color: #744ee8;
 }
-body.demo nav .searchbar {
-  display: none;
-}
-body.demo header {
-  position: fixed;
-  left: 0;
-  width: 20%;
-  height: 100%;
-  background: #333;
+body.demo #hamburger-btn span,
+body.demo #hamburger-btn span:before,
+body.demo #hamburger-btn span:after {
+  background: #744ee8;
 }
 body.demo .intro-header {
   margin-bottom: 0;
 }
 body.demo .intro-header .site-heading {
+  display: none;
   padding: 100px 0;
 }
 .portfolio ul {
   list-style: none;
   padding: 0;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 60px;
   *zoom: 1;
 }
 .portfolio ul:before,
@@ -1487,8 +1485,10 @@ body.demo .intro-header .site-heading {
   clear: both;
 }
 .portfolio ul li {
+  padding: 10px;
+}
+.portfolio ul li .con {
   position: relative;
-  padding: 0;
   overflow: hidden;
 }
 .portfolio ul li .mask {
@@ -1503,7 +1503,7 @@ body.demo .intro-header .site-heading {
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background: #744ee8;
-  z-index: 3;
+  z-index: 1;
 }
 .portfolio ul li a {
   display: inline-block;
@@ -1515,6 +1515,7 @@ body.demo .intro-header .site-heading {
   margin-top: -0.8em;
   margin-left: -2.5em;
   padding: .3em .5em;
+  font-size: 14px;
   color: #fff;
   border: 1px solid;
   opacity: 0.8;
