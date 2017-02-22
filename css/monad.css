@@ -833,7 +833,7 @@ form .row:first-child .floating-label-form-group {
 .pager li i {
   position: absolute;
   top: 50%;
-  margin-top: -0.5em;
+  margin-top: -0.6em;
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
