@@ -55,9 +55,12 @@ featured-condition-size: 1 # A tag will be featured if the size of it is more th
 friends: [
     {
         title: "Hux Blog",
-        href: "http://huangxuan.me"
+        href: "//huangxuan.me"
     },{
-        title: "zhihu",
-        href: "http://zhihu.com"
+        title: "Zhihu",
+        href: "//zhihu.com"
+    },{
+        title: "极简图床",
+        href: "//yotuku.cn"
     }
 ]
