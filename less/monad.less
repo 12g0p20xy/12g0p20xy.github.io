@@ -20,9 +20,11 @@ body {
 	.serif;
 	font-size: 18px;
 	color: #555;
-	background: #f9f9f9;
 	overflow-x : hidden;
 	.transition-all();
+	&.bg{
+		background: #f8f8f8;
+	}
 }
 
 // -- Typography
@@ -68,9 +70,9 @@ article{
 }
 blockquote {
 	padding: 20px;
-	color: @gray;
-	border-color: @brand-secondary;
-	background: lighten(@brand-secondary, 20%);
+	color: #8d77df;
+	border-color: #a1a3eb;
+	background: #eef1fc;
 	font-style: italic;
 	font-size: 0.95em;
 	margin: 20px 0 20px;
@@ -105,7 +107,13 @@ img.shadow{
 }
 // override table style in bootstrap
 .table th, .table td{
-	border: 1px solid #eee !important;
+	border: 1px solid #eee!important;
+}
+.table{
+	border: 2px solid #ddd;
+	tbody tr:nth-child(2n+1){
+		background: #f9f9f9;
+	}
 }
 
 hr.small {
@@ -1073,7 +1081,7 @@ body {
 	display: block;
 	max-width: 100%;
 	height: auto;
-	margin: 1.5em auto 1.6em auto;
+	margin: 1.5em auto 1.8em auto;
 }
 
 

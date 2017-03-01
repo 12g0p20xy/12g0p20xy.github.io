@@ -64,11 +64,13 @@ body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 18px;
   color: #555;
-  background: #f9f9f9;
   overflow-x: hidden;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+body.bg {
+  background: #f8f8f8;
 }
 p {
   margin: 1em 0;
@@ -107,9 +109,9 @@ article {
 }
 blockquote {
   padding: 20px;
-  color: #8c8c8c;
-  border-color: #96e7d6;
-  background: #e9faf6;
+  color: #8d77df;
+  border-color: #a1a3eb;
+  background: #eef1fc;
   font-style: italic;
   font-size: 0.95em;
   margin: 20px 0 20px;
@@ -140,7 +142,13 @@ img.shadow {
 }
 .table th,
 .table td {
-  border: 1px solid #eee !important;
+  border: 1px solid #eee!important;
+}
+.table {
+  border: 2px solid #ddd;
+}
+.table tbody tr:nth-child(2n+1) {
+  background: #f9f9f9;
 }
 hr.small {
   max-width: 100px;
@@ -1015,7 +1023,7 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 1.5em auto 1.6em auto;
+  margin: 1.5em auto 1.8em auto;
 }
 /* Hux Optimize UserExperience */
 .navbar-default .navbar-toggle:focus,
