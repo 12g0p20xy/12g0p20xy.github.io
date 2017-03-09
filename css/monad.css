@@ -111,7 +111,7 @@ blockquote {
   padding: 20px;
   color: #8d77df;
   border-color: #a1a3eb;
-  background: #eef1fc;
+  background: #f8f9ff;
   font-style: italic;
   font-size: 0.95em;
   margin: 20px 0 20px;
@@ -1133,6 +1133,11 @@ input {
 img.emoji {
   display: inline;
   margin: 0 .5em;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 #hamburger-btn {
   position: relative;
