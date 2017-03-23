@@ -5,8 +5,10 @@ subtitle:
 date: 2016-10-24
 author: monad
 header-img: img/home-bg.jpg
-tags: [单体模式, Javascript]
+tags: [单体, 单例, Javascript]
 ---
+
+[面向对象](/2016/08/05/oop/)
 
 ## 使用单体模式的好处
 
