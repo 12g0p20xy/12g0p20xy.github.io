@@ -38,7 +38,7 @@ duoshuo_share: false # set to false if you want to use Comment without Sharing
 
 # Analytics settings
 # Baidu
-ba_track_id: 
+ba_track_id: "851610262dde1b8d7f7dbea6402eff4e"
 # Google
 google_tracking_id: UA-89863402-1
 
