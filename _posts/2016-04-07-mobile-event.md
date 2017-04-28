@@ -4,7 +4,7 @@ title: 移动端事件的介绍和一些Tips
 subtitle:
 date: 2016-04-07
 author: monad
-header-img: img/post-bg-05.jpg
+header-img: http://olrr17ktb.bkt.clouddn.com/17-4-28/86108672-file_1493346429861_afd8.jpg
 tags: [移动端, 点击事件]
 ---
 
