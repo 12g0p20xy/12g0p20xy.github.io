@@ -4,7 +4,7 @@ title: 不定高元素的水平垂直居中解决方案总结
 subtitle:
 date: 2016-07-01
 author: monad
-header-img: http://olrr17ktb.bkt.clouddn.com/17-4-28/71831480-file_1493346395169_153c.jpg
+header-img: img/home-bg.jpg
 tags: [垂直居中, Css]
 ---
 

@@ -4,7 +4,7 @@ title: Compass的使用 - 自动拼接精灵图
 subtitle:
 date: 2016-01-25
 author: monad
-header-img: http://olrr17ktb.bkt.clouddn.com/17-4-28/25945350-file_1493346417231_64a1.jpg
+header-img: img/post-bg-07.jpg
 tags: [Compass, Sass, Sprites, 精灵图]
 ---
 
