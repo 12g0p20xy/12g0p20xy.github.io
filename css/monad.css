@@ -119,6 +119,10 @@ blockquote {
 blockquote p {
   margin: 0;
 }
+code {
+  color: #d7560c;
+  background-color: #f9f0ea;
+}
 small.img-hint {
   display: block;
   margin-top: -20px;
