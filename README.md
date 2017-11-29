@@ -2,8 +2,6 @@
 
 This blog theme is based on [Hux Blog](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog](https://startbootstrap.com/template-overviews/clean-blog/)
 
-[Live Demo](https://12g0p20xy.github.io)
-
 ## How To Use
 
 Cd to your project.

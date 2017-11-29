@@ -32,13 +32,13 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: monad
+# duoshuo_username: monad
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: false # set to false if you want to use Comment without Sharing
 
 # Analytics settings
 # Baidu
-ba_track_id: "851610262dde1b8d7f7dbea6402eff4e"
+ba_track_id: "2104f8c136537cb7faba9fe96442a073"
 # Google
 google_tracking_id: UA-89863402-1
 
