@@ -209,7 +209,7 @@ jQuery(document).ready(function($) {
 
     $backTop.on('click', function() {
         console.log($backTop)
-        $('body').animate({scrollTop: 0}, 300);
+        $('html, body').animate({scrollTop: 0}, 300);
     });
 
 
